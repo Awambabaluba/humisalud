@@ -173,9 +173,9 @@ export const blogPosts: BlogPost[] = [
     resumen:
       "Es un caso real y documentado de neumonitis por hipersensibilidad. No es alarmismo: con una limpieza regular y unos hábitos básicos, el riesgo es prácticamente nulo.",
     imagenPortada: {
-      src: winixImg,
-      alt: "Humidificador híbrido Winix L500 de gran depósito en un salón",
-      credito: "Imagen: Winix",
+      src: rowentaImg,
+      alt: "Humidificador Rowenta con tratamiento antibacteriano del agua",
+      credito: "Imagen: Rowenta / Groupe SEB",
     },
     contenido: [
       "Cuando empezamos a escribir sobre humidificadores, una de las primeras cosas que nos preguntó un lector fue si era verdad lo que había leído por ahí sobre la \"fiebre del humidificador\". Sonaba a leyenda urbana, del tipo de cosas que circulan exageradas por foros, pero no lo es: es un cuadro clínico real, documentado en literatura médica desde hace décadas, con nombre técnico (neumonitis por hipersensibilidad asociada a humidificadores) y con una causa perfectamente identificada. Y lo mejor de todo es que se previene con una limpieza de cinco minutos un par de veces por semana, así que no hay razón para asustarse, solo para tomárselo en serio.",
@@ -209,9 +209,9 @@ export const blogPosts: BlogPost[] = [
       undefined,
       undefined,
       {
-        src: rowentaImg,
-        alt: "Humidificador híbrido Rowenta Aqua Perfect con vapor frío y caliente",
-        credito: "Imagen: Rowenta / Groupe SEB",
+        src: winixImg,
+        alt: "Humidificador Winix L500 de gran depósito, requiere vigilar la limpieza con más frecuencia",
+        credito: "Imagen: Winix",
       },
       {
         src: cecotecImg,

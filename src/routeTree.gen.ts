@@ -25,6 +25,7 @@ import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AvisoAfiliacionRouteImport } from './routes/aviso-afiliacion'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EnIndexRouteImport } from './routes/en.index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as ProductoSlugRouteImport } from './routes/producto.$slug'
 import { Route as EnRunningCostRouteImport } from './routes/en.running-cost'
 import { Route as EnCalculatorRouteImport } from './routes/en.calculator'
@@ -111,6 +112,11 @@ const EnIndexRoute = EnIndexRouteImport.update({
   path: '/',
   getParentRoute: () => EnRoute,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRoute,
+} as any)
 const ProductoSlugRoute = ProductoSlugRouteImport.update({
   id: '/producto/$slug',
   path: '/producto/$slug',
@@ -158,12 +164,12 @@ export interface FileRoutesByFullPath {
   '/en/calculator': typeof EnCalculatorRoute
   '/en/running-cost': typeof EnRunningCostRoute
   '/producto/$slug': typeof ProductoSlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/en/': typeof EnIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aviso-afiliacion': typeof AvisoAfiliacionRoute
-  '/blog': typeof BlogRouteWithChildren
   '/calculadora': typeof CalculadoraRoute
   '/cookies': typeof CookiesRoute
   '/coste-de-uso': typeof CosteDeUsoRoute
@@ -180,6 +186,7 @@ export interface FileRoutesByTo {
   '/en/calculator': typeof EnCalculatorRoute
   '/en/running-cost': typeof EnRunningCostRoute
   '/producto/$slug': typeof ProductoSlugRoute
+  '/blog': typeof BlogIndexRoute
   '/en': typeof EnIndexRoute
 }
 export interface FileRoutesById {
@@ -204,6 +211,7 @@ export interface FileRoutesById {
   '/en/calculator': typeof EnCalculatorRoute
   '/en/running-cost': typeof EnRunningCostRoute
   '/producto/$slug': typeof ProductoSlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/en/': typeof EnIndexRoute
 }
 export interface FileRouteTypes {
@@ -229,12 +237,12 @@ export interface FileRouteTypes {
     | '/en/calculator'
     | '/en/running-cost'
     | '/producto/$slug'
+    | '/blog/'
     | '/en/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/aviso-afiliacion'
-    | '/blog'
     | '/calculadora'
     | '/cookies'
     | '/coste-de-uso'
@@ -251,6 +259,7 @@ export interface FileRouteTypes {
     | '/en/calculator'
     | '/en/running-cost'
     | '/producto/$slug'
+    | '/blog'
     | '/en'
   id:
     | '__root__'
@@ -274,6 +283,7 @@ export interface FileRouteTypes {
     | '/en/calculator'
     | '/en/running-cost'
     | '/producto/$slug'
+    | '/blog/'
     | '/en/'
   fileRoutesById: FileRoutesById
 }
@@ -411,6 +421,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EnIndexRouteImport
       parentRoute: typeof EnRoute
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/producto/$slug': {
       id: '/producto/$slug'
       path: '/producto/$slug'
@@ -451,10 +468,12 @@ declare module '@tanstack/react-router' {
 
 interface BlogRouteChildren {
   BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
   BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
