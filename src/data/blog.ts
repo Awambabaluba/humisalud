@@ -39,9 +39,9 @@ export const blogPosts: BlogPost[] = [
     resumen:
       "Repasamos qué rango de humedad relativa recomiendan las normativas de referencia y qué pasa si te sales de él, por arriba o por abajo, con ejemplos de lo que pasa en una casa española de verdad.",
     imagenPortada: {
-      src: levoitImg,
-      alt: "Humidificador Levoit Dual 200S funcionando en un dormitorio",
-      credito: "Imagen: Levoit / VeSync",
+      src: "https://images.unsplash.com/photo-1757967350347-e796a659d30c?auto=format&fit=crop&w=1200&q=80",
+      alt: "Condensación en el cristal de una ventana por exceso de humedad en casa",
+      credito: "Foto: Unsplash",
     },
     contenido: [
       "Hay una cosa que casi nadie revisa en su casa y que probablemente debería: la humedad del aire. Todo el mundo tiene un termostato, todo el mundo sabe si en el salón hace frío o calor, pero pregúntale a alguien cuánta humedad relativa hay en su dormitorio y lo más normal es que se quede en blanco. Y sin embargo, ese dato explica por qué te despiertas con la garganta como papel de lija en febrero, por qué la piel se te agrieta en los nudillos en cuanto llega el frío, o por qué el bebé tose por las noches sin tener ningún resfriado de por medio.",
@@ -71,9 +71,9 @@ export const blogPosts: BlogPost[] = [
       undefined,
       undefined,
       {
-        src: xiaomiImg,
-        alt: "Humidificador inteligente Xiaomi con control por aplicación móvil",
-        credito: "Imagen: Xiaomi",
+        src: "https://images.unsplash.com/photo-1770219792143-1586d82a7101?auto=format&fit=crop&w=1200&q=80",
+        alt: "Higrómetro midiendo el porcentaje de humedad relativa del ambiente",
+        credito: "Foto: Unsplash",
       },
       undefined,
       undefined,
@@ -105,9 +105,9 @@ export const blogPosts: BlogPost[] = [
     resumen:
       "Las dos tecnologías más vendidas resuelven el mismo problema de formas muy distintas. Aquí la diferencia real, no la de la ficha de marketing, con ejemplos de cuándo conviene cada una.",
     imagenPortada: {
-      src: philipsImg,
-      alt: "Humidificador evaporativo Philips HU2716 NanoCloud sobre una mesa de salón",
-      credito: "Imagen: Philips / Versuni",
+      src: "https://images.unsplash.com/photo-1501297875943-27f3803b4956?auto=format&fit=crop&w=1200&q=80",
+      alt: "Macrofotografía de gotas de agua, ilustrando la diferencia entre vapor y evaporación",
+      credito: "Foto: Unsplash",
     },
     contenido: [
       "Si hay una pregunta que se repite semana tras semana en los comentarios y en los correos que nos llegan, es esta: ¿evaporativo o ultrasónico? Y la respuesta corta —\"depende\"— se queda corta de verdad, porque no es solo una cuestión de presupuesto, es una cuestión de cómo funciona cada aparato por dentro y qué consecuencias tiene eso en tu salón o en tu dormitorio durante los próximos tres años, no solo el primer mes de uso.",
@@ -173,9 +173,9 @@ export const blogPosts: BlogPost[] = [
     resumen:
       "Es un caso real y documentado de neumonitis por hipersensibilidad. No es alarmismo: con una limpieza regular y unos hábitos básicos, el riesgo es prácticamente nulo.",
     imagenPortada: {
-      src: rowentaImg,
-      alt: "Humidificador Rowenta con tratamiento antibacteriano del agua",
-      credito: "Imagen: Rowenta / Groupe SEB",
+      src: "https://images.unsplash.com/photo-1550963295-019d8a8a61c5?auto=format&fit=crop&w=1200&q=80",
+      alt: "Limpieza con spray y bayeta, hábito clave para evitar la fiebre del humidificador",
+      credito: "Foto: Unsplash",
     },
     contenido: [
       "Cuando empezamos a escribir sobre humidificadores, una de las primeras cosas que nos preguntó un lector fue si era verdad lo que había leído por ahí sobre la \"fiebre del humidificador\". Sonaba a leyenda urbana, del tipo de cosas que circulan exageradas por foros, pero no lo es: es un cuadro clínico real, documentado en literatura médica desde hace décadas, con nombre técnico (neumonitis por hipersensibilidad asociada a humidificadores) y con una causa perfectamente identificada. Y lo mejor de todo es que se previene con una limpieza de cinco minutos un par de veces por semana, así que no hay razón para asustarse, solo para tomárselo en serio.",
