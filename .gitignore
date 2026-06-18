@@ -16,6 +16,9 @@ dist-ssr
 .nitro
 *.local
 
+# Netlify auto-generated (contains Windows absolute paths)
+.netlify/
+
 # Wrangler / Cloudflare
 .wrangler/
 .dev.vars
