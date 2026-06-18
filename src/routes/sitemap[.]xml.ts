@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { productos } from "@/data/products";
 
-const BASE_URL = "";
+const BASE_URL = "https://humisalud.com";
 
 interface SitemapEntry { path: string; changefreq?: "weekly" | "monthly"; priority?: string }
 
