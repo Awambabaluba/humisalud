@@ -38,6 +38,16 @@ function BlogIndex() {
             params={{ slug: post.slug }}
             className="block rounded-2xl border border-border bg-card p-6 shadow-soft transition-transform hover:scale-[1.01]"
           >
+            {post.imagenPortada && (
+              <div className="-mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden rounded-t-2xl bg-secondary/40">
+                <img
+                  src={post.imagenPortada.src}
+                  alt={post.imagenPortada.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            )}
             <p className="text-xs uppercase tracking-wider text-primary font-medium">{post.categoria}</p>
             <h2 className="mt-2 font-display text-2xl font-semibold tracking-tight">{post.titulo}</h2>
             <p className="mt-2 text-base text-muted-foreground leading-relaxed">{post.resumen}</p>

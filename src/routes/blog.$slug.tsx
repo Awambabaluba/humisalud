@@ -1,5 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { AffiliateButton } from "@/components/site/AffiliateButton";
+import { AffiliateDisclosure } from "@/components/site/AffiliateDisclosure";
 import { getBlogPost, blogPostsOrdenados } from "@/data/blog";
 import { CalendarDays } from "lucide-react";
 
@@ -60,9 +62,48 @@ function BlogPostPage() {
         </p>
       </header>
 
+      {post.imagenPortada && (
+        <figure className="mt-8 not-prose">
+          <img
+            src={post.imagenPortada.src}
+            alt={post.imagenPortada.alt}
+            loading="eager"
+            className="w-full aspect-[16/9] object-cover rounded-2xl"
+          />
+          {post.imagenPortada.credito && (
+            <figcaption className="mt-2 text-xs text-muted-foreground">{post.imagenPortada.credito}</figcaption>
+          )}
+        </figure>
+      )}
+
       <div className="mt-8 space-y-5 text-base leading-relaxed text-foreground/90">
-        {post.contenido.map((parrafo, i) => <p key={i}>{parrafo}</p>)}
+        {post.contenido.map((parrafo, i) => {
+          const imagen = post.imagenes?.[i];
+          return (
+            <div key={i}>
+              <p>{parrafo}</p>
+              {imagen && (
+                <figure className="mt-5 not-prose">
+                  <img src={imagen.src} alt={imagen.alt} loading="lazy" className="w-full rounded-2xl" />
+                  {imagen.credito && <figcaption className="mt-2 text-xs text-muted-foreground">{imagen.credito}</figcaption>}
+                </figure>
+              )}
+            </div>
+          );
+        })}
       </div>
+
+      {post.afiliados && post.afiliados.length > 0 && (
+        <section className="mt-10 not-prose rounded-2xl border border-border bg-card p-6">
+          <h2 className="font-display text-lg font-semibold">¿Te interesa este modelo?</h2>
+          <div className="mt-4 flex flex-wrap gap-3">
+            {post.afiliados.map((a) => (
+              <AffiliateButton key={a.comercio} href={a.href} comercio={a.comercio} posicion="blog-articulo" />
+            ))}
+          </div>
+          <div className="mt-4"><AffiliateDisclosure /></div>
+        </section>
+      )}
 
       {otros.length > 0 && (
         <section className="mt-14 not-prose">

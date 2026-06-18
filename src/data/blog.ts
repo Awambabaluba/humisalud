@@ -1,3 +1,14 @@
+export interface BlogPostImagen {
+  src: string;
+  alt: string;
+  credito?: string;
+}
+
+export interface BlogPostAfiliado {
+  comercio: string;
+  href: string;
+}
+
 export interface BlogPost {
   slug: string;
   titulo: string;
@@ -5,6 +16,11 @@ export interface BlogPost {
   resumen: string;
   categoria: string;
   contenido: string[];
+  /** false mientras es un borrador pendiente de revisión humana — no aparece en /blog, sitemap ni rutas públicas */
+  publicado?: boolean;
+  imagenPortada?: BlogPostImagen;
+  imagenes?: BlogPostImagen[];
+  afiliados?: BlogPostAfiliado[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -53,9 +69,12 @@ export const blogPosts: BlogPost[] = [
 ];
 
 export function getBlogPost(slug: string) {
-  return blogPosts.find((p) => p.slug === slug);
+  const post = blogPosts.find((p) => p.slug === slug);
+  return post && post.publicado !== false ? post : undefined;
 }
 
-export const blogPostsOrdenados = [...blogPosts].sort(
+export const blogPostsPublicados = blogPosts.filter((p) => p.publicado !== false);
+
+export const blogPostsOrdenados = [...blogPostsPublicados].sort(
   (a, b) => new Date(b.fecha).getTime() - new Date(a.fecha).getTime(),
 );
