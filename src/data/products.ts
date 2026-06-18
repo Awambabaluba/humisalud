@@ -130,7 +130,7 @@ export const productos: Producto[] = [
     },
     resumen:
       "Difusor ultrasónico de entrada que cumple para habitaciones pequeñas y para perfumar el aire de vez en cuando. No le pidas hacer de humidificador en un salón ni tenerlo encendido toda la noche en el cuarto del bebé.",
-    enlaceAfiliado: "https://www.amazon.es/s?k=Cecotec+Pure+Aroma+300+Yang",
+    enlaceAfiliado: "https://www.amazon.es/Cecotec-Humidificador-Temporizador-aromaterapia-Ultrasilencioso/dp/B07MSJDB8M",
     comercio: "Amazon",
     fechaActualizacion: HOY,
     fuentes: ["Cecotec.es (17/06/2026)", "PcComponentes (17/06/2026)", "Amazon.es (17/06/2026)"],
@@ -185,7 +185,7 @@ export const productos: Producto[] = [
     },
     resumen:
       "Un conectado de gama media que en las reseñas verificadas siempre sale bien parado: silencioso, con capacidad suficiente y muy fácil de limpiar. Es la apuesta más segura para un dormitorio o la habitación del bebé.",
-    enlaceAfiliado: "https://www.amazon.es/s?k=Levoit+Dual+200S",
+    enlaceAfiliado: "https://www.amazon.es/Levoit-Humidificador-Dual-200S-Smart/dp/B0CT91XZLG",
     comercio: "Amazon",
     fechaActualizacion: HOY,
     fuentes: ["Estudio interno HumiSalud (jun 2026)", "levoit.com ficha Dual 200S"],
@@ -241,7 +241,7 @@ export const productos: Producto[] = [
     },
     resumen:
       "Si lo tuyo es la higiene del aire y el precio te da igual, este es el que te recomendaríamos. Eso sí, las cifras antibacterianas que aparecen en su caja son del fabricante, y así te las contamos: como datos de marca, no como comprobación independiente.",
-    enlaceAfiliado: "https://www.amazon.es/s?k=Philips+HU2716+NanoCloud",
+    enlaceAfiliado: "https://www.amazon.es/Philips-Serie-2000-HU2716-Humidificador/dp/B08LW4K16N",
     comercio: "Amazon",
     fechaActualizacion: HOY,
     fuentes: ["Philips.es (17/06/2026)", "idealo.es histórico"],
@@ -289,7 +289,7 @@ export const productos: Producto[] = [
     },
     resumen:
       "Buena opción para un salón con la calefacción a tope todo el invierno. El 99,9% de eliminación bacteriana lo dice Rowenta, no nosotros.",
-    enlaceAfiliado: "https://www.amazon.es/s?k=Rowenta+Aqua+Perfect+humidificador",
+    enlaceAfiliado: "https://www.amazon.es/Rowenta-HU5220-HU5220F0-Humidificador/dp/B074QTR8DS",
     comercio: "Amazon",
     fechaActualizacion: HOY,
     fuentes: ["Rowenta.es (17/06/2026)"],
@@ -337,7 +337,7 @@ export const productos: Producto[] = [
     },
     resumen:
       "Un conectado con buena relación calidad-precio, sobre todo si ya tienes cacharros Xiaomi por casa. La eficacia de la luz UV-C es un dato de fabricante y, sobre todo, depende de que limpies el depósito como toca.",
-    enlaceAfiliado: "https://www.amazon.es/s?k=Xiaomi+Smart+Humidifier+2",
+    enlaceAfiliado: "https://www.amazon.es/Xiaomi-Smart-Humidifier-Capacidad-autom%C3%A1tico/dp/B0BC9SDP8Z",
     comercio: "Amazon",
     fechaActualizacion: HOY,
     fuentes: ["Mi.com (17/06/2026)"],
@@ -381,7 +381,7 @@ export const productos: Producto[] = [
     },
     resumen:
       "Para espacios grandes en los que la mayoría de modelos se quedan cortos. Antes de publicarlo definitivamente nos falta confirmar el PVP actual.",
-    enlaceAfiliado: "https://www.amazon.es/s?k=Winix+L500+humidifier",
+    enlaceAfiliado: "https://www.amazon.es/Winix-Humidificador-Ultras%C3%B3nico-silencioso-humidificaci%C3%B3n/dp/B08PBZ9KH3",
     comercio: "Amazon",
     fechaActualizacion: HOY,
     fuentes: ["Estudio HumiSalud jun 2026"],
