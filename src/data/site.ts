@@ -4,7 +4,7 @@ export const SITE = {
   description:
     "Comparativas, calculadora por m² y análisis de cada modelo. Te decimos qué humidificador comprar y por qué, sin fingir que los hemos probado en casa.",
   url: "",
-  email: "hola@humisalud.example",
+  email: "juandavidmarquesq@gmail.com",
 } as const;
 
 export const NAV = [
