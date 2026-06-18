@@ -21,6 +21,7 @@ import { Route as EnRouteImport } from './routes/en'
 import { Route as CosteDeUsoRouteImport } from './routes/coste-de-uso'
 import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as CalculadoraRouteImport } from './routes/calculadora'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AvisoAfiliacionRouteImport } from './routes/aviso-afiliacion'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EnIndexRouteImport } from './routes/en.index'
@@ -28,6 +29,7 @@ import { Route as ProductoSlugRouteImport } from './routes/producto.$slug'
 import { Route as EnRunningCostRouteImport } from './routes/en.running-cost'
 import { Route as EnCalculatorRouteImport } from './routes/en.calculator'
 import { Route as CategoriaSlugRouteImport } from './routes/categoria.$slug'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const TerminosRoute = TerminosRouteImport.update({
   id: '/terminos',
@@ -89,6 +91,11 @@ const CalculadoraRoute = CalculadoraRouteImport.update({
   path: '/calculadora',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AvisoAfiliacionRoute = AvisoAfiliacionRouteImport.update({
   id: '/aviso-afiliacion',
   path: '/aviso-afiliacion',
@@ -124,10 +131,16 @@ const CategoriaSlugRoute = CategoriaSlugRouteImport.update({
   path: '/categoria/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aviso-afiliacion': typeof AvisoAfiliacionRoute
+  '/blog': typeof BlogRouteWithChildren
   '/calculadora': typeof CalculadoraRoute
   '/cookies': typeof CookiesRoute
   '/coste-de-uso': typeof CosteDeUsoRoute
@@ -140,6 +153,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
   '/terminos': typeof TerminosRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
   '/en/calculator': typeof EnCalculatorRoute
   '/en/running-cost': typeof EnRunningCostRoute
@@ -149,6 +163,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aviso-afiliacion': typeof AvisoAfiliacionRoute
+  '/blog': typeof BlogRouteWithChildren
   '/calculadora': typeof CalculadoraRoute
   '/cookies': typeof CookiesRoute
   '/coste-de-uso': typeof CosteDeUsoRoute
@@ -160,6 +175,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
   '/terminos': typeof TerminosRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
   '/en/calculator': typeof EnCalculatorRoute
   '/en/running-cost': typeof EnRunningCostRoute
@@ -170,6 +186,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aviso-afiliacion': typeof AvisoAfiliacionRoute
+  '/blog': typeof BlogRouteWithChildren
   '/calculadora': typeof CalculadoraRoute
   '/cookies': typeof CookiesRoute
   '/coste-de-uso': typeof CosteDeUsoRoute
@@ -182,6 +199,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
   '/terminos': typeof TerminosRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
   '/en/calculator': typeof EnCalculatorRoute
   '/en/running-cost': typeof EnRunningCostRoute
@@ -193,6 +211,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/aviso-afiliacion'
+    | '/blog'
     | '/calculadora'
     | '/cookies'
     | '/coste-de-uso'
@@ -205,6 +224,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/sobre-nosotros'
     | '/terminos'
+    | '/blog/$slug'
     | '/categoria/$slug'
     | '/en/calculator'
     | '/en/running-cost'
@@ -214,6 +234,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/aviso-afiliacion'
+    | '/blog'
     | '/calculadora'
     | '/cookies'
     | '/coste-de-uso'
@@ -225,6 +246,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/sobre-nosotros'
     | '/terminos'
+    | '/blog/$slug'
     | '/categoria/$slug'
     | '/en/calculator'
     | '/en/running-cost'
@@ -234,6 +256,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/aviso-afiliacion'
+    | '/blog'
     | '/calculadora'
     | '/cookies'
     | '/coste-de-uso'
@@ -246,6 +269,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/sobre-nosotros'
     | '/terminos'
+    | '/blog/$slug'
     | '/categoria/$slug'
     | '/en/calculator'
     | '/en/running-cost'
@@ -256,6 +280,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AvisoAfiliacionRoute: typeof AvisoAfiliacionRoute
+  BlogRoute: typeof BlogRouteWithChildren
   CalculadoraRoute: typeof CalculadoraRoute
   CookiesRoute: typeof CookiesRoute
   CosteDeUsoRoute: typeof CosteDeUsoRoute
@@ -358,6 +383,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CalculadoraRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/aviso-afiliacion': {
       id: '/aviso-afiliacion'
       path: '/aviso-afiliacion'
@@ -407,8 +439,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CategoriaSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
+
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface EnRouteChildren {
   EnCalculatorRoute: typeof EnCalculatorRoute
@@ -427,6 +476,7 @@ const EnRouteWithChildren = EnRoute._addFileChildren(EnRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AvisoAfiliacionRoute: AvisoAfiliacionRoute,
+  BlogRoute: BlogRouteWithChildren,
   CalculadoraRoute: CalculadoraRoute,
   CookiesRoute: CookiesRoute,
   CosteDeUsoRoute: CosteDeUsoRoute,

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { productos } from "@/data/products";
+import { blogPosts } from "@/data/blog";
 
 const BASE_URL = "https://humisalud.com";
 
@@ -17,6 +18,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/calculadora", changefreq: "monthly", priority: "0.8" },
           { path: "/coste-de-uso", changefreq: "monthly", priority: "0.7" },
           { path: "/guia-de-compra", changefreq: "monthly", priority: "0.8" },
+          { path: "/blog", changefreq: "weekly", priority: "0.8" },
           { path: "/metodologia", changefreq: "monthly", priority: "0.6" },
           { path: "/sobre-nosotros", changefreq: "monthly", priority: "0.4" },
           { path: "/en", changefreq: "weekly", priority: "0.9" },
@@ -30,6 +32,7 @@ export const Route = createFileRoute("/sitemap.xml")({
             path: `/categoria/${s}`, changefreq: "monthly" as const, priority: "0.7",
           })),
           ...productos.map((p) => ({ path: `/producto/${p.slug}`, changefreq: "monthly" as const, priority: "0.7" })),
+          ...blogPosts.map((p) => ({ path: `/blog/${p.slug}`, changefreq: "monthly" as const, priority: "0.6" })),
         ];
 
         const urls = entries.map((e) => [
