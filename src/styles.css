@@ -135,7 +135,7 @@
 @layer base {
   * { border-color: var(--color-border); }
   html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-  html, body { background-color: transparent; }
+  html, body { background-color: transparent; overflow-x: hidden; width: 100%; }
   body {
     color: var(--color-foreground);
     font-family: var(--font-sans);
