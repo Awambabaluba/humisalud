@@ -11,7 +11,7 @@ const LEAVES = [
 ];
 
 export function IntroOverlay() {
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(true);
   const [closing, setClosing] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const locale = useLocale();
@@ -21,7 +21,6 @@ export function IntroOverlay() {
     if (typeof window === "undefined") return;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     setReducedMotion(reduced);
-    setMounted(true);
 
     const t1 = window.setTimeout(() => setClosing(true), reduced ? 2600 : 7500);
     const t2 = window.setTimeout(() => setMounted(false), reduced ? 3100 : 8200);
