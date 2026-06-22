@@ -239,7 +239,7 @@ export const blogPosts: BlogPost[] = [
     titulo: "Levoit presenta el Superior Studio: un evaporativo con filtro que dura hasta dos años",
     fecha: "2026-06-20",
     categoria: "Novedades",
-    publicado: false,
+    publicado: true,
     resumen:
       "Levoit anuncia el Superior Studio, un humidificador evaporativo con filtro lavable de hasta dos años de vida y solo 19 dB en su nivel más bajo. Aún no está en Amazon España.",
     imagenPortada: {
