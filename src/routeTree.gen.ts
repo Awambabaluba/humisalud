@@ -14,6 +14,7 @@ import { Route as SobreNosotrosRouteImport } from './routes/sobre-nosotros'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SelectorRouteImport } from './routes/selector'
 import { Route as PrivacidadRouteImport } from './routes/privacidad'
+import { Route as OfertasRouteImport } from './routes/ofertas'
 import { Route as MetodologiaRouteImport } from './routes/metodologia'
 import { Route as MejoresHumidificadoresRouteImport } from './routes/mejores-humidificadores'
 import { Route as GuiaDeCompraRouteImport } from './routes/guia-de-compra'
@@ -55,6 +56,11 @@ const SelectorRoute = SelectorRouteImport.update({
 const PrivacidadRoute = PrivacidadRouteImport.update({
   id: '/privacidad',
   path: '/privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OfertasRoute = OfertasRouteImport.update({
+  id: '/ofertas',
+  path: '/ofertas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MetodologiaRoute = MetodologiaRouteImport.update({
@@ -154,6 +160,7 @@ export interface FileRoutesByFullPath {
   '/guia-de-compra': typeof GuiaDeCompraRoute
   '/mejores-humidificadores': typeof MejoresHumidificadoresRoute
   '/metodologia': typeof MetodologiaRoute
+  '/ofertas': typeof OfertasRoute
   '/privacidad': typeof PrivacidadRoute
   '/selector': typeof SelectorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -176,6 +183,7 @@ export interface FileRoutesByTo {
   '/guia-de-compra': typeof GuiaDeCompraRoute
   '/mejores-humidificadores': typeof MejoresHumidificadoresRoute
   '/metodologia': typeof MetodologiaRoute
+  '/ofertas': typeof OfertasRoute
   '/privacidad': typeof PrivacidadRoute
   '/selector': typeof SelectorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -201,6 +209,7 @@ export interface FileRoutesById {
   '/guia-de-compra': typeof GuiaDeCompraRoute
   '/mejores-humidificadores': typeof MejoresHumidificadoresRoute
   '/metodologia': typeof MetodologiaRoute
+  '/ofertas': typeof OfertasRoute
   '/privacidad': typeof PrivacidadRoute
   '/selector': typeof SelectorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -227,6 +236,7 @@ export interface FileRouteTypes {
     | '/guia-de-compra'
     | '/mejores-humidificadores'
     | '/metodologia'
+    | '/ofertas'
     | '/privacidad'
     | '/selector'
     | '/sitemap.xml'
@@ -249,6 +259,7 @@ export interface FileRouteTypes {
     | '/guia-de-compra'
     | '/mejores-humidificadores'
     | '/metodologia'
+    | '/ofertas'
     | '/privacidad'
     | '/selector'
     | '/sitemap.xml'
@@ -273,6 +284,7 @@ export interface FileRouteTypes {
     | '/guia-de-compra'
     | '/mejores-humidificadores'
     | '/metodologia'
+    | '/ofertas'
     | '/privacidad'
     | '/selector'
     | '/sitemap.xml'
@@ -298,6 +310,7 @@ export interface RootRouteChildren {
   GuiaDeCompraRoute: typeof GuiaDeCompraRoute
   MejoresHumidificadoresRoute: typeof MejoresHumidificadoresRoute
   MetodologiaRoute: typeof MetodologiaRoute
+  OfertasRoute: typeof OfertasRoute
   PrivacidadRoute: typeof PrivacidadRoute
   SelectorRoute: typeof SelectorRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -342,6 +355,13 @@ declare module '@tanstack/react-router' {
       path: '/privacidad'
       fullPath: '/privacidad'
       preLoaderRoute: typeof PrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ofertas': {
+      id: '/ofertas'
+      path: '/ofertas'
+      fullPath: '/ofertas'
+      preLoaderRoute: typeof OfertasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/metodologia': {
@@ -503,6 +523,7 @@ const rootRouteChildren: RootRouteChildren = {
   GuiaDeCompraRoute: GuiaDeCompraRoute,
   MejoresHumidificadoresRoute: MejoresHumidificadoresRoute,
   MetodologiaRoute: MetodologiaRoute,
+  OfertasRoute: OfertasRoute,
   PrivacidadRoute: PrivacidadRoute,
   SelectorRoute: SelectorRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
