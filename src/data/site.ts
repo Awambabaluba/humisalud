@@ -14,6 +14,7 @@ export const NAV = [
   { to: "/calculadora", label: "Calculadora" },
   { to: "/coste-de-uso", label: "Coste de uso" },
   { to: "/guia-de-compra", label: "Guía" },
+  { to: "/ofertas", label: "Ofertas" },
   { to: "/blog", label: "Blog" },
   { to: "/metodologia", label: "Cómo trabajamos" },
 ] as const;

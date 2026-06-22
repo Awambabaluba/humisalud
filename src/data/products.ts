@@ -54,6 +54,9 @@ export interface Producto {
   imagen?: string; // dejar vacío hasta tener imagen oficial
   precioOrientativo: string; // string para reflejar rangos / multi-tienda
   precioMin?: number;
+  /** Precio de referencia (el más alto observado). Si precioMin < precioReferencia, se considera oferta activa. Actualizado por la tarea diaria de revisión de precios. */
+  precioReferencia?: number;
+  precioComprobadoEn?: string;
   rango: RangoPrecio;
   tecnologia: Tecnologia;
   capacidadL: number | "DATO_PENDIENTE";
@@ -390,6 +393,25 @@ export const productos: Producto[] = [
 ];
 
 export const getProducto = (slug: string) => productos.find((p) => p.slug === slug);
+
+export interface Oferta {
+  producto: Producto;
+  descuentoPercent: number;
+}
+
+/** Productos cuyo precioMin actual es menor que su precioReferencia — ofertas activas detectadas por la revisión diaria. */
+export const getOfertas = (): Oferta[] => {
+  return productos
+    .filter((p) => p.precioReferencia && p.precioMin)
+    .map((p) => {
+      const actual = p.precioMin!;
+      const referencia = p.precioReferencia!;
+      const descuentoPercent = referencia > 0 ? Math.round(((referencia - actual) / referencia) * 100) : 0;
+      return { producto: p, descuentoPercent };
+    })
+    .filter((o) => o.descuentoPercent >= 5)
+    .sort((a, b) => b.descuentoPercent - a.descuentoPercent);
+};
 
 export const mejoresPorCategoria = {
   general: "levoit-dual-200s",

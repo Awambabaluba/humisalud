@@ -10,9 +10,10 @@ interface Props {
   producto: Producto;
   badge?: string;
   highlight?: boolean;
+  descuentoPercent?: number;
 }
 
-export function ProductCard({ producto: p, badge, highlight }: Props) {
+export function ProductCard({ producto: p, badge, highlight, descuentoPercent }: Props) {
   const locale = useLocale();
   const en = locale === "en";
   const L = {
@@ -40,6 +41,11 @@ export function ProductCard({ producto: p, badge, highlight }: Props) {
       {badge && (
         <span className="absolute -top-3 left-5 chip bg-primary text-primary-foreground border-primary/50">
           {badge}
+        </span>
+      )}
+      {descuentoPercent !== undefined && descuentoPercent > 0 && (
+        <span className="absolute -top-3 right-5 chip bg-affiliate text-affiliate-foreground border-affiliate/50 font-semibold">
+          -{descuentoPercent}%
         </span>
       )}
       <Link
