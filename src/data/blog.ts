@@ -347,6 +347,45 @@ export const blogPosts: BlogPost[] = [
       undefined,
     ],
   },
+  {
+    slug: "humidificador-para-bebe-vapor-frio-caliente-donde-poner",
+    titulo: "Humidificador para bebé: vapor frío o caliente, dónde ponerlo y cuándo no usarlo",
+    fecha: "2026-07-01",
+    categoria: "Guías",
+    publicado: false,
+    resumen:
+      "Guía práctica para padres: vapor frío siempre (el caliente quema), capacidad mínima, dónde colocarlo respecto a la cuna y cuándo llamar al pediatra.",
+    imagenPortada: {
+      src: "https://images.unsplash.com/photo-1749703827003-8e5046941847?auto=format&fit=crop&w=1200&q=80",
+      alt: "Cuna de madera en habitación de bebé tranquila y bien iluminada",
+      credito: "Foto: Unsplash",
+    },
+    contenido: [
+      "El primer resfriado del bebé llega antes de lo que uno esperaría, y con él la pregunta de si vale la pena comprar un humidificador para la habitación. La respuesta es que sí ayuda en situaciones concretas, pero hay algunas cosas que conviene tener claras antes de encenderlo.",
+      "La más importante, sin excepción: siempre vapor frío. Los humidificadores de vapor caliente hierven el agua antes de expulsarla, y la salida del aparato puede alcanzar temperaturas que queman si el bebé —o un hermano mayor que entra curioso— se acerca demasiado. Los de vapor frío, sean ultrasónicos o evaporativos, consiguen la misma humedad en el ambiente sin ese riesgo. No hay debate en este punto: en la habitación de un bebé, vapor caliente nunca.",
+      "Para una habitación estándar de bebé, entre 10 y 15 metros cuadrados, lo mínimo razonable es un depósito de dos litros y cobertura declarada de unos 20 m². Con menos capacidad, estarás rellenando el depósito varias veces en una sola noche, que es justo cuando menos apetece levantarse. El EssenCAT Humidificador para Bebés es una opción compacta que incluye aceites esenciales de eucalipto, lavanda y naranja; el BÉABA Humidificador de vapor frío lleva años siendo referencia en farmacias especializadas; y el Suavinex Humidificador ultrasónico suma un funcionamiento especialmente silencioso, pensado exactamente para no interrumpir el sueño.",
+      "La colocación importa tanto como el modelo elegido. Lo correcto es una superficie elevada, a unos 50-70 centímetros del suelo, con al menos metro y medio de distancia a la cuna. El vapor necesita espacio para dispersarse antes de llegar al nivel del bebé: si el aparato está demasiado cerca, la ropa de cama y las superficies se humedecen en exceso, lo que a la larga favorece los ácaros, exactamente lo contrario de lo que se busca. Nunca en el suelo y nunca pegado a la cabecera.",
+      "Cuándo no hace falta: si el bebé está sano, duerme bien y el higrómetro de la habitación marca entre 45% y 60% de humedad, el humidificador es prescindible. Se vuelve útil cuando la humedad baja de 40% —algo frecuente con la calefacción en marcha—, cuando hay mocos secos o costras nasales que dificultan respirar, cuando la piel está muy irritada, o con tos seca nocturna sin fiebre que muchas veces no es otra cosa que mucosa resentida por el aire seco de los radiadores.",
+      "Una advertencia clara para cerrar: si el bebé tiene fiebre junto con síntomas respiratorios, si la tos persiste más de dos noches con el humidificador en marcha, o si hay signos visibles de esfuerzo respiratorio —las costillas marcadas al respirar, labios azulados, respiración muy rápida—, eso no lo resuelve ningún aparato. Es el momento de llamar al pediatra sin esperar, no de ajustar la posición del humidificador.",
+    ],
+    imagenes: [
+      undefined,
+      undefined,
+      {
+        src: "https://www.beaba.com/dw/image/v2/BFPR_PRD/on/demandware.static/-/Sites-master-beaba/default/dwc156f0b9/images/packshot-hi-res/920416_product_face_1.jpg",
+        alt: "BÉABA Zen Air, humidificador de vapor frío para bebés",
+        credito: "Imagen: BÉABA",
+      },
+      undefined,
+      undefined,
+      undefined,
+    ],
+    afiliados: [
+      { comercio: "Amazon", href: "https://www.amazon.es/dp/B0BZ8VVJMV?tag=david0e98-21" },
+      { comercio: "Amazon", href: "https://www.amazon.es/dp/B07PJZQZ3Q?tag=david0e98-21" },
+      { comercio: "Amazon", href: "https://www.amazon.es/dp/B07TTJ9T91?tag=david0e98-21" },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string) {
