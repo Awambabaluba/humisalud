@@ -78,8 +78,13 @@ export function AffiliateButton({
   );
 }
 
+// Tag de afiliado de Amazon Associates. Fijo en código como valor por defecto
+// para no depender de una variable de entorno de build (que si falta, deja todos
+// los enlaces sin tag y hace perder comisiones). Se puede sobrescribir con VITE_AMAZON_TAG.
+const AMAZON_TAG = (import.meta.env.VITE_AMAZON_TAG as string | undefined) || "david0e98-21";
+
 function withAmazonTag(url: string): string {
-  const tag = import.meta.env.VITE_AMAZON_TAG as string | undefined;
+  const tag = AMAZON_TAG;
   if (!tag) return url;
   try {
     const u = new URL(url);
