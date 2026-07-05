@@ -349,12 +349,12 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "levoit-neoclassic-humidificador-lavavajillas",
-    titulo: "Levoit presenta el NeoClassic: humidificadores con piezas aptas para el lavavajillas",
+    titulo: "Levoit NeoClassic: humidificadores con piezas aptas para el lavavajillas",
     fecha: "2026-07-06",
     categoria: "Novedades",
     publicado: false,
     resumen:
-      "Levoit presenta el NeoClassic: humidificadores con piezas aptas para el lavavajillas y protección antimicrobiana. Aún sin fecha para España.",
+      "Levoit presenta el NeoClassic, una gama de humidificadores con piezas aptas para el lavavajillas y protección antimicrobiana. Aún sin fecha en España.",
     imagenPortada: {
       src: "https://levoit.com/cdn/shop/files/neoclassic-650-humidifier-3705360.jpg?v=1778850794",
       alt: "Levoit NeoClassic 650, nuevo humidificador con piezas aptas para lavavajillas",
