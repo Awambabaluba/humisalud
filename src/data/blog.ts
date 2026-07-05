@@ -347,6 +347,65 @@ export const blogPosts: BlogPost[] = [
       undefined,
     ],
   },
+  {
+    slug: "levoit-neoclassic-humidificador-lavavajillas",
+    titulo: "Levoit NeoClassic: humidificadores con piezas aptas para el lavavajillas",
+    fecha: "2026-07-06",
+    categoria: "Novedades",
+    publicado: false,
+    resumen:
+      "Levoit presenta el NeoClassic, una gama de humidificadores con piezas aptas para el lavavajillas y protección antimicrobiana. Aún sin fecha en España.",
+    imagenPortada: {
+      src: "https://levoit.com/cdn/shop/files/neoclassic-650-humidifier-3705360.jpg?v=1778850794",
+      alt: "Levoit NeoClassic 650, nuevo humidificador con piezas aptas para lavavajillas",
+      credito: "Imagen: Levoit",
+    },
+    contenido: [
+      "Si hay una queja que se repite en cualquier reseña de humidificador, en cualquier foro, en cualquier comentario debajo de nuestros propios artículos, es esta: funciona genial, pero limpiarlo es un incordio. Boquillas estrechas por las que apenas entra la mano, depósitos que hay que fregar a ciegas, bandejas que casi piden un destornillador para llegar al fondo. Levoit, la marca que ya conocemos bien en este blog por el Dual 200S, ha decidido atacar ese problema de frente con su nueva gama NeoClassic, presentada el 3 de junio según la nota de prensa oficial de la compañía.",
+      "La gama consta de cuatro modelos: NeoClassic 450 y 450S, con depósito de 4,2 litros, 270 ml/h de caudal, cobertura de hasta 40 m² y 42 horas de autonomía; y NeoClassic 650 y 650S, con 6,2 litros, 320 ml/h, hasta 50 m² y 62 horas. Los precios de salida van de 49,99 a 79,99 dólares según el modelo, con las versiones \"S\" añadiendo conectividad a través de la app VeSync que Levoit ya usa en el resto de su catálogo.",
+      "Lo que de verdad diferencia a esta gama, según la marca, no es la potencia ni la autonomía: es el diseño de la bandeja. Un sistema de \"giro y extracción\" deja todo el recorrido del agua accesible, y todas las piezas que tocan el agua —bandeja, protector de niebla, depósito, tapa y filtro— son aptas para el lavavajillas. Hasta donde hemos visto, es de las pocas veces que un fabricante grande convierte esto en el argumento central de un lanzamiento, en vez de dejarlo como una línea más de la ficha técnica.",
+      "No es un capricho de diseño. En nuestro artículo sobre la fiebre del humidificador ya explicamos que buena parte del riesgo real de estos aparatos viene precisamente de ahí: del agua estancada y del biofilm que se acumula en las paredes del depósito cuando la limpieza se pospone porque resulta incómoda. Si meter las piezas en el lavavajillas es de verdad tan sencillo como promete Levoit, es razonable esperar que la gente lo haga con más frecuencia que fregando a mano con un cepillo por una boca estrecha.",
+      "Los modelos 650 y 650S suman además un material antimicrobiano registrado por la EPA estadounidense en las superficies en contacto con el agua, que según el fabricante inhibe el crecimiento de moho durante 28 días. Es una protección adicional, no un sustituto de la limpieza regular —lo mismo que ya señalamos con la luz UV-C de otros modelos—, pero suma una capa más frente a un problema que sí está documentado en la literatura médica.",
+      "En cuanto al ruido, Levoit anuncia 21 dB en modo sueño para los modelos 450 y 26 dB para los 650, cifras que, si se confirman en uso real y no solo en laboratorio, están en la franja baja que buscamos siempre para un dormitorio. El modo automático mantiene una precisión de sensor de ±5%, en línea con lo que ya vimos en el Dual 200S que tenemos analizado en el blog.",
+      "Las versiones S incorporan la app VeSync con programación de horarios, seguimiento de humedad y un \"Modo Escena\" con ambientes preconfigurados, además de una función llamada SleepWake pensada para automatizar el encendido y apagado según la rutina de sueño. Charlie Park, vicepresidente de investigación y desarrollo de Levoit, lo resume así en la nota de prensa: \"NeoClassic es nuestra respuesta a la frustración de la limpieza, diseñada específicamente para un mantenimiento sin esfuerzo sin comprometer el rendimiento\".",
+      "Por ahora el NeoClassic solo está confirmado a la venta en Levoit.com y en Amazon de Estados Unidos. No lo hemos encontrado todavía en Amazon España ni en la tienda europea de la marca, así que si te interesa desde aquí tocará esperar o recurrir a la importación. Es el mismo patrón que vimos hace unas semanas con el Superior Studio, otro lanzamiento reciente de Levoit: la marca suele estrenar novedades primero en su mercado doméstico antes de traerlas a Europa.",
+      "Mientras se confirma si el NeoClassic llega a España y cuándo, si lo que buscas ya mismo es un humidificador de esta marca disponible hoy en Amazon España, el Levoit Dual 200S que tenemos analizado sigue siendo la opción real, aunque su forma de facilitar el mantenimiento sea distinta: pasa por el higrostato y el agua destilada, no por meter piezas en el lavavajillas.",
+      "Conviene esperar a reseñas de uso real antes de dar por buena, sin matices, la promesa de \"apto para lavavajillas\": el calor y los detergentes son más agresivos que un fregado a mano, y habrá que comprobar cómo aguantan las juntas de goma y las piezas de plástico más finas tras decenas de ciclos, algo que ni Levoit puede garantizar todavía porque el producto acaba de salir al mercado.",
+      "Lo interesante de este lanzamiento, más allá de si llega pronto o tarde a España, es la dirección que marca: que un fabricante grande convierta la facilidad de limpieza en el argumento de venta principal, en vez de en un apartado menor de la ficha técnica, es una buena noticia para cualquiera que use humidificador, sea de esta marca o de otra. Si de verdad se traduce en gente limpiando su aparato con más frecuencia porque ya no es un incordio, el beneficio real está en la salud del aire que respiras en casa.",
+    ],
+    imagenes: [
+      undefined,
+      {
+        src: "https://levoit.com/cdn/shop/files/levoit-neo-450-humidifier-42l-top-fill-cool-mist-42h-runtime-ultra-quiet-21db-4035150.jpg",
+        alt: "Levoit NeoClassic 450, con depósito de 4,2 litros y diseño top-fill",
+        credito: "Imagen: Levoit",
+      },
+      undefined,
+      undefined,
+      {
+        src: "https://levoit.com/cdn/shop/files/neoclassic-650-humidifier-5282726.jpg?v=1778850795",
+        alt: "Bandeja desmontable del Levoit NeoClassic, apta para lavavajillas",
+        credito: "Imagen: Levoit",
+      },
+      undefined,
+      {
+        src: "https://levoit.com/cdn/shop/files/levoit-neo-450-humidifier-42l-top-fill-cool-mist-42h-runtime-ultra-quiet-21db-6544693.jpg",
+        alt: "Detalle del panel y luz nocturna del Levoit NeoClassic 450",
+        credito: "Imagen: Levoit",
+      },
+      undefined,
+      {
+        src: levoitImg,
+        alt: "Levoit Dual 200S, modelo de la misma marca ya disponible en Amazon España",
+        credito: "Imagen: Levoit / VeSync",
+      },
+      undefined,
+      undefined,
+    ],
+    afiliados: [
+      { comercio: "Amazon", href: "https://www.amazon.es/Levoit-Humidificador-Dual-200S-Smart/dp/B0CT91XZLG" },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string) {
