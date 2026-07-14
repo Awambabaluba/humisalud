@@ -406,6 +406,61 @@ export const blogPosts: BlogPost[] = [
       { comercio: "Amazon", href: "https://www.amazon.es/Levoit-Humidificador-Dual-200S-Smart/dp/B0CT91XZLG" },
     ],
   },
+  {
+    slug: "aire-acondicionado-reseca-garganta-humidificador-verano",
+    titulo: "Por qué el aire acondicionado te reseca y cómo evitarlo",
+    fecha: "2026-07-14",
+    categoria: "Salud",
+    publicado: true,
+    resumen:
+      "Un enfermero explica, en plena ola de calor, por qué el aire acondicionado reseca la garganta y la piel, y cómo un humidificador ayuda a compensarlo.",
+    imagenPortada: {
+      src: "https://images.unsplash.com/photo-1709745634912-2a79b938f3c2?auto=format&fit=crop&w=1200&q=80",
+      alt: "Aparato de aire acondicionado blanco instalado justo encima de una cama",
+      credito: "Foto: Unsplash",
+    },
+    contenido: [
+      "Estamos en plena segunda ola de calor de 2026 y en muchas casas el aire acondicionado lleva encendido, sin apagarse apenas, más de una semana seguida. Es lo normal cuando el termómetro no baja ni de noche, pero esta semana varios medios (COPE, The Objective, Trendencias) han recogido las mismas declaraciones de Jorge Ángel Heras, enfermero y divulgador sanitario, sobre un efecto secundario del aire acondicionado que casi nadie tiene en cuenta: baja tanto la humedad del ambiente que reseca las vías respiratorias y la piel, exactamente el mismo mecanismo que ya explicamos hace unas semanas al hablar de la humedad ideal en casa, solo que aquí el culpable no es la calefacción de invierno, es el compresor del aire en pleno julio.",
+      "El razonamiento es sencillo: un aparato de aire acondicionado enfría extrayendo calor del aire, y para hacerlo condensa parte del vapor de agua que ese aire lleva disuelto, igual que se forma el agua en la bandeja exterior de la unidad. El resultado es un ambiente más frío pero también más seco, y esa sequedad ataca primero a las mucosas que protegen la nariz y la garganta. Heras lo resume así a COPE: \"el aire acondicionado baja mucho la humedad del ambiente, y esto hace que las vías respiratorias y la piel se resequen\". No es una opinión aislada, es lo mismo que describe cualquier neumólogo cuando le preguntas por qué en verano, con el aire puesto, también aparecen toses secas que nada tienen que ver con un resfriado.",
+      "Hay un segundo problema, menos comentado, que el propio enfermero señala en las mismas entrevistas: pasar la noche entera con el aire frío incidiendo sobre el cuerpo enfría la musculatura y puede provocar calambres y contracturas, sobre todo en cuello y espalda. Es la típica tortícolis de verano que se atribuye a dormir mal, cuando el causante llevaba toda la noche zumbando en la pared de enfrente.",
+      "La recomendación que se repite en las entrevistas no es apagar el aire acondicionado y aguantar el calor a pelo, poco realista con las temperaturas de estos días, sino usarlo de otra manera: encenderlo un rato antes de acostarte, apagarlo después en vez de tenerlo toda la noche, mantener el termostato entre 24 y 26 grados en lugar de forzar mínimos que disparan el contraste térmico, orientar las lamas hacia el techo para que el aire no golpee la cara o el cuello, y priorizar la ventilación natural en las horas en que ya ha refrescado fuera. Y cuando eso no basta porque la habitación necesita el aire encendido buena parte de la noche, la recomendación explícita de Heras es \"también estaría bien pues utilizar un humidificador\" para devolver la humedad que el propio aparato ha quitado.",
+      "Aquí conviene aterrizar la idea, porque en verano se suele pensar en el humidificador como cosa de invierno. El rango que buscamos sigue siendo el mismo 40-60% de humedad relativa del que ya hablamos al repasar el RITE y las guías de la OMS, y ese rango no entiende de estaciones: un dormitorio con el aire acondicionado a tope en agosto puede acabar tan seco como uno con la calefacción a tope en enero.",
+      "Para este uso concreto —contrarrestar unas horas de aire acondicionado nocturno, no humidificar una casa entera todo el invierno— no hace falta el aparato más grande ni el más caro del catálogo. Un ultrasónico compacto de entrada, como el Cecotec Pure Aroma 300 Yang que ya tenemos analizado en el blog, con su depósito de 300 ml, es más que suficiente para las 6-8 horas de sueño de una habitación individual, y su precio ronda los 20-25 euros, una cifra que no merece la pena complicar con un evaporativo de gama alta si el problema es solo estacional.",
+      "Una advertencia que ya dimos en su momento y que sigue aplicando igual: no se trata de dejarlo a máxima potencia toda la noche sin control. Si la habitación es pequeña y cierras puertas y ventanas por el aire acondicionado, un humidificador sin higrostato puesto a tope puede empujar la humedad por encima del 60% en pocas horas, con riesgo de condensación en el cristal. Lo razonable es vigilar el ambiente con un higrómetro barato, o elegir un modelo con sensor y modo automático que se apague solo al llegar al rango saludable.",
+      "Merece la pena insistir en algo que Heras menciona de pasada y que repetimos en este blog: nada de esto sustituye beber agua a lo largo del día ni ventilar la casa en las horas en que el exterior está más fresco. El humidificador ayuda con la sequedad mientras duermes, pero no compensa una deshidratación de fondo si no bebes lo suficiente con el calor que hace estos días.",
+      "El mensaje de fondo no es que el aire acondicionado sea malo —con el calor que hace esta semana, sería absurdo plantearlo así—, sino que usarlo sin pensar en la humedad tiene un coste que se nota en la garganta, en la piel y en el cuello agarrotado de la mañana siguiente. Encenderlo con cabeza, apagarlo cuando ya no hace falta, y compensar la sequedad con un humidificador pequeño si el dormitorio lo necesita, es la diferencia entre pasar la ola de calor durmiendo bien o levantarte con la sensación de que algo en casa te reseca por dentro.",
+    ],
+    imagenes: [
+      undefined,
+      {
+        src: "https://images.unsplash.com/photo-1762341123870-d706f257a12e?auto=format&fit=crop&w=1200&q=80",
+        alt: "Unidad de aire acondicionado marcando 22 grados",
+        credito: "Foto: Unsplash",
+      },
+      undefined,
+      undefined,
+      {
+        src: "https://images.unsplash.com/photo-1768471569643-717e823b5f9a?auto=format&fit=crop&w=1200&q=80",
+        alt: "Humidificador blanco emitiendo niebla fría sobre una mesa de madera",
+        credito: "Foto: Unsplash",
+      },
+      {
+        src: cecotecImg,
+        alt: "Humidificador ultrasónico compacto Cecotec Pure Aroma 300 Yang",
+        credito: "Imagen: Cecotec",
+      },
+      undefined,
+      {
+        src: "https://images.unsplash.com/photo-1624948465121-96e87ae34a87?auto=format&fit=crop&w=1200&q=80",
+        alt: "Mujer bebiendo un vaso de agua para hidratarse con el calor",
+        credito: "Foto: Unsplash",
+      },
+      undefined,
+    ],
+    afiliados: [
+      { comercio: "Amazon", href: "https://www.amazon.es/Cecotec-Humidificador-Temporizador-aromaterapia-Ultrasilencioso/dp/B07MSJDB8M" },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string) {
