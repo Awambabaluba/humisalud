@@ -18,6 +18,16 @@ const PRODUCTS_FILE = join(ROOT, "src/data/products.ts");
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+// Espera aleatoria entre peticiones para no parecer tráfico de bot (evitar el
+// bloqueo opfcaptcha de Amazon, que se agrava cuanto más rápido se golpea la web).
+function randomDelay(minMs, maxMs) {
+  return sleep(minMs + Math.random() * (maxMs - minMs));
+}
+
 async function fetchAmazonPrice(url) {
   const res = await fetch(url, {
     headers: {
@@ -29,7 +39,7 @@ async function fetchAmazonPrice(url) {
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const html = await res.text();
 
-  if (/dogs of amazon|sorry.*we just need to make sure/i.test(html)) {
+  if (/dogs of amazon|sorry.*we just need to make sure|opfcaptcha|action="\/errors\/validateCaptcha"/i.test(html)) {
     throw new Error("Bloqueado por Amazon (captcha/anti-bot)");
   }
 
@@ -88,7 +98,11 @@ async function main() {
 
   const results = [];
 
+  let first = true;
   for (const [slug, amazonLink] of productLinks) {
+    if (!first) await randomDelay(4000, 9000);
+    first = false;
+
     if (!/amazon\./i.test(amazonLink)) {
       results.push({ slug, status: "SKIP", detail: "No es un enlace de Amazon (no se puede comprobar precio)" });
       continue;
