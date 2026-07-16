@@ -7,11 +7,15 @@ export const Route = createFileRoute("/selector")({
   head: () => ({
     meta: [
       { title: "Selector de humidificador — HumiSalud" },
-      { name: "description", content: "Responde 5 preguntas y te recomendamos el humidificador que mejor encaja con tu estancia, presupuesto y uso." },
+      {
+        name: "description",
+        content:
+          "Responde 5 preguntas y te recomendamos el humidificador que mejor encaja con tu estancia, presupuesto y uso.",
+      },
       { property: "og:title", content: "Selector de humidificador — HumiSalud" },
-      { property: "og:url", content: "/selector" },
+      { property: "og:url", content: "https://humisalud.com/selector" },
     ],
-    links: [{ rel: "canonical", href: "/selector" }],
+    links: [{ rel: "canonical", href: "https://humisalud.com/selector" }],
   }),
   component: SelectorPage,
 });
@@ -26,11 +30,16 @@ function SelectorPage() {
           Encuentra el que va contigo
         </h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          Cruzamos los metros de tu habitación, lo que te quieres gastar, el ruido que aguantas y para qué lo vas a usar. Solo te enseñamos modelos con datos contrastados.
+          Cruzamos los metros de tu habitación, lo que te quieres gastar, el ruido que aguantas y
+          para qué lo vas a usar. Solo te enseñamos modelos con datos contrastados.
         </p>
       </header>
-      <div className="mt-10"><Selector /></div>
-      <div className="mt-10"><AffiliateDisclosure /></div>
+      <div className="mt-10">
+        <Selector />
+      </div>
+      <div className="mt-10">
+        <AffiliateDisclosure />
+      </div>
     </section>
   );
 }

@@ -5,7 +5,11 @@ import { blogPostsPublicados } from "@/data/blog";
 
 const BASE_URL = "https://humisalud.com";
 
-interface SitemapEntry { path: string; changefreq?: "weekly" | "monthly"; priority?: string }
+interface SitemapEntry {
+  path: string;
+  changefreq?: "daily" | "weekly" | "monthly";
+  priority?: string;
+}
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
@@ -29,20 +33,34 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/privacidad", changefreq: "monthly", priority: "0.3" },
           { path: "/cookies", changefreq: "monthly", priority: "0.3" },
           { path: "/terminos", changefreq: "monthly", priority: "0.3" },
-          ...["bebe","dormitorio","salon","alergias","inteligente","economico"].map((s) => ({
-            path: `/categoria/${s}`, changefreq: "monthly" as const, priority: "0.7",
+          ...["bebe", "dormitorio", "salon", "alergias", "inteligente", "economico"].map((s) => ({
+            path: `/categoria/${s}`,
+            changefreq: "monthly" as const,
+            priority: "0.7",
           })),
-          ...productos.map((p) => ({ path: `/producto/${p.slug}`, changefreq: "monthly" as const, priority: "0.7" })),
-          ...blogPostsPublicados.map((p) => ({ path: `/blog/${p.slug}`, changefreq: "monthly" as const, priority: "0.6" })),
+          ...productos.map((p) => ({
+            path: `/producto/${p.slug}`,
+            changefreq: "monthly" as const,
+            priority: "0.7",
+          })),
+          ...blogPostsPublicados.map((p) => ({
+            path: `/blog/${p.slug}`,
+            changefreq: "monthly" as const,
+            priority: "0.6",
+          })),
         ];
 
-        const urls = entries.map((e) => [
-          `  <url>`,
-          `    <loc>${BASE_URL}${e.path}</loc>`,
-          e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
-          e.priority ? `    <priority>${e.priority}</priority>` : null,
-          `  </url>`,
-        ].filter(Boolean).join("\n"));
+        const urls = entries.map((e) =>
+          [
+            `  <url>`,
+            `    <loc>${BASE_URL}${e.path}</loc>`,
+            e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
+            e.priority ? `    <priority>${e.priority}</priority>` : null,
+            `  </url>`,
+          ]
+            .filter(Boolean)
+            .join("\n"),
+        );
 
         const xml = [
           `<?xml version="1.0" encoding="UTF-8"?>`,
@@ -51,7 +69,9 @@ export const Route = createFileRoute("/sitemap.xml")({
           `</urlset>`,
         ].join("\n");
 
-        return new Response(xml, { headers: { "Content-Type": "application/xml", "Cache-Control": "public, max-age=3600" } });
+        return new Response(xml, {
+          headers: { "Content-Type": "application/xml", "Cache-Control": "public, max-age=3600" },
+        });
       },
     },
   },
