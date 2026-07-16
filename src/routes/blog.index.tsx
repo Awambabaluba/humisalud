@@ -7,11 +7,15 @@ export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
       { title: "Blog — Noticias y guías sobre humidificadores | HumiSalud" },
-      { name: "description", content: "Novedades, estudios y guías prácticas sobre humidificadores, humedad en casa y calidad del aire. Actualizado semanalmente." },
+      {
+        name: "description",
+        content:
+          "Novedades, estudios y guías prácticas sobre humidificadores, humedad en casa y calidad del aire. Actualizado semanalmente.",
+      },
       { property: "og:title", content: "Blog HumiSalud" },
-      { property: "og:url", content: "/blog" },
+      { property: "og:url", content: "https://humisalud.com/blog" },
     ],
-    links: [{ rel: "canonical", href: "/blog" }],
+    links: [{ rel: "canonical", href: "https://humisalud.com/blog" }],
   }),
   component: BlogIndex,
 });
@@ -26,7 +30,8 @@ function BlogIndex() {
           Noticias y guías sobre humidificadores
         </h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          Publicamos al menos una entrada por semana: estudios, novedades de producto y dudas reales que nos llegáis.
+          Publicamos al menos una entrada por semana: estudios, novedades de producto y dudas reales
+          que nos llegáis.
         </p>
       </header>
 
@@ -48,12 +53,20 @@ function BlogIndex() {
                 />
               </div>
             )}
-            <p className="text-xs uppercase tracking-wider text-primary font-medium">{post.categoria}</p>
-            <h2 className="mt-2 font-display text-2xl font-semibold tracking-tight">{post.titulo}</h2>
+            <p className="text-xs uppercase tracking-wider text-primary font-medium">
+              {post.categoria}
+            </p>
+            <h2 className="mt-2 font-display text-2xl font-semibold tracking-tight">
+              {post.titulo}
+            </h2>
             <p className="mt-2 text-base text-muted-foreground leading-relaxed">{post.resumen}</p>
             <p className="mt-4 text-xs text-muted-foreground inline-flex items-center gap-1.5">
               <CalendarDays className="h-3.5 w-3.5" />
-              {new Date(post.fecha).toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" })}
+              {new Date(post.fecha).toLocaleDateString("es-ES", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              })}
             </p>
           </Link>
         ))}

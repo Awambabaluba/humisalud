@@ -18,7 +18,11 @@ interface State {
 export function Selector() {
   const en = useLocale() === "en";
   const [state, setState] = useState<State>({
-    m2: 20, presupuesto: 80, uso: "dormitorio", silencio: true, vapor: "frio",
+    m2: 20,
+    presupuesto: 80,
+    uso: "dormitorio",
+    silencio: true,
+    vapor: "frio",
   });
 
   const ranking = useMemo(() => scoreProductos(productos, state), [state]);
@@ -48,14 +52,17 @@ export function Selector() {
       en ? (
         <>
           We recommend it because it fits your {s.m2} m², budget of {s.presupuesto} € and{" "}
-          <strong className="text-foreground font-medium">{labelUso(s.uso, true)}</strong> use.
-          We don't show products without enough data; where you see "—" there's no verified official figure.
+          <strong className="text-foreground font-medium">{labelUso(s.uso, true)}</strong> use. We
+          don't show products without enough data; where you see "—" there's no verified official
+          figure.
         </>
       ) : (
         <>
-          Lo recomendamos porque encaja con tus {s.m2} m², presupuesto de {s.presupuesto} € y uso&nbsp;
-          <strong className="text-foreground font-medium">{labelUso(s.uso, false)}</strong>. No mostramos productos
-          sin datos suficientes; donde aparece "—" no hay cifra oficial verificada.
+          Lo recomendamos porque encaja con tus {s.m2} m², presupuesto de {s.presupuesto} € y
+          uso&nbsp;
+          <strong className="text-foreground font-medium">{labelUso(s.uso, false)}</strong>. No
+          mostramos productos sin datos suficientes; donde aparece "—" no hay cifra oficial
+          verificada.
         </>
       ),
     empty: en
@@ -65,40 +72,69 @@ export function Selector() {
 
   return (
     <div className="grid gap-8 lg:grid-cols-[1.05fr_1.4fr] items-start">
-      <form className="rounded-3xl border border-border bg-card p-6 sm:p-8 shadow-soft" onSubmit={(e) => e.preventDefault()}>
+      <form
+        className="rounded-3xl border border-border bg-card p-6 sm:p-8 shadow-soft"
+        onSubmit={(e) => e.preventDefault()}
+      >
         <div className="flex items-center gap-2 text-primary">
           <Sparkles className="h-4 w-4" />
           <span className="text-xs uppercase tracking-wider font-medium">{L.eyebrow}</span>
         </div>
-        <h2 className="mt-2 font-display text-2xl sm:text-3xl font-semibold tracking-tight">{L.title}</h2>
+        <h2 className="mt-2 font-display text-2xl sm:text-3xl font-semibold tracking-tight">
+          {L.title}
+        </h2>
         <p className="mt-1 text-sm text-muted-foreground">{L.subtitle}</p>
 
         <div className="mt-6 space-y-6">
           <Field label={`${L.roomSize}: ${state.m2} m²`}>
-            <input type="range" min={5} max={70} step={1} value={state.m2}
+            <input
+              type="range"
+              min={5}
+              max={70}
+              step={1}
+              value={state.m2}
+              aria-label={L.roomSize}
               onChange={(e) => setState({ ...state, m2: +e.target.value })}
-              className="w-full accent-[var(--color-primary)]" />
+              className="w-full accent-[var(--color-primary)]"
+            />
           </Field>
           <Field label={`${L.budget}: ${state.presupuesto} €`}>
-            <input type="range" min={20} max={250} step={5} value={state.presupuesto}
+            <input
+              type="range"
+              min={20}
+              max={250}
+              step={5}
+              value={state.presupuesto}
+              aria-label={L.budget}
               onChange={(e) => setState({ ...state, presupuesto: +e.target.value })}
-              className="w-full accent-[var(--color-primary)]" />
+              className="w-full accent-[var(--color-primary)]"
+            />
           </Field>
 
           <Field label={L.use}>
             <div className="grid grid-cols-2 gap-2">
-              {(["bebe","dormitorio","salon","alergias","inteligente","general"] as Uso[]).map((u) => (
-                <Chip key={u} active={state.uso === u} onClick={() => setState({ ...state, uso: u })}>
-                  {labelUso(u, en)}
-                </Chip>
-              ))}
+              {(["bebe", "dormitorio", "salon", "alergias", "inteligente", "general"] as Uso[]).map(
+                (u) => (
+                  <Chip
+                    key={u}
+                    active={state.uso === u}
+                    onClick={() => setState({ ...state, uso: u })}
+                  >
+                    {labelUso(u, en)}
+                  </Chip>
+                ),
+              )}
             </div>
           </Field>
 
           <Field label={L.vapor}>
             <div className="grid grid-cols-3 gap-2">
-              {(["frio","caliente","indiferente"] as Vapor[]).map((v) => (
-                <Chip key={v} active={state.vapor === v} onClick={() => setState({ ...state, vapor: v })}>
+              {(["frio", "caliente", "indiferente"] as Vapor[]).map((v) => (
+                <Chip
+                  key={v}
+                  active={state.vapor === v}
+                  onClick={() => setState({ ...state, vapor: v })}
+                >
                   {v === "frio" ? L.cold : v === "caliente" ? L.hot : L.either}
                 </Chip>
               ))}
@@ -106,7 +142,12 @@ export function Selector() {
           </Field>
 
           <label className="flex items-center gap-3 rounded-xl border border-border bg-secondary/40 p-3 cursor-pointer">
-            <input type="checkbox" checked={state.silencio} onChange={(e) => setState({ ...state, silencio: e.target.checked })} className="h-4 w-4 accent-[var(--color-primary)]" />
+            <input
+              type="checkbox"
+              checked={state.silencio}
+              onChange={(e) => setState({ ...state, silencio: e.target.checked })}
+              className="h-4 w-4 accent-[var(--color-primary)]"
+            />
             <span className="text-sm">{L.silent}</span>
           </label>
         </div>
@@ -123,9 +164,13 @@ export function Selector() {
 
             {alts.length > 0 && (
               <>
-                <div className="mt-6 flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground">{L.alternatives}</div>
+                <div className="mt-6 flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground">
+                  {L.alternatives}
+                </div>
                 <div className="grid gap-4 sm:grid-cols-2">
-                  {alts.map((p) => <ProductCard key={p.slug} producto={p} />)}
+                  {alts.map((p) => (
+                    <ProductCard key={p.slug} producto={p} />
+                  ))}
                 </div>
               </>
             )}
@@ -146,18 +191,47 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
     </div>
   );
 }
-function Chip({ active, children, onClick }: { active: boolean; children: React.ReactNode; onClick: () => void }) {
+function Chip({
+  active,
+  children,
+  onClick,
+}: {
+  active: boolean;
+  children: React.ReactNode;
+  onClick: () => void;
+}) {
   return (
-    <button type="button" onClick={onClick}
+    <button
+      type="button"
+      onClick={onClick}
       className={[
         "rounded-full border px-3 py-2 text-sm transition-all",
-        active ? "border-primary bg-primary text-primary-foreground shadow-soft" : "border-border bg-background hover:bg-secondary",
-      ].join(" ")}>{children}</button>
+        active
+          ? "border-primary bg-primary text-primary-foreground shadow-soft"
+          : "border-border bg-background hover:bg-secondary",
+      ].join(" ")}
+    >
+      {children}
+    </button>
   );
 }
 function labelUso(u: Uso, en: boolean) {
-  const es = { bebe: "Bebé", dormitorio: "Dormitorio", salon: "Salón", alergias: "Alergias", inteligente: "Inteligente", general: "General" };
-  const enMap = { bebe: "Baby", dormitorio: "Bedroom", salon: "Living room", alergias: "Allergies", inteligente: "Smart", general: "General" };
+  const es = {
+    bebe: "Bebé",
+    dormitorio: "Dormitorio",
+    salon: "Salón",
+    alergias: "Alergias",
+    inteligente: "Inteligente",
+    general: "General",
+  };
+  const enMap = {
+    bebe: "Baby",
+    dormitorio: "Bedroom",
+    salon: "Living room",
+    alergias: "Allergies",
+    inteligente: "Smart",
+    general: "General",
+  };
   return (en ? enMap : es)[u];
 }
 function EmptyState({ text }: { text: string }) {
@@ -179,7 +253,7 @@ function scoreOne(p: Producto, s: State): number {
   let score = p.valoracionEditorial;
   if (typeof p.coberturaM2 === "number") {
     if (p.coberturaM2 >= s.m2) score += 8;
-    else score -= Math.min(20, (s.m2 - p.coberturaM2));
+    else score -= Math.min(20, s.m2 - p.coberturaM2);
   }
   if (p.precioMin && p.precioMin > s.presupuesto) score -= 25;
   const m: Record<Uso, string[]> = {
