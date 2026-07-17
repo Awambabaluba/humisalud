@@ -70,7 +70,7 @@ export function IntroOverlay() {
 
         {/* Wordmark emergiendo del punto de fuga */}
         <div className="intro-wordmark-wrap">
-          <h1 className="intro-wordmark">HumiSalud</h1>
+          <p className="intro-wordmark">HumiSalud</p>
           <p className="intro-tagline">{tagline}</p>
         </div>
 
