@@ -14,6 +14,6 @@ export default defineConfig({
     },
   },
   nitro: {
-    preset: "netlify",
+    preset: "cloudflare_pages",
   },
 });

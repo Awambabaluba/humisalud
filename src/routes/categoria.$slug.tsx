@@ -6,13 +6,25 @@ import { AffiliateDisclosure } from "@/components/site/AffiliateDisclosure";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { CATEGORIAS } from "@/data/site";
 
-const COPY: Record<string, { h1: string; lead: string; title: string; desc: string; filtro: (p: typeof productos[number]) => boolean; mejor: keyof typeof mejoresPorCategoria }> = {
+const COPY: Record<
+  string,
+  {
+    h1: string;
+    lead: string;
+    title: string;
+    desc: string;
+    filtro: (p: (typeof productos)[number]) => boolean;
+    mejor: keyof typeof mejoresPorCategoria;
+  }
+> = {
   bebe: {
     h1: "Mejores humidificadores para bebé en 2026",
     lead: "Vapor frío, por debajo de 35 dB y fáciles de rellenar sin acrobacias. En la habitación del bebé, vapor caliente nunca.",
     title: "Humidificador para bebé 2026 — HumiSalud",
     desc: "Humidificadores seguros para el cuarto del bebé: vapor frío, silenciosos y fáciles de limpiar.",
-    filtro: (p) => p.idealPara.some((u) => /bebé|infantil/i.test(u)) || ["Ultrasónico","Evaporativo"].includes(p.tecnologia),
+    filtro: (p) =>
+      p.idealPara.some((u) => /bebé|infantil/i.test(u)) ||
+      ["Ultrasónico", "Evaporativo"].includes(p.tecnologia),
     mejor: "bebe",
   },
   dormitorio: {
@@ -36,7 +48,8 @@ const COPY: Record<string, { h1: string; lead: string; title: string; desc: stri
     lead: "Evaporativos: ni rastro de polvo blanco, y modelos con filtración cuidada.",
     title: "Humidificador para alergias — HumiSalud",
     desc: "Humidificadores recomendados para personas con alergias o asma: evaporativos sin polvo blanco.",
-    filtro: (p) => p.tecnologia === "Evaporativo" || p.idealPara.some((u) => /alergia|asma/i.test(u)),
+    filtro: (p) =>
+      p.tecnologia === "Evaporativo" || p.idealPara.some((u) => /alergia|asma/i.test(u)),
     mejor: "alergias",
   },
   inteligente: {
@@ -44,7 +57,8 @@ const COPY: Record<string, { h1: string; lead: string; title: string; desc: stri
     lead: "Control desde el móvil, Alexa o Google, y programación automática.",
     title: "Humidificador inteligente — HumiSalud",
     desc: "Humidificadores conectados con app, Alexa, Google y modos automáticos.",
-    filtro: (p) => ["UV-C"].includes(p.tecnologia) || /inteligente|smart|app/i.test(p.caracteristicas.join(" ")),
+    filtro: (p) =>
+      ["UV-C"].includes(p.tecnologia) || /inteligente|smart|app/i.test(p.caracteristicas.join(" ")),
     mejor: "inteligente",
   },
   economico: {
@@ -73,13 +87,15 @@ export const Route = createFileRoute("/categoria/$slug")({
         { property: "og:description", content: loaderData.desc },
         { property: "og:type", content: "article" },
       ],
-      links: [{ rel: "canonical", href: `/categoria/${loaderData.slug}` }],
+      links: [{ rel: "canonical", href: `https://humisalud.com/categoria/${loaderData.slug}` }],
     };
   },
   notFoundComponent: () => (
     <div className="mx-auto max-w-2xl px-5 py-20 text-center">
       <h1 className="font-display text-3xl font-semibold">Categoría no encontrada</h1>
-      <Link to="/" className="mt-4 inline-block text-primary underline">Inicio</Link>
+      <Link to="/" className="mt-4 inline-block text-primary underline">
+        Inicio
+      </Link>
     </div>
   ),
   component: CategoriaPage,
@@ -96,20 +112,31 @@ function CategoriaPage() {
       <Breadcrumbs items={[{ to: "/", label: "Inicio" }, { label: cat?.titulo ?? "Categoría" }]} />
       <header className="mt-6 max-w-2xl">
         <p className="text-xs uppercase tracking-[0.18em] text-primary font-medium">Categoría</p>
-        <h1 className="mt-3 font-display text-4xl sm:text-5xl font-semibold tracking-tight">{copy.h1}</h1>
+        <h1 className="mt-3 font-display text-4xl sm:text-5xl font-semibold tracking-tight">
+          {copy.h1}
+        </h1>
         <p className="mt-4 text-lg text-muted-foreground">{copy.lead}</p>
       </header>
-      <div className="mt-8"><AffiliateDisclosure /></div>
+      <div className="mt-8">
+        <AffiliateDisclosure />
+      </div>
       <section className="mt-10">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {lista.map((p, i) => (
-            <ProductCard key={p.slug} producto={p} highlight={i === 0} badge={i === 0 ? "Mejor opción" : undefined} />
+            <ProductCard
+              key={p.slug}
+              producto={p}
+              highlight={i === 0}
+              badge={i === 0 ? "Mejor opción" : undefined}
+            />
           ))}
         </div>
       </section>
       <section className="mt-12">
         <h2 className="font-display text-2xl font-semibold">Comparativa</h2>
-        <div className="mt-4"><ComparisonTable productos={lista} /></div>
+        <div className="mt-4">
+          <ComparisonTable productos={lista} />
+        </div>
       </section>
     </article>
   );

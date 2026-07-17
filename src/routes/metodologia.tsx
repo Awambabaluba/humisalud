@@ -6,11 +6,15 @@ export const Route = createFileRoute("/metodologia")({
   head: () => ({
     meta: [
       { title: "Metodología editorial — HumiSalud" },
-      { name: "description", content: "Cómo evaluamos cada humidificador: rúbrica de 100 puntos, fuentes, fechado de precios y separación de valoraciones." },
+      {
+        name: "description",
+        content:
+          "Cómo evaluamos cada humidificador: rúbrica de 100 puntos, fuentes, fechado de precios y separación de valoraciones.",
+      },
       { property: "og:title", content: "Metodología editorial — HumiSalud" },
-      { property: "og:url", content: "/metodologia" },
+      { property: "og:url", content: "https://humisalud.com/metodologia" },
     ],
-    links: [{ rel: "canonical", href: "/metodologia" }],
+    links: [{ rel: "canonical", href: "https://humisalud.com/metodologia" }],
   }),
   component: Metodologia,
 });
@@ -20,12 +24,16 @@ function Metodologia() {
     <article className="mx-auto max-w-3xl px-5 py-12 sm:py-16">
       <Breadcrumbs items={[{ to: "/", label: "Inicio" }, { label: "Metodología" }]} />
       <header className="mt-6">
-        <p className="text-xs uppercase tracking-[0.18em] text-primary font-medium">Cómo evaluamos</p>
-        <h1 className="mt-3 font-display text-4xl sm:text-5xl font-semibold tracking-tight">Cómo trabajamos en HumiSalud</h1>
+        <p className="text-xs uppercase tracking-[0.18em] text-primary font-medium">
+          Cómo evaluamos
+        </p>
+        <h1 className="mt-3 font-display text-4xl sm:text-5xl font-semibold tracking-tight">
+          Cómo trabajamos en HumiSalud
+        </h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          No probamos los humidificadores en casa y lo decimos sin rodeos. Lo que sí hacemos: leer las fichas
-          técnicas con lupa, cruzar reseñas verificadas y pasar siempre cada modelo por la misma rúbrica para
-          poder compararlos entre sí.
+          No probamos los humidificadores en casa y lo decimos sin rodeos. Lo que sí hacemos: leer
+          las fichas técnicas con lupa, cruzar reseñas verificadas y pasar siempre cada modelo por
+          la misma rúbrica para poder compararlos entre sí.
         </p>
       </header>
 
@@ -44,7 +52,10 @@ function Metodologia() {
             ["Funciones extra (modo auto, app, voz)", "8%"],
             ["Garantía y servicio postventa", "7%"],
           ].map(([k, w]) => (
-            <li key={k} className="flex items-center justify-between rounded-xl border border-border bg-card px-4 py-3">
+            <li
+              key={k}
+              className="flex items-center justify-between rounded-xl border border-border bg-card px-4 py-3"
+            >
               <span>{k}</span>
               <span className="font-display font-semibold tabular-nums">{w}</span>
             </li>
@@ -54,7 +65,9 @@ function Metodologia() {
 
       <section className="mt-12">
         <h2 className="font-display text-2xl font-semibold">Principios editoriales</h2>
-        <div className="mt-5"><MethodologyBlock /></div>
+        <div className="mt-5">
+          <MethodologyBlock />
+        </div>
       </section>
 
       <section className="mt-12">
@@ -69,9 +82,9 @@ function Metodologia() {
       </section>
 
       <section className="mt-12 rounded-2xl border border-border bg-secondary/40 p-5 sm:p-6 text-sm">
-        <strong className="font-medium">Lo que sí reconocemos:</strong> como no probamos los modelos en casa, dependemos
-        de la ficha del fabricante y de las reseñas verificadas. Lo dejamos claro en cada análisis y, si un dato está
-        sin confirmar, lo marcamos como pendiente.
+        <strong className="font-medium">Lo que sí reconocemos:</strong> como no probamos los modelos
+        en casa, dependemos de la ficha del fabricante y de las reseñas verificadas. Lo dejamos
+        claro en cada análisis y, si un dato está sin confirmar, lo marcamos como pendiente.
       </section>
     </article>
   );
