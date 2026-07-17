@@ -352,7 +352,7 @@ export const blogPosts: BlogPost[] = [
     titulo: "Humidificador para bebé: vapor frío o caliente, dónde ponerlo y cuándo no usarlo",
     fecha: "2026-07-01",
     categoria: "Guías",
-    publicado: false,
+    publicado: true,
     resumen:
       "Guía práctica para padres: vapor frío siempre (el caliente quema), capacidad mínima, dónde colocarlo respecto a la cuna y cuándo llamar al pediatra.",
     imagenPortada: {
