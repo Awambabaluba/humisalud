@@ -1,5 +1,6 @@
 import type { Producto } from "@/data/products";
 import { AffiliateButton } from "./AffiliateButton";
+import { PriceTag } from "./PriceTag";
 import { Link } from "@tanstack/react-router";
 import { useLocale } from "@/i18n/LocaleContext";
 
@@ -11,7 +12,7 @@ export function ComparisonTable({ productos }: { productos: Producto[] }) {
     capacity: en ? "Capacity" : "Capacidad",
     coverage: en ? "Coverage" : "Cobertura",
     rating: en ? "Rating" : "Valoración",
-    range: en ? "Range" : "Rango",
+    price: en ? "Price" : "Precio",
     action: en ? "Action" : "Acción",
   };
   return (
@@ -24,7 +25,7 @@ export function ComparisonTable({ productos }: { productos: Producto[] }) {
             <Th className="text-right">{L.capacity}</Th>
             <Th className="text-right">{L.coverage}</Th>
             <Th className="text-right">{L.rating}</Th>
-            <Th className="text-right">{L.range}</Th>
+            <Th className="text-right">{L.price}</Th>
             <Th className="text-right sr-only-th">{L.action}</Th>
           </tr>
         </thead>
@@ -41,7 +42,9 @@ export function ComparisonTable({ productos }: { productos: Producto[] }) {
               <Td className="text-right tabular-nums">{fmt(p.capacidadL, "L")}</Td>
               <Td className="text-right tabular-nums">{fmt(p.coberturaM2, "m²")}</Td>
               <Td className="text-right tabular-nums font-display font-semibold">{p.valoracionEditorial}</Td>
-              <Td className="text-right">{p.rango}</Td>
+              <Td className="text-right">
+                <PriceTag producto={p} size="sm" align="right" />
+              </Td>
               <Td className="text-right">
                 <AffiliateButton
                   href={p.enlaceAfiliado}

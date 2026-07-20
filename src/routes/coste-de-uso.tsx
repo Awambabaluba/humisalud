@@ -46,15 +46,15 @@ function Page() {
         <p className="mt-4 text-base leading-relaxed text-muted-foreground">
           La factura depende sobre todo de la tecnología. Un humidificador ultrasónico o evaporativo
           consume muy poco —del orden de 20 a 30 W—, así que tenerlo encendido varias horas al día
-          apenas se nota: unos céntimos al mes. El salto de verdad lo dan los de vapor caliente: como
-          hierven el agua, tiran de 200 a 400 W y pueden multiplicar por diez el gasto. Un modelo
-          híbrido queda en medio según use frío o calor.
+          apenas se nota: unos céntimos al mes. El salto de verdad lo dan los de vapor caliente:
+          como hierven el agua, tiran de 200 a 400 W y pueden multiplicar por diez el gasto. Un
+          modelo híbrido queda en medio según use frío o calor.
         </p>
         <p className="mt-4 text-base leading-relaxed text-muted-foreground">
           Con la luz a unos 0,15 €/kWh, un ultrasónico de 25 W ocho horas al día ronda 1 €/mes,
           mientras que un vapor caliente de 300 W en el mismo uso se va por encima de 10 €/mes. Para
-          gastar menos, usa el modo automático (así no nebuliza de más) y tira de vapor frío salvo que
-          necesites calentar el ambiente.
+          gastar menos, usa el modo automático (así no nebuliza de más) y tira de vapor frío salvo
+          que necesites calentar el ambiente.
         </p>
       </section>
 
@@ -62,24 +62,28 @@ function Page() {
         <h2 className="font-display text-2xl font-semibold">Preguntas frecuentes</h2>
         <div className="mt-5 space-y-5">
           <div>
-            <h3 className="font-medium text-foreground">¿Cuánto gasta de luz un humidificador al mes?</h3>
+            <h3 className="font-medium text-foreground">
+              ¿Cuánto gasta de luz un humidificador al mes?
+            </h3>
             <p className="mt-1 text-muted-foreground">
-              Un ultrasónico o evaporativo (20-30 W) apenas 1-2 €/mes con uso normal. Un vapor caliente
-              (200-400 W) puede superar los 10 €/mes.
+              Un ultrasónico o evaporativo (20-30 W) apenas 1-2 €/mes con uso normal. Un vapor
+              caliente (200-400 W) puede superar los 10 €/mes.
             </p>
           </div>
           <div>
-            <h3 className="font-medium text-foreground">¿Qué tecnología es la más barata de tener?</h3>
+            <h3 className="font-medium text-foreground">
+              ¿Qué tecnología es la más barata de tener?
+            </h3>
             <p className="mt-1 text-muted-foreground">
-              El ultrasónico y el evaporativo, porque no calientan el agua. El vapor caliente es, con
-              diferencia, el que más consume.
+              El ultrasónico y el evaporativo, porque no calientan el agua. El vapor caliente es,
+              con diferencia, el que más consume.
             </p>
           </div>
           <div>
             <h3 className="font-medium text-foreground">¿Consume mucha agua?</h3>
             <p className="mt-1 text-muted-foreground">
-              De medio a un litro por hora al máximo caudal, según el modelo. El modo automático reduce
-              el consumo al mantener solo la humedad justa.
+              De medio a un litro por hora al máximo caudal, según el modelo. El modo automático
+              reduce el consumo al mantener solo la humedad justa.
             </p>
           </div>
         </div>

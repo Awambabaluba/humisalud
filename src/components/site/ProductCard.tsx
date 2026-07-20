@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Droplet, Gauge, Volume2, Ruler } from "lucide-react";
 import type { Producto } from "@/data/products";
 import { AffiliateButton } from "./AffiliateButton";
+import { PriceTag } from "./PriceTag";
 import { RatingBar } from "./RatingBar";
 import { PRODUCT_IMAGES, PRODUCT_IMAGE_CREDITS } from "@/assets/product-images";
 import { useLocale } from "@/i18n/LocaleContext";
@@ -107,10 +108,7 @@ export function ProductCard({ producto: p, badge, highlight, descuentoPercent }:
       </Link>
 
       <div className="mt-4 flex items-center justify-between gap-3 pt-4 border-t border-border">
-        <div>
-          <p className="text-[11px] uppercase tracking-wider text-muted-foreground">{L.priceRange}</p>
-          <p className="font-display text-base font-semibold">{p.rango}</p>
-        </div>
+        <PriceTag producto={p} size="sm" />
         <AffiliateButton
           href={p.enlaceAfiliado}
           comercio={p.comercio}

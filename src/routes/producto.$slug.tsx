@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { getProducto, productos } from "@/data/products";
 import { getPostsRelacionadosConProducto } from "@/data/blog";
 import { AffiliateButton } from "@/components/site/AffiliateButton";
+import { PriceTag } from "@/components/site/PriceTag";
 import { AffiliateDisclosure } from "@/components/site/AffiliateDisclosure";
 import { ProsCons } from "@/components/site/ProsCons";
 import { ProductCard } from "@/components/site/ProductCard";
@@ -48,6 +49,18 @@ export const Route = createFileRoute("/producto/$slug")({
                 name: p.nombre,
                 brand: { "@type": "Brand", name: p.marca },
                 description: p.resumen,
+                ...(typeof p.precioMin === "number" && p.precioComprobadoEn
+                  ? {
+                      offers: {
+                        "@type": "Offer",
+                        price: p.precioMin.toFixed(2),
+                        priceCurrency: "EUR",
+                        availability: "https://schema.org/InStock",
+                        url: `https://humisalud.com/producto/${p.slug}`,
+                        priceValidUntil: p.precioComprobadoEn,
+                      },
+                    }
+                  : {}),
                 review: {
                   "@type": "Review",
                   author: { "@type": "Organization", name: "HumiSalud" },
@@ -114,7 +127,8 @@ function ProductoPage() {
             </div>
           </div>
 
-          <div className="mt-6 flex items-center gap-4 flex-wrap">
+          <div className="mt-6 flex items-center gap-5 flex-wrap">
+            <PriceTag producto={p} size="lg" />
             <AffiliateButton
               href={p.enlaceAfiliado}
               comercio={p.comercio}
@@ -124,10 +138,6 @@ function ProductoPage() {
               marca={p.marca}
               posicion="ficha-hero"
             />
-            <div>
-              <p className="text-xs text-muted-foreground">Rango de precio</p>
-              <p className="font-display text-lg font-semibold">{p.rango}</p>
-            </div>
           </div>
           <p className="mt-3 text-xs text-muted-foreground inline-flex items-center gap-1.5">
             <CalendarDays className="h-3.5 w-3.5" /> Actualizado el{" "}

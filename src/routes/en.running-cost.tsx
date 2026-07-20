@@ -45,16 +45,16 @@ function Page() {
         <h2 className="font-display text-2xl font-semibold">What each technology costs to run</h2>
         <p className="mt-4 text-base leading-relaxed text-muted-foreground">
           Your bill depends mostly on the technology. An ultrasonic or evaporative humidifier draws
-          very little —around 20 to 30 W— so running it for several hours a day barely shows up: a few
-          cents per month. The real jump comes from warm-mist units: because they boil the water, they
-          pull 200 to 400 W and can multiply the cost tenfold. A hybrid model sits in between depending
-          on whether it runs cool or warm.
+          very little —around 20 to 30 W— so running it for several hours a day barely shows up: a
+          few cents per month. The real jump comes from warm-mist units: because they boil the
+          water, they pull 200 to 400 W and can multiply the cost tenfold. A hybrid model sits in
+          between depending on whether it runs cool or warm.
         </p>
         <p className="mt-4 text-base leading-relaxed text-muted-foreground">
           At around €0.15/kWh, a 25 W ultrasonic running eight hours a day costs roughly €1/month,
-          while a 300 W warm-mist unit on the same schedule climbs above €10/month. To spend less, use
-          the auto mode (so it doesn't over-mist) and stick to cool mist unless you actually need to
-          warm the room.
+          while a 300 W warm-mist unit on the same schedule climbs above €10/month. To spend less,
+          use the auto mode (so it doesn't over-mist) and stick to cool mist unless you actually
+          need to warm the room.
         </p>
       </section>
 
@@ -62,14 +62,18 @@ function Page() {
         <h2 className="font-display text-2xl font-semibold">Frequently asked questions</h2>
         <div className="mt-5 space-y-5">
           <div>
-            <h3 className="font-medium text-foreground">How much electricity does a humidifier use per month?</h3>
+            <h3 className="font-medium text-foreground">
+              How much electricity does a humidifier use per month?
+            </h3>
             <p className="mt-1 text-muted-foreground">
               An ultrasonic or evaporative unit (20-30 W) costs barely €1-2/month with normal use. A
               warm-mist unit (200-400 W) can top €10/month.
             </p>
           </div>
           <div>
-            <h3 className="font-medium text-foreground">Which technology is the cheapest to run?</h3>
+            <h3 className="font-medium text-foreground">
+              Which technology is the cheapest to run?
+            </h3>
             <p className="mt-1 text-muted-foreground">
               Ultrasonic and evaporative, because they don't heat the water. Warm-mist is by far the
               most expensive to keep running.
