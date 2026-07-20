@@ -423,12 +423,12 @@ export const getOfertas = (): Oferta[] => {
 
 export const mejoresPorCategoria = {
   general: "levoit-dual-200s",
-  calidadPrecio: "xiaomi-smart-humidifier-2",
+  calidadPrecio: "cecotec-pure-aroma-300-yang",
   economico: "cecotec-pure-aroma-300-yang",
   bebe: "philips-hu2716-nanocloud",
   dormitorioSilencioso: "levoit-dual-200s",
   alergias: "philips-hu2716-nanocloud",
-  salon: "rowenta-aqua-perfect",
-  inteligente: "xiaomi-smart-humidifier-2",
+  salon: "winix-l500",
+  inteligente: "levoit-dual-200s",
   estanciasGrandes: "winix-l500",
 } as const;
