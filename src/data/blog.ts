@@ -518,6 +518,35 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "xiaomi-mijia-smart-evaporative-humidifier-pro-espana",
+    titulo: "Xiaomi lanza el Mijia Smart Evaporative Humidifier Pro: humidificación sin niebla, ya a la venta en España",
+    fecha: "2026-07-21",
+    categoria: "Novedades",
+    publicado: false,
+    resumen:
+      "Xiaomi amplía su gama Mijia con un humidificador evaporativo de 5 litros, filtro antibacteriano lavable y 30,7 dB de ruido. Ya está en Amazon España, aunque de momento solo a través de vendedores externos.",
+    imagenPortada: {
+      src: "https://m.media-amazon.com/images/I/6148d2MArUL._AC_SX679_.jpg",
+      alt: "Xiaomi Mijia Smart Evaporative Humidifier Pro, humidificador evaporativo con pantalla superior",
+      credito: "Imagen: Amazon",
+    },
+    contenido: [
+      "Xiaomi ha ampliado su gama Mijia de climatización del hogar con el Smart Evaporative Humidifier Pro, un modelo que rompe con la tecnología que hasta ahora identificaba a la marca en este blog: el Xiaomi Smart Humidifier 2 que ya tenemos analizado combina base ultrasónica con lámpara UV-C, mientras que este Pro pasa a la evaporación pura. Ya está disponible en versión EU y ya se puede comprar desde España, aunque de momento solo a través de vendedores externos en Amazon.",
+      "La diferencia no es un detalle técnico menor. En nuestra guía sobre evaporativo frente a ultrasónico ya explicamos que la evaporación tiene una ventaja de partida: al no pulverizar el agua en gotas microscópicas, no arrastra minerales al aire y por tanto no genera el polvo blanco que sí puede depositarse con los ultrasónicos cuando se usa agua del grifo. A cambio, suele costar algo más de electricidad y de mantenimiento del filtro.",
+      "En especificaciones, Xiaomi declara un depósito de 5 litros, un caudal de humidificación de hasta 600 ml/h -pensado para dormitorios grandes o salones medianos- y un funcionamiento de hasta 20 horas seguidas en modo nocturno antes de que salte el aviso de depósito vacío. El dato que más nos ha llamado la atención es el de ruido: 30,7 dB(A), una cifra baja para un evaporativo de este caudal, que la marca atribuye a un motor inversor de corriente continua, una bomba de agua cerrada y un conducto de aire de baja resistencia.",
+      "El filtro es antibacteriano de tipo 3D, lavable, con una vida recomendada de entre 6 y 12 meses según el uso. Xiaomi declara una eficacia antibacteriana superior al 99,9% frente a E. coli y Staphylococcus aureus. Como con cualquier cifra de este tipo -ya lo vimos con la protección antimicrobiana de 28 días del Levoit NeoClassic-, es un dato de laboratorio del propio fabricante: útil como referencia, pero no un sustituto de lavar el filtro y el depósito con la frecuencia que marca el manual.",
+      "Lo más práctico para quien nos lee desde España es el precio. En la tienda oficial de Xiaomi el Mijia Smart Evaporative Humidifier Pro figura a 99,99 €. En Amazon España, sin embargo, todavía no hay oferta directa de Xiaomi ni de Amazon: las siete ofertas disponibles hoy vienen de vendedores terceros, la más barata a 106,03 € con envío gratuito gestionado por Tienda Siglo XXI (vendedor con un 73% de valoraciones positivas en los últimos 12 meses). Antes de comprar merece la pena comparar el precio de la tienda oficial de Xiaomi con el de Amazon, porque hoy el primero sale más a cuenta si no te importa esperar el envío desde fuera.",
+      "Si buscas evaporativo y ya disponible con vendedor de confianza en España, el Philips HU2716 NanoCloud que tenemos analizado sigue siendo nuestra referencia en esta tecnología. Y si lo que prefieres es quedarte con un Xiaomi conectado aunque sea con tecnología distinta, el Xiaomi Smart Humidifier 2 sigue siendo la opción real de la marca disponible hoy con vendedor directo en Amazon España.",
+      "Habrá que esperar a que lleguen más unidades y opiniones de uso real para confirmar si el ruido declarado y la promesa de bajo mantenimiento del filtro se sostienen fuera del laboratorio. Por ahora, es la novedad evaporativa más reciente de Xiaomi y ya se puede comprar desde España, con matices en el precio que conviene mirar antes de decidir dónde comprarlo.",
+    ],
+    afiliados: [
+      {
+        comercio: "Amazon",
+        href: "https://www.amazon.es/dp/B0G6G6RXZW",
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string) {
