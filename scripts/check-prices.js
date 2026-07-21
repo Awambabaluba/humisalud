@@ -76,12 +76,18 @@ function pageExtract() {
   ].filter(Boolean);
 
   const read = (root) => {
-    const off = root.querySelector('.a-price[data-a-color="base"] .a-offscreen, .a-price .a-offscreen');
+    const off = root.querySelector(
+      '.a-price[data-a-color="base"] .a-offscreen, .a-price .a-offscreen',
+    );
     if (off) return off.textContent.trim();
     const whole = root.querySelector(".a-price-whole");
     if (whole) {
       const frac = root.querySelector(".a-price-fraction");
-      return whole.textContent.replace(/[^\d]/g, "") + (frac ? "," + frac.textContent.replace(/[^\d]/g, "") : "") + "€";
+      return (
+        whole.textContent.replace(/[^\d]/g, "") +
+        (frac ? "," + frac.textContent.replace(/[^\d]/g, "") : "") +
+        "€"
+      );
     }
     return null;
   };
@@ -170,7 +176,7 @@ function extractProducts(content) {
 // precioReferencia / precioComprobadoEn para reemplazarlos en bloque.
 function updateRe(slug) {
   return new RegExp(
-    `(slug: "${slug}"[\\s\\S]*?precioMin: )([\\d.]+)(,\\r?\\n(?: {4}precioReferencia: ([\\d.]+),\\r?\\n)?(?: {4}precioComprobadoEn: "[^"]+",\\r?\\n)?)`,
+    `(slug: "${slug}"(?:(?!slug: ")[\\s\\S])*?precioMin: )([\\d.]+)(,\\r?\\n(?: {4}precioReferencia: ([\\d.]+),\\r?\\n)?(?: {4}precioComprobadoEn: "[^"]+",\\r?\\n)?)`,
   );
 }
 
@@ -221,12 +227,19 @@ async function main() {
         oldPriceNum > 0 ? (Math.abs(livePriceNum - oldPriceNum) / oldPriceNum) * 100 : 0;
       if (changePercent > 60) {
         const dir = livePriceNum < oldPriceNum ? "caída" : "subida";
-        results.push({ slug, status: "SOSPECHOSO", oldPrice: oldPriceNum, detectedPrice: livePriceNum, dir });
+        results.push({
+          slug,
+          status: "SOSPECHOSO",
+          oldPrice: oldPriceNum,
+          detectedPrice: livePriceNum,
+          dir,
+        });
         continue;
       }
 
       const newReferenceNum = Math.max(oldReferenceNum, livePriceNum);
-      const changed = Math.abs(livePriceNum - oldPriceNum) > 0.01 || newReferenceNum !== oldReferenceNum;
+      const changed =
+        Math.abs(livePriceNum - oldPriceNum) > 0.01 || newReferenceNum !== oldReferenceNum;
       if (changed) {
         content = content.replace(
           re,
@@ -234,7 +247,9 @@ async function main() {
         );
       }
       const discountPercent =
-        newReferenceNum > 0 ? Math.round(((newReferenceNum - livePriceNum) / newReferenceNum) * 100) : 0;
+        newReferenceNum > 0
+          ? Math.round(((newReferenceNum - livePriceNum) / newReferenceNum) * 100)
+          : 0;
       results.push({
         slug,
         status: changed ? "ACTUALIZADO" : "SIN CAMBIOS",
@@ -246,7 +261,11 @@ async function main() {
       // --- Primera inserción de precio real ---
       const re = insertRe(slug);
       if (!re.test(content)) {
-        results.push({ slug, status: "SKIP", detail: "No se encontró dónde insertar (sin precioOrientativo)" });
+        results.push({
+          slug,
+          status: "SKIP",
+          detail: "No se encontró dónde insertar (sin precioOrientativo)",
+        });
         continue;
       }
       content = content.replace(
@@ -278,7 +297,9 @@ async function main() {
     } else if (r.status === "SKIP") {
       console.log(`SKIP   ${r.slug}: ${r.detail}`);
     } else if (r.status === "SOSPECHOSO") {
-      console.log(`AVISO  ${r.slug}: ${r.dir} >60% (${r.oldPrice}€ -> ${r.detectedPrice}€) — no se aplicó, revisar a mano`);
+      console.log(
+        `AVISO  ${r.slug}: ${r.dir} >60% (${r.oldPrice}€ -> ${r.detectedPrice}€) — no se aplicó, revisar a mano`,
+      );
     } else if (r.status === "NUEVO") {
       inserted++;
       console.log(`NUEVO  ${r.slug}: ${r.newPrice}€ (primer precio real insertado)`);
@@ -290,7 +311,9 @@ async function main() {
     } else if (r.status === "SIN CAMBIOS") {
       if (r.discountPercent > 0) ofertas++;
       if (process.argv.includes("--verbose")) {
-        console.log(`=      ${r.slug}: ${r.oldPrice}€ (sin cambios)${r.discountPercent > 0 ? `  -> OFERTA -${r.discountPercent}%` : ""}`);
+        console.log(
+          `=      ${r.slug}: ${r.oldPrice}€ (sin cambios)${r.discountPercent > 0 ? `  -> OFERTA -${r.discountPercent}%` : ""}`,
+        );
       }
     }
   }
