@@ -190,11 +190,11 @@ export const productos: Producto[] = [
     },
     resumen:
       "Un conectado de gama media que en las reseñas verificadas siempre sale bien parado: silencioso, con capacidad suficiente y muy fácil de limpiar. Es la apuesta más segura para un dormitorio o la habitación del bebé.",
-    enlaceAfiliado: "https://www.amazon.es/Levoit-Humidificador-Dual-200S-Smart/dp/B0CT91XZLG",
+    enlaceAfiliado: "https://www.amazon.es/dp/B0DQP1G2B2",
     comercio: "Amazon",
     fechaActualizacion: HOY,
-    fuentes: ["Estudio interno HumiSalud (jun 2026)", "levoit.com ficha Dual 200S"],
-    datosPendientes: ["Precio observado"],
+    fuentes: ["Estudio interno HumiSalud (jun 2026)", "levoit.com ficha Dual 200S", "Amazon.es (21/07/2026)"],
+    datosPendientes: [],
   },
   {
     slug: "philips-hu2716-nanocloud",
@@ -257,16 +257,16 @@ export const productos: Producto[] = [
   },
   {
     slug: "rowenta-aqua-perfect",
-    nombre: "Rowenta Aqua Perfect",
+    nombre: "Rowenta Aqua Boost",
     marca: "Rowenta",
-    modelo: "Aqua Perfect",
-    precioOrientativo: "DATO_PENDIENTE",
+    modelo: "Aqua Boost HU4020",
+    precioOrientativo: "95,20 €",
     rango: "Alto",
     tecnologia: "Híbrido",
-    capacidadL: 4.5,
-    coberturaM2: 40,
-    ruidoDb: 40, // ficha distribuidor (Rowenta no publica en web ES)
-    autonomiaH: 12, // temporizador máx. en display
+    capacidadL: 2.5,
+    coberturaM2: 50,
+    ruidoDb: 30, // ficha Amazon.es, 30 dBA a velocidad mínima
+    autonomiaH: 15, // hasta 15h de funcionamiento (ficha Amazon.es)
     valoracionEditorial: 82,
     idealPara: ["Salones medianos-grandes", "Invierno con calefacción intensa"],
     noRecomendadoPara: ["Dormitorios pequeños", "Quien busca lo más barato"],
@@ -275,8 +275,8 @@ export const productos: Producto[] = [
       "Vapor frío y caliente",
       "Datos de marca: 99,9% de eliminación bacteriana (fabricante)",
     ],
-    inconvenientes: ["Precio medio-alto", "Mayor tamaño"],
-    caracteristicas: ["Híbrido frío/caliente", "Sensor de humedad", "Depósito 4,5 L"],
+    inconvenientes: ["Precio medio-alto", "Depósito más pequeño (2,5 L) que otros híbridos"],
+    caracteristicas: ["Híbrido frío/caliente", "Sensor de humedad", "Depósito 2,5 L"],
     atributos: {
       control: {
         higrostato: true, modoAuto: true, wifiApp: false,
@@ -297,11 +297,11 @@ export const productos: Producto[] = [
     },
     resumen:
       "Buena opción para un salón con la calefacción a tope todo el invierno. El 99,9% de eliminación bacteriana lo dice Rowenta, no nosotros.",
-    enlaceAfiliado: "https://www.amazon.es/Rowenta-HU5220-HU5220F0-Humidificador/dp/B074QTR8DS",
+    enlaceAfiliado: "https://www.amazon.es/dp/B09C6JVGBR",
     comercio: "Amazon",
     fechaActualizacion: HOY,
-    fuentes: ["Rowenta.es (17/06/2026)"],
-    datosPendientes: ["Precio observado actual"],
+    fuentes: ["Rowenta.es (17/06/2026)", "Amazon.es (21/07/2026)"],
+    datosPendientes: [],
   },
   {
     slug: "xiaomi-smart-humidifier-2",
