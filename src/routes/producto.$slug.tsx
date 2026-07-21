@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getProducto, productos } from "@/data/products";
+import { getProducto, productos, isDisponible } from "@/data/products";
 import { getPostsRelacionadosConProducto } from "@/data/blog";
 import { AffiliateButton } from "@/components/site/AffiliateButton";
 import { PriceTag } from "@/components/site/PriceTag";
@@ -89,7 +89,7 @@ export const Route = createFileRoute("/producto/$slug")({
 
 function ProductoPage() {
   const { producto: p } = Route.useLoaderData();
-  const alternativas = productos.filter((x) => x.slug !== p.slug).slice(0, 3);
+  const alternativas = productos.filter((x) => x.slug !== p.slug && isDisponible(x)).slice(0, 3);
   const postsRelacionados = getPostsRelacionadosConProducto(p.nombre).slice(0, 3);
 
   return (

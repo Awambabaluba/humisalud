@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { calcular } from "@/lib/humidifier-math";
-import { productos } from "@/data/products";
+import { productos, isDisponible } from "@/data/products";
 import { ProductCard } from "./ProductCard";
 import { useT } from "@/i18n/LocaleContext";
 import { Droplets } from "lucide-react";
@@ -22,7 +22,7 @@ export function CalculatorWidget() {
   const matches = useMemo(
     () =>
       productos.filter(
-        (p) => typeof p.coberturaM2 === "number" && (p.coberturaM2 as number) >= m2,
+        (p) => isDisponible(p) && typeof p.coberturaM2 === "number" && (p.coberturaM2 as number) >= m2,
       ),
     [m2],
   );
