@@ -402,6 +402,13 @@ export const productos: Producto[] = [
 
 export const getProducto = (slug: string) => productos.find((p) => p.slug === slug);
 
+/** Un producto está disponible salvo que su precioOrientativo esté marcado
+ * "no disponible" (la tarea de precios lo actualiza). "DATO_PENDIENTE" NO es
+ * agotado (precio sin confirmar). Los agotados se ocultan solos de listados,
+ * comparativas y ofertas hasta que vuelvan a stock o se sustituyan. */
+export const isDisponible = (p: Producto): boolean =>
+  !p.precioOrientativo.toLowerCase().includes("no disponible");
+
 export interface Oferta {
   producto: Producto;
   descuentoPercent: number;
@@ -410,7 +417,7 @@ export interface Oferta {
 /** Productos cuyo precioMin actual es menor que su precioReferencia — ofertas activas detectadas por la revisión diaria. */
 export const getOfertas = (): Oferta[] => {
   return productos
-    .filter((p) => p.precioReferencia && p.precioMin)
+    .filter((p) => p.precioReferencia && p.precioMin && isDisponible(p))
     .map((p) => {
       const actual = p.precioMin!;
       const referencia = p.precioReferencia!;

@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { productos, mejoresPorCategoria } from "@/data/products";
+import { productos, mejoresPorCategoria, isDisponible } from "@/data/products";
 import { ProductCard } from "@/components/site/ProductCard";
 import { ComparisonTable } from "@/components/site/ComparisonTable";
 import { AffiliateDisclosure } from "@/components/site/AffiliateDisclosure";
@@ -154,7 +154,7 @@ export const Route = createFileRoute("/categoria/$slug")({
 function CategoriaPage() {
   const { slug } = Route.useLoaderData();
   const copy = COPY[slug]!;
-  const lista = productos.filter(copy.filtro);
+  const lista = productos.filter((p) => copy.filtro(p) && isDisponible(p));
 
   const cat = CATEGORIAS.find((c) => c.slug === slug);
   return (
