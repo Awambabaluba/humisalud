@@ -523,7 +523,7 @@ export const blogPosts: BlogPost[] = [
     titulo: "Xiaomi lanza el Mijia Smart Evaporative Humidifier Pro: humidificación sin niebla, ya a la venta en España",
     fecha: "2026-07-21",
     categoria: "Novedades",
-    publicado: false,
+    publicado: true,
     resumen:
       "Xiaomi amplía su gama Mijia con un humidificador evaporativo de 5 litros, filtro antibacteriano lavable y 30,7 dB de ruido. Ya está en Amazon España, aunque de momento solo a través de vendedores externos.",
     imagenPortada: {
