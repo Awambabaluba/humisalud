@@ -2,12 +2,7 @@
 // (14–17 jun 2026, fuentes citadas) y deben re-verificarse antes de publicar.
 // Donde el estudio no aporta datos concretos usamos {{DATO_PENDIENTE}}.
 
-export type Tecnologia =
-  | "Ultrasónico"
-  | "Evaporativo"
-  | "Vapor caliente"
-  | "Híbrido"
-  | "UV-C";
+export type Tecnologia = "Ultrasónico" | "Evaporativo" | "Vapor caliente" | "Híbrido" | "UV-C";
 
 export type RangoPrecio = "Económico" | "Medio" | "Alto" | "Premium";
 
@@ -16,31 +11,31 @@ type AsistenteVoz = "Alexa" | "Google" | "Siri";
 
 export interface AtributosProducto {
   control: {
-    higrostato: TriBool;            // sensor de humedad integrado
-    modoAuto: TriBool;              // ajusta vapor según humedad
+    higrostato: TriBool; // sensor de humedad integrado
+    modoAuto: TriBool; // ajusta vapor según humedad
     wifiApp: TriBool;
     asistentesVoz: AsistenteVoz[] | "DATO_PENDIENTE";
     temporizador: TriBool;
     apagadoAutoSinAgua: TriBool;
   };
   confort: {
-    modoNoche: TriBool;             // velocidad silenciosa
+    modoNoche: TriBool; // velocidad silenciosa
     luzApagable: TriBool;
     boquilla360: TriBool;
     indicadorAgua: TriBool;
-    topFill: TriBool;               // rellenado superior
+    topFill: TriBool; // rellenado superior
   };
   mantenimiento: {
     filtroRequerido: TriBool;
     filtroCosteAnualEur?: number | "DATO_PENDIENTE";
-    bocaAncha: TriBool;             // facilita limpiar el depósito
+    bocaAncha: TriBool; // facilita limpiar el depósito
     cartuchoAntical: TriBool;
     autolimpieza: TriBool;
-    uvc: TriBool;                   // lámpara UV-C interna
+    uvc: TriBool; // lámpara UV-C interna
   };
   extras: {
     aromaterapia: TriBool;
-    vaporCaliente: TriBool;         // opción de vapor templado/caliente
+    vaporCaliente: TriBool; // opción de vapor templado/caliente
     ionizador: TriBool;
     consumoW?: number | "DATO_PENDIENTE";
   };
@@ -117,25 +112,38 @@ export const productos: Producto[] = [
     ],
     atributos: {
       control: {
-        higrostato: false, modoAuto: false, wifiApp: false,
-        asistentesVoz: [], temporizador: PEND, apagadoAutoSinAgua: true,
+        higrostato: false,
+        modoAuto: false,
+        wifiApp: false,
+        asistentesVoz: [],
+        temporizador: PEND,
+        apagadoAutoSinAgua: true,
       },
       confort: {
-        modoNoche: false, luzApagable: PEND, boquilla360: true,
-        indicadorAgua: true, topFill: false,
+        modoNoche: false,
+        luzApagable: PEND,
+        boquilla360: true,
+        indicadorAgua: true,
+        topFill: false,
       },
       mantenimiento: {
-        filtroRequerido: false, bocaAncha: false, cartuchoAntical: false,
-        autolimpieza: false, uvc: false,
+        filtroRequerido: false,
+        bocaAncha: false,
+        cartuchoAntical: false,
+        autolimpieza: false,
+        uvc: false,
       },
       extras: {
-        aromaterapia: true, vaporCaliente: false, ionizador: false,
+        aromaterapia: true,
+        vaporCaliente: false,
+        ionizador: false,
         consumoW: 24,
       },
     },
     resumen:
       "Difusor ultrasónico de entrada que cumple para habitaciones pequeñas y para perfumar el aire de vez en cuando. No le pidas hacer de humidificador en un salón ni tenerlo encendido toda la noche en el cuarto del bebé.",
-    enlaceAfiliado: "https://www.amazon.es/Cecotec-Humidificador-Temporizador-aromaterapia-Ultrasilencioso/dp/B07MSJDB8M",
+    enlaceAfiliado:
+      "https://www.amazon.es/Cecotec-Humidificador-Temporizador-aromaterapia-Ultrasilencioso/dp/B07MSJDB8M",
     comercio: "Amazon",
     fechaActualizacion: HOY,
     fuentes: ["Cecotec.es (17/06/2026)", "PcComponentes (17/06/2026)", "Amazon.es (17/06/2026)"],
@@ -165,26 +173,34 @@ export const productos: Producto[] = [
       "Como ultrasónico, exige agua destilada para evitar polvo blanco",
       "Filtro/cartucho antical requiere mantenimiento",
     ],
-    caracteristicas: [
-      "Ultrasónico vapor frío",
-      "Conectado (VeSync)",
-      "Top-fill 3 L",
-    ],
+    caracteristicas: ["Ultrasónico vapor frío", "Conectado (VeSync)", "Top-fill 3 L"],
     atributos: {
       control: {
-        higrostato: true, modoAuto: true, wifiApp: true,
-        asistentesVoz: ["Alexa", "Google"], temporizador: true, apagadoAutoSinAgua: true,
+        higrostato: true,
+        modoAuto: true,
+        wifiApp: true,
+        asistentesVoz: ["Alexa", "Google"],
+        temporizador: true,
+        apagadoAutoSinAgua: true,
       },
       confort: {
-        modoNoche: true, luzApagable: true, boquilla360: true,
-        indicadorAgua: true, topFill: true,
+        modoNoche: true,
+        luzApagable: true,
+        boquilla360: true,
+        indicadorAgua: true,
+        topFill: true,
       },
       mantenimiento: {
-        filtroRequerido: false, bocaAncha: true, cartuchoAntical: true,
-        autolimpieza: false, uvc: false,
+        filtroRequerido: false,
+        bocaAncha: true,
+        cartuchoAntical: true,
+        autolimpieza: false,
+        uvc: false,
       },
       extras: {
-        aromaterapia: true, vaporCaliente: false, ionizador: false,
+        aromaterapia: true,
+        vaporCaliente: false,
+        ionizador: false,
         consumoW: 25,
       },
     },
@@ -230,20 +246,32 @@ export const productos: Producto[] = [
     ],
     atributos: {
       control: {
-        higrostato: true, modoAuto: true, wifiApp: false,
-        asistentesVoz: [], temporizador: true, apagadoAutoSinAgua: true,
+        higrostato: true,
+        modoAuto: true,
+        wifiApp: false,
+        asistentesVoz: [],
+        temporizador: true,
+        apagadoAutoSinAgua: true,
       },
       confort: {
-        modoNoche: true, luzApagable: true, boquilla360: false,
-        indicadorAgua: true, topFill: false,
+        modoNoche: true,
+        luzApagable: true,
+        boquilla360: false,
+        indicadorAgua: true,
+        topFill: false,
       },
       mantenimiento: {
-        filtroRequerido: true, filtroCosteAnualEur: 40,
-        bocaAncha: true, cartuchoAntical: false,
-        autolimpieza: false, uvc: false,
+        filtroRequerido: true,
+        filtroCosteAnualEur: 40,
+        bocaAncha: true,
+        cartuchoAntical: false,
+        autolimpieza: false,
+        uvc: false,
       },
       extras: {
-        aromaterapia: false, vaporCaliente: false, ionizador: false,
+        aromaterapia: false,
+        vaporCaliente: false,
+        ionizador: false,
         consumoW: 15,
       },
     },
@@ -279,19 +307,31 @@ export const productos: Producto[] = [
     caracteristicas: ["Híbrido frío/caliente", "Sensor de humedad", "Depósito 4,5 L"],
     atributos: {
       control: {
-        higrostato: true, modoAuto: true, wifiApp: false,
-        asistentesVoz: [], temporizador: true, apagadoAutoSinAgua: true,
+        higrostato: true,
+        modoAuto: true,
+        wifiApp: false,
+        asistentesVoz: [],
+        temporizador: true,
+        apagadoAutoSinAgua: true,
       },
       confort: {
-        modoNoche: true, luzApagable: true, boquilla360: true,
-        indicadorAgua: true, topFill: true,
+        modoNoche: true,
+        luzApagable: true,
+        boquilla360: true,
+        indicadorAgua: true,
+        topFill: true,
       },
       mantenimiento: {
-        filtroRequerido: false, bocaAncha: true, cartuchoAntical: true,
-        autolimpieza: PEND, uvc: false,
+        filtroRequerido: false,
+        bocaAncha: true,
+        cartuchoAntical: true,
+        autolimpieza: PEND,
+        uvc: false,
       },
       extras: {
-        aromaterapia: PEND, vaporCaliente: true, ionizador: false,
+        aromaterapia: PEND,
+        vaporCaliente: true,
+        ionizador: false,
         consumoW: PEND,
       },
     },
@@ -327,25 +367,38 @@ export const productos: Producto[] = [
     caracteristicas: ["Ultrasónico con UV-C", "Conectado", "4,5 L"],
     atributos: {
       control: {
-        higrostato: true, modoAuto: true, wifiApp: true,
-        asistentesVoz: ["Alexa", "Google"], temporizador: true, apagadoAutoSinAgua: true,
+        higrostato: true,
+        modoAuto: true,
+        wifiApp: true,
+        asistentesVoz: ["Alexa", "Google"],
+        temporizador: true,
+        apagadoAutoSinAgua: true,
       },
       confort: {
-        modoNoche: true, luzApagable: true, boquilla360: true,
-        indicadorAgua: true, topFill: true,
+        modoNoche: true,
+        luzApagable: true,
+        boquilla360: true,
+        indicadorAgua: true,
+        topFill: true,
       },
       mantenimiento: {
-        filtroRequerido: false, bocaAncha: true, cartuchoAntical: false,
-        autolimpieza: false, uvc: true,
+        filtroRequerido: false,
+        bocaAncha: true,
+        cartuchoAntical: false,
+        autolimpieza: false,
+        uvc: true,
       },
       extras: {
-        aromaterapia: false, vaporCaliente: false, ionizador: false,
+        aromaterapia: false,
+        vaporCaliente: false,
+        ionizador: false,
         consumoW: 32,
       },
     },
     resumen:
       "Un conectado con buena relación calidad-precio, sobre todo si ya tienes cacharros Xiaomi por casa. La eficacia de la luz UV-C es un dato de fabricante y, sobre todo, depende de que limpies el depósito como toca.",
-    enlaceAfiliado: "https://www.amazon.es/Xiaomi-Smart-Humidifier-Capacidad-autom%C3%A1tico/dp/B0BC9SDP8Z",
+    enlaceAfiliado:
+      "https://www.amazon.es/Xiaomi-Smart-Humidifier-Capacidad-autom%C3%A1tico/dp/B0BC9SDP8Z",
     comercio: "Amazon",
     fechaActualizacion: HOY,
     fuentes: ["Mi.com (17/06/2026)"],
@@ -374,25 +427,38 @@ export const productos: Producto[] = [
     caracteristicas: ["Ultrasónico frío + caliente", "7,5 L", "Cobertura amplia"],
     atributos: {
       control: {
-        higrostato: true, modoAuto: true, wifiApp: false,
-        asistentesVoz: [], temporizador: true, apagadoAutoSinAgua: true,
+        higrostato: true,
+        modoAuto: true,
+        wifiApp: false,
+        asistentesVoz: [],
+        temporizador: true,
+        apagadoAutoSinAgua: true,
       },
       confort: {
-        modoNoche: true, luzApagable: true, boquilla360: true,
-        indicadorAgua: true, topFill: true,
+        modoNoche: true,
+        luzApagable: true,
+        boquilla360: true,
+        indicadorAgua: true,
+        topFill: true,
       },
       mantenimiento: {
-        filtroRequerido: false, bocaAncha: true, cartuchoAntical: PEND,
-        autolimpieza: PEND, uvc: false,
+        filtroRequerido: false,
+        bocaAncha: true,
+        cartuchoAntical: PEND,
+        autolimpieza: PEND,
+        uvc: false,
       },
       extras: {
-        aromaterapia: PEND, vaporCaliente: true, ionizador: false,
+        aromaterapia: PEND,
+        vaporCaliente: true,
+        ionizador: false,
         consumoW: PEND,
       },
     },
     resumen:
       "Para espacios grandes en los que la mayoría de modelos se quedan cortos. Antes de publicarlo definitivamente nos falta confirmar el PVP actual.",
-    enlaceAfiliado: "https://www.amazon.es/Winix-Humidificador-Ultras%C3%B3nico-silencioso-humidificaci%C3%B3n/dp/B08PBZ9KH3",
+    enlaceAfiliado:
+      "https://www.amazon.es/Winix-Humidificador-Ultras%C3%B3nico-silencioso-humidificaci%C3%B3n/dp/B08PBZ9KH3",
     comercio: "Amazon",
     fechaActualizacion: HOY,
     fuentes: ["Estudio HumiSalud jun 2026"],
@@ -421,7 +487,8 @@ export const getOfertas = (): Oferta[] => {
     .map((p) => {
       const actual = p.precioMin!;
       const referencia = p.precioReferencia!;
-      const descuentoPercent = referencia > 0 ? Math.round(((referencia - actual) / referencia) * 100) : 0;
+      const descuentoPercent =
+        referencia > 0 ? Math.round(((referencia - actual) / referencia) * 100) : 0;
       return { producto: p, descuentoPercent };
     })
     .filter((o) => o.descuentoPercent >= 5)

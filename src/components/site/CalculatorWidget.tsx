@@ -22,7 +22,8 @@ export function CalculatorWidget() {
   const matches = useMemo(
     () =>
       productos.filter(
-        (p) => isDisponible(p) && typeof p.coberturaM2 === "number" && (p.coberturaM2 as number) >= m2,
+        (p) =>
+          isDisponible(p) && typeof p.coberturaM2 === "number" && (p.coberturaM2 as number) >= m2,
       ),
     [m2],
   );
@@ -33,19 +34,69 @@ export function CalculatorWidget() {
         className="rounded-3xl border border-border bg-card p-6 sm:p-8 shadow-soft"
         onSubmit={(e) => e.preventDefault()}
       >
-        <NumberField label={t("calc.area")} value={m2} min={5} max={120} step={1} onChange={setM2} unit="m²" />
-        <NumberField label={t("calc.height")} value={alturaM} min={2.2} max={4} step={0.1} onChange={setAlturaM} unit="m" />
-        <NumberField label={t("calc.current")} value={humedadActual} min={10} max={80} step={1} onChange={setHumedadActual} unit="%" />
-        <NumberField label={t("calc.target")} value={humedadObjetivo} min={30} max={65} step={1} onChange={setHumedadObjetivo} unit="%" />
-        <NumberField label={t("calc.hours")} value={horasUso} min={1} max={24} step={1} onChange={setHorasUso} unit="h" />
-        <NumberField label={t("calc.ach")} value={ach} min={0.2} max={3} step={0.1} onChange={setAch} unit="ACH" />
+        <NumberField
+          label={t("calc.area")}
+          value={m2}
+          min={5}
+          max={120}
+          step={1}
+          onChange={setM2}
+          unit="m²"
+        />
+        <NumberField
+          label={t("calc.height")}
+          value={alturaM}
+          min={2.2}
+          max={4}
+          step={0.1}
+          onChange={setAlturaM}
+          unit="m"
+        />
+        <NumberField
+          label={t("calc.current")}
+          value={humedadActual}
+          min={10}
+          max={80}
+          step={1}
+          onChange={setHumedadActual}
+          unit="%"
+        />
+        <NumberField
+          label={t("calc.target")}
+          value={humedadObjetivo}
+          min={30}
+          max={65}
+          step={1}
+          onChange={setHumedadObjetivo}
+          unit="%"
+        />
+        <NumberField
+          label={t("calc.hours")}
+          value={horasUso}
+          min={1}
+          max={24}
+          step={1}
+          onChange={setHorasUso}
+          unit="h"
+        />
+        <NumberField
+          label={t("calc.ach")}
+          value={ach}
+          min={0.2}
+          max={3}
+          step={0.1}
+          onChange={setAch}
+          unit="ACH"
+        />
       </form>
 
       <div className="space-y-5">
         <div className="rounded-3xl border border-border bg-gradient-to-br from-mist via-card to-background p-6 sm:p-8 shadow-card">
           <div className="flex items-center gap-2 text-primary">
             <Droplets className="h-4 w-4" />
-            <span className="text-xs uppercase tracking-wider font-medium">{t("calc.results")}</span>
+            <span className="text-xs uppercase tracking-wider font-medium">
+              {t("calc.results")}
+            </span>
           </div>
           <dl className="mt-4 grid gap-4 sm:grid-cols-2">
             <Metric label={t("calc.flow")} value={`${Math.round(result.caudalGph)} g/h`} />
@@ -72,8 +123,22 @@ export function CalculatorWidget() {
 }
 
 function NumberField({
-  label, value, min, max, step, onChange, unit,
-}: { label: string; value: number; min: number; max: number; step: number; onChange: (n: number) => void; unit: string }) {
+  label,
+  value,
+  min,
+  max,
+  step,
+  onChange,
+  unit,
+}: {
+  label: string;
+  value: number;
+  min: number;
+  max: number;
+  step: number;
+  onChange: (n: number) => void;
+  unit: string;
+}) {
   return (
     <label className="block mb-5">
       <div className="flex items-baseline justify-between mb-2">
