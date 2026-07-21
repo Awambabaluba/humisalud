@@ -6,6 +6,7 @@ export const Route = createFileRoute("/cookies")({
     meta: [
       { title: "Política de cookies — HumiSalud" },
       { name: "description", content: "Cookies utilizadas en HumiSalud." },
+      { name: "robots", content: "noindex,follow" },
       { property: "og:url", content: "https://humisalud.com/cookies" },
     ],
     links: [{ rel: "canonical", href: "https://humisalud.com/cookies" }],

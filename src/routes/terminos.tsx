@@ -6,6 +6,7 @@ export const Route = createFileRoute("/terminos")({
     meta: [
       { title: "Términos legales — HumiSalud" },
       { name: "description", content: "Términos legales de uso de HumiSalud." },
+      { name: "robots", content: "noindex,follow" },
       { property: "og:url", content: "https://humisalud.com/terminos" },
     ],
     links: [{ rel: "canonical", href: "https://humisalud.com/terminos" }],

@@ -10,6 +10,7 @@ export const Route = createFileRoute("/aviso-afiliacion")({
         content:
           "Cómo funciona el programa de afiliación de HumiSalud y qué relación tenemos con Amazon y otros comercios.",
       },
+      { name: "robots", content: "noindex,follow" },
       { property: "og:title", content: "Aviso de afiliación — HumiSalud" },
       { property: "og:url", content: "https://humisalud.com/aviso-afiliacion" },
     ],

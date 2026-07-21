@@ -7,7 +7,7 @@ function makeLegal(title: string, slug: string, body: React.ReactNode) {
       meta: [
         { title: `${title} — HumiSalud` },
         { name: "description", content: `${title} de HumiSalud.` },
-        { name: "robots", content: "index,follow" },
+        { name: "robots", content: "noindex,follow" },
         { property: "og:url", content: `https://humisalud.com/${slug}` },
       ],
       links: [{ rel: "canonical", href: `https://humisalud.com/${slug}` }],
