@@ -65,6 +65,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#0f3b46" },
       { name: "google-site-verification", content: "bwrvMTpyhkgsRLtYeKb56L3ug3x6uHWAisNUJhF-mz0" },
+      { name: "p:domain_verify", content: "17c72c5be5b5fe998240bad6b59c3484" },
       { property: "og:title", content: "HumiSalud — Guía editorial de humidificadores" },
       { name: "twitter:title", content: "HumiSalud — Guía editorial de humidificadores" },
       { property: "og:description", content: "Análisis técnico, comparativas filtrables y cálculo por m². Recomendaciones honestas sobre humidificadores." },
