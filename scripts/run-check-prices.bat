@@ -8,6 +8,16 @@ REM local y NO toca GitHub, por eso el push tiene que hacerlo esta rutina.
 cd /d "c:\Users\juand\Proyectos\humisalud\humidify-wisely-main"
 echo. >> "%~dp0check-prices.log"
 echo ==== %DATE% %TIME% ==== >> "%~dp0check-prices.log"
+REM Sincroniza ANTES de leer/escribir products.ts: sin esto, si main se movio
+REM desde la ultima ejecucion, esta rutina lee y modifica una version vieja del
+REM fichero y el push de mas abajo llega tarde (non-fast-forward) o choca con
+REM otro cambio basado en la misma version vieja (mismo bug medido y corregido
+REM el 3/8/2026 en el run-check-prices.bat de aspirabot-com).
+git pull --ff-only origin main >> "%~dp0check-prices.log" 2>&1
+if errorlevel 1 (
+  echo ATENCION: git pull --ff-only fallo -^> main tiene commits que no se pueden traer en avance rapido. Abortando para no partir de una base vieja. >> "%~dp0check-prices.log"
+  exit /b 1
+)
 node scripts\check-prices.js >> "%~dp0check-prices.log" 2>&1
 REM Tras refrescar precios, avisa por Telegram si la seccion /ofertas cambio
 REM (nueva oferta, baja aun mas o termina). Lee el products.ts recien escrito.
