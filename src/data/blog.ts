@@ -547,6 +547,64 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "cuando-encender-el-humidificador-higrometro",
+    titulo:
+      "¿Cuándo hay que encender el humidificador? El calendario no manda, el higrómetro sí",
+    fecha: "2026-08-23",
+    categoria: "Guías",
+    resumen:
+      "Cada final de agosto nos preguntáis lo mismo. La respuesta no es una fecha: el humidificador no lo enciende septiembre, lo enciende la calefacción. Y encenderlo antes de tiempo no es neutro, tiene un coste que casi nadie cuenta.",
+    imagenPortada: {
+      src: philipsImg,
+      alt: "Humidificador evaporativo Philips HU2716 NanoCloud, con higrostato y modo automático",
+      credito: "Imagen: Philips / Versuni",
+    },
+    contenido: [
+      "Todos los años, más o menos por estas fechas, empieza a llegarnos la misma pregunta por correo: ¿cuándo hay que empezar a usar el humidificador? Quien se lo compró el invierno pasado lo tiene guardado en un armario desde marzo, ve que agosto se acaba y quiere saber si toca sacarlo ya. La respuesta corta es que no hay una fecha, y que quien te dé una la está inventando. La respuesta larga es bastante más útil, porque explica de qué depende de verdad y te ahorra tenerlo funcionando semanas antes de que haga ninguna falta.",
+      "El punto de partida es entender que a tu casa no la seca el frío: la seca la calefacción. Suena contradictorio, porque asociamos el aire seco al invierno, pero el mecanismo es exactamente ese. El aire frío de la calle contiene muy poca agua en términos absolutos, aunque el parte meteorológico diga que la humedad relativa exterior es del 80 o del 90 por ciento. Cuando ese aire entra en tu casa y lo calientas hasta los 21 grados, la cantidad de agua que lleva dentro no cambia, pero la capacidad de ese aire para admitir vapor se dispara. El resultado es que esa misma agua, repartida ahora en un aire con mucha más capacidad, se traduce en una humedad relativa mucho más baja. Por eso el día que enciendes el radiador es el día que tu casa empieza a secarse de verdad, y no el día que baja el termómetro.",
+      "De ahí sale la regla práctica más fiable que podemos darte: el humidificador no lo enciende el calendario, lo enciende la calefacción. Mientras no haya calefacción funcionando de forma sostenida, es muy raro que una casa española necesite humidificación, por mucho que estemos ya en septiembre y la sensación general sea de que el verano se acaba.",
+      "Conviene tener en la cabeza qué números son los razonables. El RITE, el reglamento español de instalaciones térmicas que ya repasamos en su día junto a las recomendaciones de la OMS, plantea para el diseño de instalaciones una humedad relativa interior en torno al 40-50 por ciento en invierno con calefacción, y algo más alta, del 45 al 60 por ciento, en verano con refrigeración. No es una norma que te obligue a nada en tu salón, pero sí es la mejor referencia disponible de qué se considera confortable y salubre en una vivienda en España.",
+      "Lo que casi nadie cuenta es que humidificar antes de tiempo no es una decisión neutra. No es que no sirva de nada: es que puede hacer daño. Y el motivo tiene nombre y apellidos, los ácaros del polvo doméstico, que son la principal causa de alergia respiratoria en España y que dependen de la humedad del aire de una forma bastante literal.",
+      "Los ácaros no beben agua: la absorben directamente del aire a través de su cutícula, así que la humedad ambiental no es para ellos una comodidad, sino una condición de supervivencia. Las cifras que maneja la literatura son concretas: el Dermatophagoides farinae encuentra su óptimo entre el 50 y el 60 por ciento de humedad relativa, y el Dermatophagoides pteronyssinus, la especie más común en zonas húmedas, prefiere valores por encima del 75 por ciento. Por debajo del 50 por ciento la cosa se les complica seriamente, porque no consiguen captar agua suficiente y acaban muriendo. En sentido contrario, por encima de ese 50 por ciento y con temperaturas de entre 20 y 37 grados, que es exactamente el clima de una casa con calefacción, su proliferación se acelera.",
+      "Por eso las recomendaciones que se dan a los pacientes alérgicos a ácaros van justo en la dirección contraria a la intuición: mantener la humedad relativa por debajo del 50 por ciento y evitar de forma expresa los humidificadores que la suban por encima del 60. Si en tu casa hay alguien con asma o rinitis alérgica por ácaros, encender el humidificador en septiembre por si acaso, sin haber medido nada, no es una precaución inofensiva: es empujar el ambiente justo hacia la franja en la que los ácaros se multiplican mejor.",
+      "La conclusión práctica de todo esto es que hay un paso previo que casi nadie da y que cuesta menos que cualquier accesorio del aparato: medir. Un higrómetro decente vale poco más que un par de cafés, y sin ese número estás decidiendo a ciegas sobre algo cuyo rango correcto es bastante estrecho. Nuestra recomendación es medir en el dormitorio, que es donde pasas más horas seguidas respirando el mismo aire, por la noche, y colocando el aparato lejos del propio humidificador y de radiadores o ventanas: a medio metro de la salida de vapor, cualquier higrómetro te dará un número que no representa la habitación.",
+      "Con el número delante, la decisión se vuelve casi automática. Si mides por debajo del 40 por ciento de forma sostenida y la calefacción ya está funcionando, el humidificador está justificado y hará un trabajo real. Si te mueves entre el 40 y el 50, estás justo donde hay que estar y lo mejor que puedes hacer es no tocar nada. Y si mides por encima del 50 o 55 por ciento, encender un humidificador no solo es innecesario, es contraproducente, y el problema que tienes probablemente sea el contrario: ventilación insuficiente o exceso de humedad, que es otra conversación distinta.",
+      "Los síntomas son una pista, nunca un veredicto. Levantarte con la garganta seca, notar calambres de electricidad estática al tocar el pomo de una puerta, los labios agrietados o las juntas del parqué abriéndose son señales clásicas de aire seco, y está bien fijarse en ellas. Pero en septiembre engañan mucho, porque la garganta seca al despertar puede venir perfectamente del aire acondicionado que aún estás usando, de la alergia al polen o de dormir con la boca abierta por una congestión. Fíate del higrómetro antes que de la sensación.",
+      "Tampoco toda España va al mismo ritmo, y esto explica por qué las recomendaciones genéricas de internet fallan tanto. En el interior peninsular, con inviernos fríos, ambiente seco y muchas horas de calefacción al día, la humedad interior cae con facilidad por debajo del 40 por ciento y el humidificador tiene todo el sentido. En la cornisa cantábrica y en buena parte del litoral mediterráneo, en cambio, la humedad ambiental es lo bastante alta durante casi todo el año como para que muchas casas no lleguen a necesitarlo nunca, y allí el aparato acaba siendo un gasto que no resuelve ningún problema real.",
+      "Entonces, si todavía no toca encenderlo, ¿qué tiene sentido hacer ahora, a finales de agosto? Preparar el terreno. Ese humidificador lleva desde marzo guardado en un armario, probablemente con restos de agua en algún recoveco, con el filtro tal como quedó al final de la temporada pasada y con la cal acumulada de meses de uso. Este es el momento tranquilo para vaciarlo del todo, hacerle un ciclo de descalcificación con vinagre, revisar si el filtro necesita recambio y comprobar que enciende y funciona, en vez de descubrir el primer día de frío que el aparato huele raro o que el filtro está para tirar. Todo lo que contamos en su día sobre limpieza y prevención de la fiebre del humidificador aplica aquí de lleno, y el arranque de temporada es justo cuando más importa.",
+      "Y si lo que estás es pensando en comprar uno para esta temporada, hay una característica que, a la luz de todo lo anterior, importa más de lo que parece: el higrostato con modo automático. Es lo que permite fijar un objetivo, digamos el 45 por ciento, y que el aparato se pare solo al alcanzarlo en vez de seguir soltando vapor hasta convertir el dormitorio en un invernadero. Un humidificador sin higrostato depende por completo de que tú te acuerdes de apagarlo, y esa es precisamente la vía por la que se acaba pasando del 60 por ciento sin enterarte.",
+      "En el catálogo que tenemos analizado, los modelos que sí llevan higrostato y modo automático son el Levoit Dual 200S, el Philips HU2716 NanoCloud, el Rowenta Aqua Boost, el Winix L500 y el Xiaomi Smart Humidifier 2. El Cecotec Pure Aroma 300 Yang, que es el modelo de entrada más económico, no lo incluye, y conviene saberlo antes de comprarlo: no es un mal aparato para su precio, pero exige que seas tú quien vigile el nivel de humedad, cosa que en la práctica casi nadie hace de forma constante.",
+      "Resumiendo lo importante, porque es fácil perderse: no hay fecha de inicio de temporada, hay un disparador, y el disparador es la calefacción. Antes de eso, mide. Si el número está entre 40 y 50, no hagas nada, que es la mejor decisión posible. Y si hay alergia a ácaros en casa, recuerda que el humidificador puede jugar en tu contra si lo usas sin medir. El mejor humidificador, al final, es el que sabe estarse apagado cuando no hace falta.",
+    ],
+    imagenes: [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      {
+        src: levoitImg,
+        alt: "Levoit Dual 200S, humidificador ultrasónico con higrostato y modo automático",
+        credito: "Imagen: Levoit / VeSync",
+      },
+      undefined,
+    ],
+    afiliados: [
+      {
+        comercio: "Amazon",
+        href: "https://www.amazon.es/dp/B08LW4K16N",
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string) {
