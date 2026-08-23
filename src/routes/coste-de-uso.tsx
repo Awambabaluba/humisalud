@@ -4,13 +4,13 @@ import { CostTable } from "@/components/site/CostTable";
 export const Route = createFileRoute("/coste-de-uso")({
   head: () => ({
     meta: [
-      { title: "Coste real de uso de un humidificador — HumiSalud" },
+      { title: "Cuánto consume un humidificador: coste real en luz | HumiSalud" },
       {
         name: "description",
         content:
           "Cuánto cuesta tener un humidificador encendido cada día: €/mes y €/año por tecnología (ultrasónico, evaporativo, vapor caliente, híbrido).",
       },
-      { property: "og:title", content: "Coste real de uso de un humidificador — HumiSalud" },
+      { property: "og:title", content: "Cuánto consume un humidificador: coste real en luz | HumiSalud" },
       { property: "og:url", content: "https://humisalud.com/coste-de-uso" },
     ],
     links: [
