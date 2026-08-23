@@ -165,9 +165,14 @@ function extractProducts(content) {
   const slugs = [...content.matchAll(/^\s+slug: "([\w-]+)",/gm)].map((m) => m[1]);
   const links = new Map();
   for (const slug of slugs) {
-    const blockRe = new RegExp(`slug: "${slug}"[\\s\\S]*?enlaceAfiliado: "([^"]+)"`);
+    // El bloque se ACOTA hasta el siguiente `slug: "` y se tolera el salto de
+    // linea tras `enlaceAfiliado:`. Sin las dos cosas, un producto cuyo enlace
+    // quede partido en dos lineas (lo hace prettier) no casaba aqui y la busqueda
+    // seguia hasta el enlace del producto SIGUIENTE: a Cecotec se le asignaba el
+    // precio del Levoit. Solo lo freno el guardia de subidas >60%.
+    const blockRe = new RegExp(`slug: "${slug}"((?:(?!slug: \")[\\s\\S])*?)enlaceAfiliado:\\s*"([^"]+)"`);
     const m = content.match(blockRe);
-    if (m) links.set(slug, m[1]);
+    if (m) links.set(slug, m[2]);
   }
   return links;
 }
