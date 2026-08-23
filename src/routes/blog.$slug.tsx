@@ -1,9 +1,37 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { AffiliateButton } from "@/components/site/AffiliateButton";
 import { AffiliateDisclosure } from "@/components/site/AffiliateDisclosure";
 import { getBlogPost, blogPostsOrdenados } from "@/data/blog";
 import { CalendarDays } from "lucide-react";
+
+/**
+ * Convierte [texto](/ruta) dentro de un parrafo en un enlace real.
+ *
+ * `contenido` es texto plano y se pintaba tal cual, asi que los articulos NO
+ * podian enlazarse entre si: el unico enlazado interno del blog eran los dos
+ * relacionados del pie. Esto habilita enlaces editoriales sin cambiar el
+ * esquema ni tocar los articulos ya escritos (si no hay corchetes, no pasa nada).
+ */
+function conEnlaces(texto: string) {
+  const partes: ReactNode[] = [];
+  const re = /\[([^\]]+)\]\((\/[^)\s]*)\)/g;
+  let ultimo = 0;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(texto)) !== null) {
+    if (m.index > ultimo) partes.push(texto.slice(ultimo, m.index));
+    partes.push(
+      <Link key={`${m.index}-${m[2]}`} to={m[2]} className="underline underline-offset-2">
+        {m[1]}
+      </Link>,
+    );
+    ultimo = m.index + m[0].length;
+  }
+  if (ultimo === 0) return texto;
+  if (ultimo < texto.length) partes.push(texto.slice(ultimo));
+  return partes;
+}
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -57,7 +85,15 @@ export const Route = createFileRoute("/blog/$slug")({
 
 function BlogPostPage() {
   const { post } = Route.useLoaderData();
-  const otros = blogPostsOrdenados.filter((p) => p.slug !== post.slug).slice(0, 2);
+  // Relacionados: primero los de la MISMA categoria, luego se completa rotando
+// desde la posicion del articulo actual. Antes se cogian siempre los 2 mas
+// recientes, asi que los articulos antiguos no recibian NINGUN enlace interno
+// y Search Console los dejaba en "Descubierta: actualmente sin indexar".
+const resto = blogPostsOrdenados.filter((p) => p.slug !== post.slug);
+const mismaCat = resto.filter((p) => p.categoria === post.categoria);
+const posicion = blogPostsOrdenados.findIndex((p) => p.slug === post.slug);
+const rotados = resto.map((_, i) => resto[(posicion + 1 + i) % resto.length]);
+const otros = [...new Set([...mismaCat, ...rotados])].slice(0, 3);
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-12 sm:py-16 prose-editorial">
@@ -106,7 +142,7 @@ function BlogPostPage() {
           const imagen = post.imagenes?.[i];
           return (
             <div key={i}>
-              <p>{parrafo}</p>
+              <p>{conEnlaces(parrafo)}</p>
               {imagen && (
                 <figure className="mt-5 not-prose">
                   <img
