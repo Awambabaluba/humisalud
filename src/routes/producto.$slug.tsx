@@ -73,14 +73,25 @@ export const Route = createFileRoute("/producto/$slug")({
                           shippingDestination: { "@type": "DefinedRegion", addressCountry: "ES" },
                           deliveryTime: {
                             "@type": "ShippingDeliveryTime",
-                            handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
-                            transitTime: { "@type": "QuantitativeValue", minValue: 1, maxValue: 3, unitCode: "DAY" },
+                            handlingTime: {
+                              "@type": "QuantitativeValue",
+                              minValue: 0,
+                              maxValue: 1,
+                              unitCode: "DAY",
+                            },
+                            transitTime: {
+                              "@type": "QuantitativeValue",
+                              minValue: 1,
+                              maxValue: 3,
+                              unitCode: "DAY",
+                            },
                           },
                         },
                         hasMerchantReturnPolicy: {
                           "@type": "MerchantReturnPolicy",
                           applicableCountry: "ES",
-                          returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+                          returnPolicyCategory:
+                            "https://schema.org/MerchantReturnFiniteReturnWindow",
                           merchantReturnDays: 30,
                           returnMethod: "https://schema.org/ReturnByMail",
                           returnFees: "https://schema.org/FreeReturn",
