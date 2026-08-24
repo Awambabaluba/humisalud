@@ -14,7 +14,7 @@ import { IntroOverlay } from "@/components/site/IntroOverlay";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "HumiSalud — Mejores humidificadores 2026, análisis y guía de compra" },
+      { title: "HumiSalud — Mejores humidificadores 2026: guía y análisis" },
       {
         name: "description",
         content:

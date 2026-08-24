@@ -19,8 +19,12 @@ export interface BlogPostAfiliado {
 export interface BlogPost {
   slug: string;
   titulo: string;
+  /** Título corto para la etiqueta <title> (SEO) cuando `titulo` es demasiado largo para caber en 60 car. junto al sufijo " — HumiSalud". Si falta, se usa `titulo`. */
+  metaTitulo?: string;
   fecha: string;
   resumen: string;
+  /** Meta description corta (120-155 car.) cuando `resumen` es demasiado larga. Si falta, se usa `resumen`. */
+  metaDescripcion?: string;
   categoria: string;
   contenido: string[];
   /** false mientras es un borrador pendiente de revisión humana — no aparece en /blog, sitemap ni rutas públicas */
@@ -34,10 +38,13 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "humedad-ideal-en-casa-2026",
     titulo: "¿Cuál es la humedad ideal en casa? Lo que dicen RITE y la OMS",
+    metaTitulo: "¿Cuál es la humedad ideal en casa? RITE y OMS",
     fecha: "2026-06-08",
     categoria: "Salud",
     resumen:
       "Repasamos qué rango de humedad relativa recomiendan las normativas de referencia y qué pasa si te sales de él, por arriba o por abajo, con ejemplos de lo que pasa en una casa española de verdad.",
+    metaDescripcion:
+      "Qué rango de humedad relativa recomiendan el RITE y la OMS, y qué pasa si te sales de él por arriba o por abajo, con ejemplos reales.",
     imagenPortada: {
       src: "https://images.unsplash.com/photo-1757967350347-e796a659d30c?auto=format&fit=crop&w=1200&q=80",
       alt: "Condensación en el cristal de una ventana por exceso de humedad en casa",
@@ -103,10 +110,13 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "evaporativo-vs-ultrasonico-cual-elegir",
     titulo: "Evaporativo vs. ultrasónico: la pregunta que más nos hacéis",
+    metaTitulo: "Evaporativo vs. ultrasónico: ¿cuál elegir?",
     fecha: "2026-06-15",
     categoria: "Guías",
     resumen:
       "Las dos tecnologías más vendidas resuelven el mismo problema de formas muy distintas. Aquí la diferencia real, no la de la ficha de marketing, con ejemplos de cuándo conviene cada una.",
+    metaDescripcion:
+      "Comparamos evaporativo y ultrasónico sin marketing: diferencias reales de mantenimiento, ruido y consumo, y cuándo conviene elegir cada uno.",
     imagenPortada: {
       src: "https://images.unsplash.com/photo-1501297875943-27f3803b4956?auto=format&fit=crop&w=1200&q=80",
       alt: "Macrofotografía de gotas de agua, ilustrando la diferencia entre vapor y evaporación",
@@ -174,10 +184,13 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "fiebre-del-humidificador-prevencion",
     titulo: "Qué es la 'fiebre del humidificador' y cómo evitarla con hábitos sencillos",
+    metaTitulo: "Fiebre del humidificador: qué es y cómo evitarla",
     fecha: "2026-06-18",
     categoria: "Salud",
     resumen:
       "Es un caso real y documentado de neumonitis por hipersensibilidad. No es alarmismo: con una limpieza regular y unos hábitos básicos, el riesgo es prácticamente nulo.",
+    metaDescripcion:
+      "Es un caso real de neumonitis por hipersensibilidad, no alarmismo: con limpieza regular y hábitos básicos, el riesgo es prácticamente nulo.",
     imagenPortada: {
       src: "https://images.unsplash.com/photo-1550963295-019d8a8a61c5?auto=format&fit=crop&w=1200&q=80",
       alt: "Limpieza con spray y bayeta, hábito clave para evitar la fiebre del humidificador",
@@ -246,11 +259,14 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "levoit-superior-studio-evaporativo-filtro-dos-anos",
     titulo: "Levoit presenta el Superior Studio: un evaporativo con filtro que dura hasta dos años",
+    metaTitulo: "Levoit Superior Studio: filtro de 2 años",
     fecha: "2026-06-20",
     categoria: "Novedades",
     publicado: true,
     resumen:
       "Levoit anuncia el Superior Studio, un humidificador evaporativo con filtro lavable de hasta dos años de vida y solo 19 dB en su nivel más bajo. Aún no está en Amazon España.",
+    metaDescripcion:
+      "Levoit presenta el Superior Studio, evaporativo con filtro lavable de hasta dos años y solo 19 dB en su nivel más bajo. Aún no está en Amazon España.",
     imagenPortada: {
       src: "https://levoit.com/cdn/shop/files/levoit-superior-studio-smart-evaporative-humidifier-6081922.jpg?v=1779264913",
       alt: "Levoit Superior Studio, nuevo humidificador evaporativo inteligente",
@@ -362,6 +378,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "humidificador-para-bebe-vapor-frio-caliente-donde-poner",
     titulo: "Humidificador para bebé: vapor frío o caliente, dónde ponerlo y cuándo no usarlo",
+    metaTitulo: "Humidificador para bebé: vapor frío, ubicación",
     fecha: "2026-07-01",
     categoria: "Guías",
     publicado: true,
@@ -401,6 +418,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "levoit-neoclassic-humidificador-lavavajillas",
     titulo: "Levoit NeoClassic: humidificadores con piezas aptas para el lavavajillas",
+    metaTitulo: "Levoit NeoClassic: apto para lavavajillas",
     fecha: "2026-07-06",
     categoria: "Novedades",
     publicado: true,
@@ -463,6 +481,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "aire-acondicionado-reseca-garganta-humidificador-verano",
     titulo: "Por qué el aire acondicionado te reseca y cómo evitarlo",
+    metaTitulo: "Por qué el aire acondicionado reseca la garganta",
     fecha: "2026-07-14",
     categoria: "Salud",
     publicado: true,
@@ -521,11 +540,14 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "xiaomi-mijia-smart-evaporative-humidifier-pro-espana",
     titulo: "Xiaomi lanza el Mijia Smart Evaporative Humidifier Pro: humidificación sin niebla, ya a la venta en España",
+    metaTitulo: "Xiaomi Mijia Smart Evaporative Humidifier Pro",
     fecha: "2026-07-21",
     categoria: "Novedades",
     publicado: true,
     resumen:
       "Xiaomi amplía su gama Mijia con un humidificador evaporativo de 5 litros, filtro antibacteriano lavable y 30,7 dB de ruido. Ya está en Amazon España, aunque de momento solo a través de vendedores externos.",
+    metaDescripcion:
+      "Xiaomi amplía su gama Mijia con un evaporativo de 5 litros, filtro lavable y 30,7 dB de ruido. Ya está en Amazon España vía vendedores externos.",
     imagenPortada: {
       src: "https://m.media-amazon.com/images/I/6148d2MArUL._AC_SX679_.jpg",
       alt: "Xiaomi Mijia Smart Evaporative Humidifier Pro, humidificador evaporativo con pantalla superior",
@@ -551,10 +573,13 @@ export const blogPosts: BlogPost[] = [
     slug: "cuando-encender-el-humidificador-higrometro",
     titulo:
       "¿Cuándo hay que encender el humidificador? El calendario no manda, el higrómetro sí",
+    metaTitulo: "¿Cuándo hay que encender el humidificador?",
     fecha: "2026-08-23",
     categoria: "Guías",
     resumen:
       "Cada final de agosto nos preguntáis lo mismo. La respuesta no es una fecha: el humidificador no lo enciende septiembre, lo enciende la calefacción. Y encenderlo antes de tiempo no es neutro, tiene un coste que casi nadie cuenta.",
+    metaDescripcion:
+      "No hay fecha fija: el humidificador lo enciende la calefacción, no el calendario. Encenderlo antes de tiempo tiene un coste que casi nadie cuenta.",
     imagenPortada: {
       src: philipsImg,
       alt: "Humidificador evaporativo Philips HU2716 NanoCloud, con higrostato y modo automático",

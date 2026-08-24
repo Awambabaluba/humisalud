@@ -41,13 +41,14 @@ export const Route = createFileRoute("/blog/$slug")({
   },
   head: ({ loaderData }) => {
     const post = loaderData?.post;
-    const title = post ? `${post.titulo} — HumiSalud` : "Artículo — HumiSalud";
+    const title = post ? `${post.metaTitulo ?? post.titulo} — HumiSalud` : "Artículo — HumiSalud";
+    const description = post?.metaDescripcion ?? post?.resumen ?? "";
     return {
       meta: [
         { title },
-        { name: "description", content: post?.resumen ?? "" },
+        { name: "description", content: description },
         { property: "og:title", content: title },
-        { property: "og:description", content: post?.resumen ?? "" },
+        { property: "og:description", content: description },
         { property: "og:type", content: "article" },
         {
           property: "og:url",
