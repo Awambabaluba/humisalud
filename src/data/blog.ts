@@ -4,6 +4,9 @@ import xiaomiImg from "@/assets/products/xiaomi-smart-humidifier-2.webp";
 import cecotecImg from "@/assets/products/cecotec-pure-aroma-300-yang.webp";
 import winixImg from "@/assets/products/winix-l500.webp";
 import rowentaImg from "@/assets/products/rowenta-aqua-perfect.webp";
+import xiaomiPuri3ProImg from "@/assets/products/xiaomi-purifying-humidifier-3-pro.webp";
+import xiaomiPuri3ProLlenadoImg from "@/assets/products/xiaomi-purifying-humidifier-3-pro-llenado.webp";
+import xiaomiPuri3ProPantallaImg from "@/assets/products/xiaomi-purifying-humidifier-3-pro-pantalla.webp";
 
 export interface BlogPostImagen {
   src: string;
@@ -539,7 +542,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "xiaomi-mijia-smart-evaporative-humidifier-pro-espana",
-    titulo: "Xiaomi lanza el Mijia Smart Evaporative Humidifier Pro: humidificación sin niebla, ya a la venta en España",
+    titulo:
+      "Xiaomi lanza el Mijia Smart Evaporative Humidifier Pro: humidificación sin niebla, ya a la venta en España",
     metaTitulo: "Xiaomi Mijia Smart Evaporative Humidifier Pro",
     fecha: "2026-07-21",
     categoria: "Novedades",
@@ -565,14 +569,13 @@ export const blogPosts: BlogPost[] = [
     afiliados: [
       {
         comercio: "Amazon",
-        href: "https://www.amazon.es/dp/B0G6G6RXZW",
+        href: "https://www.amazon.es/dp/B0G6G6RXZW?tag=david0e98-21",
       },
     ],
   },
   {
     slug: "cuando-encender-el-humidificador-higrometro",
-    titulo:
-      "¿Cuándo hay que encender el humidificador? El calendario no manda, el higrómetro sí",
+    titulo: "¿Cuándo hay que encender el humidificador? El calendario no manda, el higrómetro sí",
     metaTitulo: "¿Cuándo hay que encender el humidificador?",
     fecha: "2026-08-23",
     categoria: "Guías",
@@ -626,7 +629,7 @@ export const blogPosts: BlogPost[] = [
     afiliados: [
       {
         comercio: "Amazon",
-        href: "https://www.amazon.es/dp/B08LW4K16N",
+        href: "https://www.amazon.es/dp/B08LW4K16N?tag=david0e98-21",
       },
     ],
   },
@@ -642,6 +645,11 @@ export const blogPosts: BlogPost[] = [
       "Xiaomi ha puesto a la venta en China el Mijia Purifying Humidifier 3 Pro: 8 litros de depósito, hasta 2.000 ml/h y un filtro de seis capas con CADR de 422 m³/h. No está en España, pero lo interesante para quien tiene alergia es que las dos funciones trabajan por separado.",
     metaDescripcion:
       "Xiaomi vende en China el Purifying Humidifier 3 Pro: 8 L, 2.000 ml/h y CADR de 422 m³/h. Aún no está en España; te contamos qué aporta.",
+    imagenPortada: {
+      src: xiaomiPuri3ProImg,
+      alt: "Xiaomi Mijia Purifying Humidifier 3 Pro, purificador y humidificador 2 en 1, en un salón",
+      credito: "Imagen: Xiaomi",
+    },
     contenido: [
       "Xiaomi ha empezado a vender en China el Mijia Purifying Humidifier 3 Pro, un aparato que hace dos cosas a la vez: purifica el aire y lo humidifica. Pasó primero por Youpin, la plataforma de financiación colectiva de la marca, a finales de julio, y desde el 10 de agosto se vende ya de forma normal en JD.com por 1.999 yuanes, unos 265 euros al cambio. De momento es un lanzamiento exclusivo del mercado chino: no está en Amazon España, no está en la tienda española de Xiaomi y no hay ninguna fecha anunciada para que llegue aquí. Lo contamos igualmente porque la idea que hay detrás sí es relevante para mucha gente que nos lee, y especialmente para quien convive con una alergia respiratoria.",
       "Las cifras que declara la marca son llamativas incluso para alguien acostumbrado a leer fichas técnicas de esta categoría. El depósito es de 8 litros, extraíble y con asa, y se puede rellenar también por arriba sin desmontar nada. El caudal máximo de humidificación llega a los 2.000 mililitros por hora, que es entre tres y diez veces lo que mueven los humidificadores domésticos que solemos analizar aquí: el Philips HU2716 que tenemos en catálogo entrega 200 ml/h y el Xiaomi evaporativo que ya se vende en España, 600 ml/h. En purificación, Xiaomi declara un CADR de 422 m³/h para partículas y de 247 m³/h para formaldehído. El ruido en modo noche queda en 28,1 dB(A) y la autonomía, en unas 16 horas seguidas.",
@@ -653,6 +661,26 @@ export const blogPosts: BlogPost[] = [
       "Conviene decir también dónde está el riesgo de un aparato así en manos de quien tiene alergia. Dos mil mililitros por hora en un dormitorio cerrado es muchísima agua, y sin un higrostato bien ajustado es una forma rapidísima de pasar del 60% de humedad relativa sin enterarte, que es precisamente la franja en la que proliferan ácaros y moho. La potencia bruta no es una virtud en esta categoría; la capacidad de pararse a tiempo, sí. Si algún día llega a España, ese sería el punto a mirar con lupa en un análisis serio, por delante de los siete minutos del titular.",
       "Mientras tanto, ¿qué se puede comprar hoy desde aquí? Si lo que te interesa es la parte evaporativa de Xiaomi, la marca ya vende en España el [Mijia Smart Evaporative Humidifier Pro](/blog/xiaomi-mijia-smart-evaporative-humidifier-pro-espana), aunque en Amazon lo hemos visto solo a través de vendedores externos. Y si lo que buscas es un humidificador con buena higiene para una casa con alergias, nuestra referencia en tecnología evaporativa sigue siendo el [Philips HU2716 NanoCloud](/producto/philips-hu2716-nanocloud), que no pulveriza agua en gotas y por tanto no dispersa minerales ni polvo blanco por la habitación. Si además quieres entender por qué insistimos tanto con esa diferencia, la tienes desarrollada en nuestra guía de [evaporativo frente a ultrasónico](/blog/evaporativo-vs-ultrasonico-cual-elegir).",
       "La conclusión que nos llevamos de este lanzamiento no es que haya que esperar a este aparato concreto, que igual no llega nunca a nuestro mercado. Es que la industria está empezando a montar las dos funciones en la misma carcasa dejándolas separar, y ese es el formato que de verdad tiene sentido para una casa con alergia: filtrar siempre, humidificar solo cuando el higrómetro dice que hace falta. Quien tenga que elegir hoy entre un purificador y un humidificador, y tenga alergia a ácaros o a polen, que empiece por el purificador. El humidificador es para el aire seco del invierno con calefacción, y solo después de haber medido.",
+    ],
+    imagenes: [
+      undefined,
+      {
+        src: xiaomiPuri3ProLlenadoImg,
+        alt: "Depósito de 8 litros del Xiaomi Mijia Purifying Humidifier 3 Pro, se rellena por arriba sin desmontarlo",
+        credito: "Imagen: Xiaomi",
+      },
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      {
+        src: xiaomiPuri3ProPantallaImg,
+        alt: "Pantalla LCD superior del Xiaomi Mijia Purifying Humidifier 3 Pro, con PM2.5, temperatura y humedad en tiempo real",
+        credito: "Imagen: Xiaomi",
+      },
+      undefined,
+      undefined,
+      undefined,
     ],
     afiliados: [
       {
