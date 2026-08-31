@@ -630,6 +630,37 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "xiaomi-purifying-humidifier-3-pro-purificador-humidificador",
+    titulo:
+      "Xiaomi pone a la venta el Purifying Humidifier 3 Pro: purificar y humidificar por separado en el mismo aparato",
+    metaTitulo: "Xiaomi Purifying Humidifier 3 Pro",
+    fecha: "2026-08-31",
+    categoria: "Novedades",
+    publicado: true,
+    resumen:
+      "Xiaomi ha puesto a la venta en China el Mijia Purifying Humidifier 3 Pro: 8 litros de depósito, hasta 2.000 ml/h y un filtro de seis capas con CADR de 422 m³/h. No está en España, pero lo interesante para quien tiene alergia es que las dos funciones trabajan por separado.",
+    metaDescripcion:
+      "Xiaomi vende en China el Purifying Humidifier 3 Pro: 8 L, 2.000 ml/h y CADR de 422 m³/h. Aún no está en España; te contamos qué aporta.",
+    contenido: [
+      "Xiaomi ha empezado a vender en China el Mijia Purifying Humidifier 3 Pro, un aparato que hace dos cosas a la vez: purifica el aire y lo humidifica. Pasó primero por Youpin, la plataforma de financiación colectiva de la marca, a finales de julio, y desde el 10 de agosto se vende ya de forma normal en JD.com por 1.999 yuanes, unos 265 euros al cambio. De momento es un lanzamiento exclusivo del mercado chino: no está en Amazon España, no está en la tienda española de Xiaomi y no hay ninguna fecha anunciada para que llegue aquí. Lo contamos igualmente porque la idea que hay detrás sí es relevante para mucha gente que nos lee, y especialmente para quien convive con una alergia respiratoria.",
+      "Las cifras que declara la marca son llamativas incluso para alguien acostumbrado a leer fichas técnicas de esta categoría. El depósito es de 8 litros, extraíble y con asa, y se puede rellenar también por arriba sin desmontar nada. El caudal máximo de humidificación llega a los 2.000 mililitros por hora, que es entre tres y diez veces lo que mueven los humidificadores domésticos que solemos analizar aquí: el Philips HU2716 que tenemos en catálogo entrega 200 ml/h y el Xiaomi evaporativo que ya se vende en España, 600 ml/h. En purificación, Xiaomi declara un CADR de 422 m³/h para partículas y de 247 m³/h para formaldehído. El ruido en modo noche queda en 28,1 dB(A) y la autonomía, en unas 16 horas seguidas.",
+      "El fabricante presume además de velocidad: dice que humidifica un dormitorio estándar en siete minutos y un salón amplio en unos diecinueve. Conviene leer esas cifras con la prudencia de siempre, porque son datos de laboratorio de la propia marca y no una medición independiente, igual que hacemos con el 99,97% de menos bacterias que anuncia Philips o con la protección antimicrobiana que declara Levoit. Sirven para hacerse una idea del orden de magnitud, no como una promesa de lo que pasará en tu casa.",
+      "Ahora bien, lo que de verdad nos parece interesante de este aparato no es ninguno de esos números, sino un detalle de diseño que se menciona casi de pasada: la purificación y la humidificación funcionan de forma independiente. Puedes tener el filtro trabajando sin que el aparato suelte ni una gota de humedad al ambiente. Y eso, para quien tiene alergia, no es un matiz menor: es justo la función que necesita.",
+      "Lo hemos explicado ya al hablar de [cuándo hay que encender el humidificador](/blog/cuando-encender-el-humidificador-higrometro), y merece la pena repetirlo porque es el malentendido más caro de esta categoría. Si tu alergia es a los ácaros del polvo, humidificar no te ayuda: te perjudica. Los ácaros absorben el agua directamente del aire, y por encima del 50% de humedad relativa se reproducen mejor. Las recomendaciones que reciben los pacientes alérgicos a ácaros van justo en sentido contrario a lo que vende esta categoría de producto: mantener la humedad por debajo del 50% y evitar los humidificadores que la suban del 60. Lo que sí reduce la carga de alérgenos en el aire es filtrarlo, que es la otra mitad de este aparato.",
+      "El filtro es un compuesto de seis capas que, según Xiaomi, retiene partículas grandes, PM1, PM2,5, formaldehído y alérgenos comunes. A eso se suma un sistema de esterilización por agua electrolizada y un filtro antibacteriano lavable en el circuito de humidificación. También incorpora un sistema de pulverización unidireccional pensado para que el agua no recircule y no se quede estancada dentro del aparato, más un ciclo de autolimpieza. Todo eso ataca el problema que explicamos al hablar de [la fiebre del humidificador](/blog/fiebre-del-humidificador-prevencion): un depósito con agua parada y biofilm acumulado convierte al humidificador en un difusor de bacterias, y en una casa con alguien alérgico o asmático eso es exactamente lo contrario de lo que buscabas al comprarlo.",
+      "El resto de la ficha es lo esperable en un aparato de este tamaño y precio: motor de corriente continua sin escobillas, pantalla LCD semiesférica con brillo adaptativo que muestra cinco datos a la vez, ruedas giratorias para moverlo entre habitaciones y control desde la app Mijia y por voz con el asistente XiaoAI. Es un mueble, no un aparato de mesilla: quien busque algo discreto para un dormitorio pequeño está mirando el producto equivocado.",
+      "Conviene decir también dónde está el riesgo de un aparato así en manos de quien tiene alergia. Dos mil mililitros por hora en un dormitorio cerrado es muchísima agua, y sin un higrostato bien ajustado es una forma rapidísima de pasar del 60% de humedad relativa sin enterarte, que es precisamente la franja en la que proliferan ácaros y moho. La potencia bruta no es una virtud en esta categoría; la capacidad de pararse a tiempo, sí. Si algún día llega a España, ese sería el punto a mirar con lupa en un análisis serio, por delante de los siete minutos del titular.",
+      "Mientras tanto, ¿qué se puede comprar hoy desde aquí? Si lo que te interesa es la parte evaporativa de Xiaomi, la marca ya vende en España el [Mijia Smart Evaporative Humidifier Pro](/blog/xiaomi-mijia-smart-evaporative-humidifier-pro-espana), aunque en Amazon lo hemos visto solo a través de vendedores externos. Y si lo que buscas es un humidificador con buena higiene para una casa con alergias, nuestra referencia en tecnología evaporativa sigue siendo el [Philips HU2716 NanoCloud](/producto/philips-hu2716-nanocloud), que no pulveriza agua en gotas y por tanto no dispersa minerales ni polvo blanco por la habitación. Si además quieres entender por qué insistimos tanto con esa diferencia, la tienes desarrollada en nuestra guía de [evaporativo frente a ultrasónico](/blog/evaporativo-vs-ultrasonico-cual-elegir).",
+      "La conclusión que nos llevamos de este lanzamiento no es que haya que esperar a este aparato concreto, que igual no llega nunca a nuestro mercado. Es que la industria está empezando a montar las dos funciones en la misma carcasa dejándolas separar, y ese es el formato que de verdad tiene sentido para una casa con alergia: filtrar siempre, humidificar solo cuando el higrómetro dice que hace falta. Quien tenga que elegir hoy entre un purificador y un humidificador, y tenga alergia a ácaros o a polen, que empiece por el purificador. El humidificador es para el aire seco del invierno con calefacción, y solo después de haber medido.",
+    ],
+    afiliados: [
+      {
+        comercio: "Amazon",
+        href: "https://www.amazon.es/dp/B08LW4K16N?tag=david0e98-21",
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string) {
