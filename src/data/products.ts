@@ -589,7 +589,7 @@ export const mejoresPorCategoria = {
   calidadPrecio: "cecotec-pure-aroma-300-yang",
   economico: "cecotec-pure-aroma-300-yang",
   bebe: "philips-hu2716-nanocloud",
-  dormitorioSilencioso: "levoit-dual-200s",
+  dormitorioSilencioso: "levoit-neoclassic-450s",
   alergias: "philips-hu2716-nanocloud",
   salon: "winix-l500",
   inteligente: "levoit-dual-200s",
