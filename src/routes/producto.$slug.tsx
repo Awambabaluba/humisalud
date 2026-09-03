@@ -14,6 +14,43 @@ import { HealthInsights } from "@/components/site/HealthInsights";
 import { AtributosClave } from "@/components/site/AtributosClave";
 import { CalendarDays, Droplet, Gauge, Ruler, Volume2 } from "lucide-react";
 
+/**
+ * Cuánto tiempo damos por bueno un precio desde que se comprobó.
+ *
+ * La tarea de revisión de precios corre SEMANALMENTE, así que 30 días son
+ * cuatro pasadas de margen: si un precio sigue sin refrescarse pasado ese
+ * plazo, no es que la tarea llegue tarde, es que no está tocando ese producto.
+ */
+const DIAS_VALIDEZ_PRECIO = 30;
+
+/**
+ * Devuelve la fecha (YYYY-MM-DD) hasta la que se declara válido un precio, o
+ * null si esa fecha ya pasó.
+ *
+ * Search Console avisó el 5/8 de que faltaba `priceValidUntil` en `offers`
+ * («Se debe especificar "validThrough" o "priceValidUntil"»). Google lo pide
+ * como fecha de caducidad de la oferta, no como promesa de que el precio
+ * aguante. Por eso se calcula desde `precioComprobadoEn`: es el mismo dato
+ * que PriceTag ya le enseña al lector ("99,99 € · 31 ago"), dicho para otro
+ * público.
+ *
+ * Si la ventana ya pasó se devuelve null y quien llama RETIRA el bloque
+ * `offers` entero. Publicar una oferta caducada cambiaría un aviso por un
+ * error, y anunciar un precio que no podemos respaldar es justo lo que la web
+ * evita de cara al usuario: PriceTag cae al rango antes que inventar cifra.
+ */
+function precioValidoHasta(comprobadoEn: string): string | null {
+  const hasta = new Date(`${comprobadoEn}T00:00:00Z`);
+  if (Number.isNaN(hasta.getTime())) return null;
+  hasta.setUTCDate(hasta.getUTCDate() + DIAS_VALIDEZ_PRECIO);
+
+  const hoy = new Date();
+  hoy.setUTCHours(0, 0, 0, 0);
+  if (hasta < hoy) return null;
+
+  return hasta.toISOString().slice(0, 10);
+}
+
 export const Route = createFileRoute("/producto/$slug")({
   loader: ({ params }) => {
     const p = getProducto(params.slug);
@@ -26,6 +63,8 @@ export const Route = createFileRoute("/producto/$slug")({
     const desc = p
       ? `Análisis editorial del ${p.nombre} (${p.marca}): tecnología ${p.tecnologia}, ventajas, inconvenientes y para quién es.`
       : "";
+    // null cuando el precio comprobado ya ha caducado -> no se publica `offers`.
+    const validoHasta = p?.precioComprobadoEn ? precioValidoHasta(p.precioComprobadoEn) : null;
     return {
       meta: [
         { title },
@@ -56,7 +95,7 @@ export const Route = createFileRoute("/producto/$slug")({
                         : `https://humisalud.com${PRODUCT_IMAGES[p.slug]}`,
                     }
                   : {}),
-                ...(typeof p.precioMin === "number" && p.precioComprobadoEn
+                ...(typeof p.precioMin === "number" && p.precioComprobadoEn && validoHasta
                   ? {
                       offers: {
                         "@type": "Offer",
@@ -66,6 +105,8 @@ export const Route = createFileRoute("/producto/$slug")({
                         url: `https://humisalud.com/producto/${p.slug}`,
                         // Fecha en que se comprobó el precio = desde cuándo es válida esta oferta.
                         validFrom: p.precioComprobadoEn,
+                        // ...y hasta cuándo. Lo pedía Search Console (5/8/2026).
+                        priceValidUntil: validoHasta,
                         seller: { "@type": "Organization", name: p.comercio },
                         shippingDetails: {
                           "@type": "OfferShippingDetails",
