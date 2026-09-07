@@ -97,7 +97,7 @@ export const DICT = {
       "Indicative estimate. Humidifiers don't compensate for poor ventilation or air leaks; adjust to your real use.",
     "cost.title": "Real running cost by technology",
     "cost.subtitle":
-      "Monthly and yearly cost based on each technology's approximate power draw. Ranges are indicative — real consumption depends on mode, target humidity and runtime.",
+      "Monthly and yearly cost based on each technology's approximate power draw. The ranges are indicative, because real consumption depends on mode, target humidity and runtime.",
     "cost.tech": "Technology",
     "cost.power": "Average draw",
     "cost.month": "€ / month",
@@ -109,7 +109,7 @@ export const DICT = {
   },
 } as const;
 
-export type DictKey = keyof typeof DICT["es"];
+export type DictKey = keyof (typeof DICT)["es"];
 
 export const t = (key: DictKey, locale: Locale): string => {
   const en = (DICT.en as Record<string, string>)[key];

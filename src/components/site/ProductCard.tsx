@@ -20,8 +20,8 @@ export function ProductCard({ producto: p, badge, highlight, descuentoPercent }:
   const L = {
     viewAnalysis: en ? `View review of ${p.nombre}` : `Ver análisis de ${p.nombre}`,
     officialImg: en
-      ? `${p.nombre} — official image ${PRODUCT_IMAGE_CREDITS[p.slug] ?? p.marca}`
-      : `${p.nombre} — imagen oficial ${PRODUCT_IMAGE_CREDITS[p.slug] ?? p.marca}`,
+      ? `Official image of ${p.nombre} (${PRODUCT_IMAGE_CREDITS[p.slug] ?? p.marca})`
+      : `Imagen oficial de ${p.nombre} (${PRODUCT_IMAGE_CREDITS[p.slug] ?? p.marca})`,
     noImg: en ? "No official image" : "Sin imagen oficial",
     rating: en ? "Editorial rating" : "Valoración editorial",
     capacity: en ? "Capacity" : "Capacidad",
@@ -136,6 +136,6 @@ function Spec({ icon, label, value }: { icon: React.ReactNode; label: string; va
 }
 
 function fmt(v: number | "DATO_PENDIENTE" | undefined, unit: string) {
-  if (v === undefined || v === "DATO_PENDIENTE") return "—";
+  if (v === undefined || v === "DATO_PENDIENTE") return "?";
   return `${v} ${unit}`;
 }

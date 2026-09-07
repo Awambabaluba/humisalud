@@ -66,8 +66,8 @@ export function AtributosClave({ atributos }: { atributos?: AtributosProducto })
     <section className="mt-12">
       <h2 className="font-display text-2xl font-semibold">Lo que de verdad importa al elegirlo</h2>
       <p className="mt-2 text-sm text-muted-foreground">
-        Estos son los detalles que marcan la diferencia entre un humidificador que usas a diario y uno que acaba en un armario.
-        Donde aparece "—" es que no hay dato oficial verificado.
+        Estos son los detalles que separan un humidificador que usas a diario de otro que acaba en un armario.
+        Donde veas un interrogante, es que no hay dato oficial verificado.
       </p>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -104,5 +104,5 @@ function renderValue(r: Row): React.ReactNode {
     return <span className="text-xs">{v.join(" · ")}</span>;
   }
   if (typeof v === "number") return <span className="tabular-nums">{v}{r.suffix ? ` ${r.suffix}` : ""}</span>;
-  return <span>—</span>;
+  return <span>?</span>;
 }

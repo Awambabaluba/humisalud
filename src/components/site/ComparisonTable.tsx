@@ -73,6 +73,6 @@ function Td({ children, className = "" }: { children: React.ReactNode; className
   return <td className={`px-4 py-3.5 align-middle border-t border-border ${className}`}>{children}</td>;
 }
 function fmt(v: number | "DATO_PENDIENTE" | undefined, unit: string) {
-  if (v === undefined || v === "DATO_PENDIENTE") return "—";
+  if (v === undefined || v === "DATO_PENDIENTE") return "?";
   return `${v} ${unit}`;
 }

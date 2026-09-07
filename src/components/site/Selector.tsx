@@ -51,18 +51,18 @@ export function Selector() {
     reason: (s: State) =>
       en ? (
         <>
-          We recommend it because it fits your {s.m2} m², budget of {s.presupuesto} € and{" "}
+          We recommend it because it fits your {s.m2} m², your budget of {s.presupuesto} € and{" "}
           <strong className="text-foreground font-medium">{labelUso(s.uso, true)}</strong> use. We
-          don't show products without enough data; where you see "—" there's no verified official
-          figure.
+          don't show products without enough data; a question mark means we have no verified
+          official figure.
         </>
       ) : (
         <>
-          Lo recomendamos porque encaja con tus {s.m2} m², presupuesto de {s.presupuesto} € y
+          Lo recomendamos porque encaja con tus {s.m2} m², tu presupuesto de {s.presupuesto} € y
           uso&nbsp;
           <strong className="text-foreground font-medium">{labelUso(s.uso, false)}</strong>. No
-          mostramos productos sin datos suficientes; donde aparece "—" no hay cifra oficial
-          verificada.
+          mostramos productos sin datos suficientes; si ves un interrogante, es que no hay cifra
+          oficial verificada.
         </>
       ),
     empty: en
