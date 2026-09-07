@@ -143,7 +143,7 @@ export const productos: Producto[] = [
     resumen:
       "Difusor ultrasónico de entrada que cumple para habitaciones pequeñas y para perfumar el aire de vez en cuando. No le pidas hacer de humidificador en un salón ni tenerlo encendido toda la noche en el cuarto del bebé.",
     enlaceAfiliado:
-      "https://www.amazon.es/Cecotec-Humidificador-Temporizador-aromaterapia-Ultrasilencioso/dp/B07MSJDB8M",
+      "https://www.amazon.es/Cecotec-Humidificador-Temporizador-aromaterapia-Ultrasilencioso/dp/B07MSJDB8M?tag=david0e98-21",
     comercio: "Amazon",
     fechaActualizacion: HOY,
     fuentes: ["Cecotec.es (17/06/2026)", "PcComponentes (17/06/2026)", "Amazon.es (17/06/2026)"],
@@ -209,10 +209,14 @@ export const productos: Producto[] = [
     },
     resumen:
       "Un conectado de gama media que en las reseñas verificadas siempre sale bien parado: silencioso, con capacidad suficiente y muy fácil de limpiar. Es la apuesta más segura para un dormitorio o la habitación del bebé.",
-    enlaceAfiliado: "https://www.amazon.es/dp/B0DQP1G2B2",
+    enlaceAfiliado: "https://www.amazon.es/dp/B0DQP1G2B2?tag=david0e98-21",
     comercio: "Amazon",
     fechaActualizacion: HOY,
-    fuentes: ["Estudio interno HumiSalud (jun 2026)", "levoit.com ficha Dual 200S", "Amazon.es (21/07/2026)"],
+    fuentes: [
+      "Estudio interno HumiSalud (jun 2026)",
+      "levoit.com ficha Dual 200S",
+      "Amazon.es (21/07/2026)",
+    ],
     datosPendientes: [],
   },
   {
@@ -296,6 +300,89 @@ export const productos: Producto[] = [
     ],
   },
   {
+    slug: "levoit-neoclassic-650s",
+    nombre: "Levoit NeoClassic 650S",
+    marca: "Levoit",
+    modelo: "NeoClassic 650S",
+    precioOrientativo: "89,99 €",
+    precioMin: 89.99,
+    precioReferencia: 89.99,
+    precioComprobadoEn: "2026-09-07",
+    rango: "Medio",
+    tecnologia: "Ultrasónico",
+    capacidadL: 6.2,
+    coberturaM2: 49.8,
+    ruidoDb: 26, // ≤26 dB en nivel bajo y modo Sueño (ficha Amazon.es y levoit.com)
+    autonomiaH: 62, // hasta 62 h en modo Sueño (nota de prensa Levoit 03/06/2026)
+    valoracionEditorial: 86,
+    idealPara: ["Salones", "Estancias grandes", "Quien no quiere rellenar cada día"],
+    noRecomendadoPara: ["Quien busque vapor caliente", "Dormitorios muy pequeños"],
+    ventajas: [
+      "6,2 L y 320 ml/h: cubre casi 50 m² sin ir siempre al máximo",
+      "26 dB: el conectado más silencioso que hemos fichado para salón",
+      "Hasta 62 h seguidas sin rellenar",
+      "Depósito y bandeja totalmente desmontables, sin rincones difíciles",
+      "Modo automático con sensor de ±5 % y control por app y voz",
+    ],
+    inconvenientes: [
+      "Solo vapor frío: no calienta el agua antes de nebulizar",
+      "Levoit recomienda agua purificada o destilada para evitar polvo blanco",
+      "Recién llegado a Amazon España, con pocas reseñas todavía",
+    ],
+    caracteristicas: [
+      "Ultrasónico vapor frío, 320 ml/h",
+      "Conectado (VeSync) con modo Escena inteligente",
+      "Top-fill 6,2 L con depósito extraíble y bandeja desmontable",
+      "Capa interna con iones de plata (dato de marca: 99,9 % hasta 28 días)",
+      "Incluye esponja filtrante de agua y cepillo de limpieza",
+    ],
+    atributos: {
+      control: {
+        higrostato: true,
+        modoAuto: true,
+        wifiApp: true,
+        asistentesVoz: PEND, // "control por app y voz", sin nombrar asistentes en la ficha
+        temporizador: true,
+        apagadoAutoSinAgua: PEND,
+      },
+      confort: {
+        modoNoche: true,
+        luzApagable: true,
+        boquilla360: true,
+        indicadorAgua: PEND,
+        topFill: true,
+      },
+      mantenimiento: {
+        filtroRequerido: false,
+        bocaAncha: true,
+        cartuchoAntical: PEND,
+        autolimpieza: false,
+        uvc: false,
+      },
+      extras: {
+        aromaterapia: true,
+        vaporCaliente: false,
+        ionizador: false,
+        consumoW: 30,
+      },
+    },
+    resumen:
+      "El hermano mayor del NeoClassic 450S, y el que de verdad tiene sentido en un salón: 6,2 L para casi 50 m², 62 horas sin rellenar y 26 dB. Cuesta 40 € menos que el Winix L500 y añade app y modo automático, pero renuncia al vapor caliente. Lo de los iones de plata lo dice Levoit citando un laboratorio externo; nosotros no lo hemos medido.",
+    enlaceAfiliado: "https://www.amazon.es/dp/B0GXVZ4FXB?tag=david0e98-21",
+    comercio: "Amazon",
+    fechaActualizacion: "2026-09-07",
+    fuentes: [
+      "Amazon.es ficha B0GXVZ4FXB (07/09/2026)",
+      "Levoit.com ficha NeoClassic 650S (07/09/2026)",
+      "Nota de prensa Levoit gama NeoClassic (03/06/2026)",
+    ],
+    datosPendientes: [
+      "Asistentes de voz concretos (la ficha solo dice «app y voz»)",
+      "Apagado automático por falta de agua (no consta en ficha)",
+      "Periodicidad de recambio de la esponja filtrante",
+    ],
+  },
+  {
     slug: "philips-hu2716-nanocloud",
     nombre: "Philips HU2716 NanoCloud",
     marca: "Philips",
@@ -360,7 +447,8 @@ export const productos: Producto[] = [
     },
     resumen:
       "Si lo tuyo es la higiene del aire y el precio te da igual, este es el que te recomendaríamos. Eso sí, las cifras antibacterianas que aparecen en su caja son del fabricante, y así te las contamos: como datos de marca, no como comprobación independiente.",
-    enlaceAfiliado: "https://www.amazon.es/Philips-Serie-2000-HU2716-Humidificador/dp/B08LW4K16N",
+    enlaceAfiliado:
+      "https://www.amazon.es/Philips-Serie-2000-HU2716-Humidificador/dp/B08LW4K16N?tag=david0e98-21",
     comercio: "Amazon",
     fechaActualizacion: HOY,
     fuentes: ["Philips.es (17/06/2026)", "idealo.es histórico"],
@@ -423,7 +511,7 @@ export const productos: Producto[] = [
     },
     resumen:
       "Buena opción para un salón con la calefacción a tope todo el invierno. El 99,9% de eliminación bacteriana lo dice Rowenta, no nosotros.",
-    enlaceAfiliado: "https://www.amazon.es/dp/B09C6JVGBR",
+    enlaceAfiliado: "https://www.amazon.es/dp/B09C6JVGBR?tag=david0e98-21",
     comercio: "Amazon",
     fechaActualizacion: HOY,
     fuentes: ["Rowenta.es (17/06/2026)", "Amazon.es (21/07/2026)"],
@@ -487,7 +575,7 @@ export const productos: Producto[] = [
     resumen:
       "Un conectado con buena relación calidad-precio, sobre todo si ya tienes cacharros Xiaomi por casa. La eficacia de la luz UV-C es un dato de fabricante y, sobre todo, depende de que limpies el depósito como toca.",
     enlaceAfiliado:
-      "https://www.amazon.es/Xiaomi-Smart-Humidifier-Capacidad-autom%C3%A1tico/dp/B0BC9SDP8Z",
+      "https://www.amazon.es/Xiaomi-Smart-Humidifier-Capacidad-autom%C3%A1tico/dp/B0BC9SDP8Z?tag=david0e98-21",
     comercio: "Amazon",
     fechaActualizacion: HOY,
     fuentes: ["Mi.com (17/06/2026)"],
@@ -501,18 +589,18 @@ export const productos: Producto[] = [
     precioOrientativo: "129,00 €",
     precioMin: 129,
     precioReferencia: 129,
-    precioComprobadoEn: "2026-07-20",
+    precioComprobadoEn: "2026-09-07",
     rango: "Alto",
     tecnologia: "Híbrido",
     capacidadL: 7.5,
-    coberturaM2: 55,
+    coberturaM2: 50, // 50 m² según el propio título de la ficha oficial en Amazon.es
     ruidoDb: 30, // ≤30 dB nivel máx. (specs Winix)
     autonomiaH: 18, // 7,5 L ÷ 400 mL/h a máximo
     valoracionEditorial: 81,
     idealPara: ["Estancias grandes", "Lofts", "Familias numerosas"],
     noRecomendadoPara: ["Dormitorios pequeños", "Espacios reducidos"],
     ventajas: ["Depósito 7,5 L de gran autonomía", "Vapor frío y caliente"],
-    inconvenientes: ["Tamaño considerable", "Precio a verificar"],
+    inconvenientes: ["Tamaño considerable", "Sin app ni modo automático programable"],
     caracteristicas: ["Ultrasónico frío + caliente", "7,5 L", "Cobertura amplia"],
     atributos: {
       control: {
@@ -545,13 +633,13 @@ export const productos: Producto[] = [
       },
     },
     resumen:
-      "Para espacios grandes en los que la mayoría de modelos se quedan cortos. Antes de publicarlo definitivamente nos falta confirmar el PVP actual.",
+      "Para espacios grandes en los que la mayoría de modelos se quedan cortos, y el único del catálogo que combina 7,5 L con vapor caliente. Si no necesitas calentar el vapor, el NeoClassic 650S hace lo mismo por 40 € menos y encima con app.",
     enlaceAfiliado:
-      "https://www.amazon.es/Winix-Humidificador-Ultras%C3%B3nico-silencioso-humidificaci%C3%B3n/dp/B08PBZ9KH3",
+      "https://www.amazon.es/Winix-Humidificador-Ultras%C3%B3nico-silencioso-humidificaci%C3%B3n/dp/B08PBZ9KH3?tag=david0e98-21",
     comercio: "Amazon",
-    fechaActualizacion: HOY,
-    fuentes: ["Estudio HumiSalud jun 2026"],
-    datosPendientes: ["PVP actual"],
+    fechaActualizacion: "2026-09-07",
+    fuentes: ["Estudio HumiSalud jun 2026", "Amazon.es ficha B08PBZ9KH3 (07/09/2026)"],
+    datosPendientes: [],
   },
 ];
 
