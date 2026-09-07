@@ -4,8 +4,9 @@ import type { Producto } from "@/data/products";
 import { AffiliateButton } from "./AffiliateButton";
 import { PriceTag } from "./PriceTag";
 import { RatingBar } from "./RatingBar";
-import { PRODUCT_IMAGES, PRODUCT_IMAGE_CREDITS } from "@/assets/product-images";
+import { PRODUCT_IMAGES } from "@/assets/product-images";
 import { useLocale } from "@/i18n/LocaleContext";
+import { fmt, productImageAlt } from "@/lib/product-format";
 
 interface Props {
   producto: Producto;
@@ -19,9 +20,7 @@ export function ProductCard({ producto: p, badge, highlight, descuentoPercent }:
   const en = locale === "en";
   const L = {
     viewAnalysis: en ? `View review of ${p.nombre}` : `Ver análisis de ${p.nombre}`,
-    officialImg: en
-      ? `Official image of ${p.nombre} (${PRODUCT_IMAGE_CREDITS[p.slug] ?? p.marca})`
-      : `Imagen oficial de ${p.nombre} (${PRODUCT_IMAGE_CREDITS[p.slug] ?? p.marca})`,
+    officialImg: productImageAlt(p, locale),
     noImg: en ? "No official image" : "Sin imagen oficial",
     rating: en ? "Editorial rating" : "Valoración editorial",
     capacity: en ? "Capacity" : "Capacidad",
@@ -133,9 +132,4 @@ function Spec({ icon, label, value }: { icon: React.ReactNode; label: string; va
       <span className="ml-auto font-medium text-foreground tabular-nums">{value}</span>
     </li>
   );
-}
-
-function fmt(v: number | "DATO_PENDIENTE" | undefined, unit: string) {
-  if (v === undefined || v === "DATO_PENDIENTE") return "?";
-  return `${v} ${unit}`;
 }
