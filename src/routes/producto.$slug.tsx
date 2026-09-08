@@ -89,13 +89,20 @@ export const Route = createFileRoute("/producto/$slug")({
                 name: p.nombre,
                 brand: { "@type": "Brand", name: p.marca },
                 description: p.resumen,
-                ...(PRODUCT_IMAGES[p.slug]
-                  ? {
-                      image: PRODUCT_IMAGES[p.slug].startsWith("http")
-                        ? PRODUCT_IMAGES[p.slug]
-                        : `https://humisalud.com${PRODUCT_IMAGES[p.slug]}`,
-                    }
-                  : {}),
+                ...(() => {
+                  // `image` solo se publica si es una URL de verdad. Un asset
+                  // que Vite haya incrustado en base64 no empieza ni por
+                  // "http" ni por "/", y anteponerle el dominio generaba
+                  // `https://humisalud.comdata:image/webp;base64,...`, que
+                  // Search Console rechazo como critico el 08/09/2026.
+                  // Sin imagen Google avisa; con una invalida, ademas, intenta
+                  // descargarla. Mejor callar que mentir.
+                  const src = PRODUCT_IMAGES[p.slug];
+                  if (!src) return {};
+                  if (src.startsWith("http")) return { image: src };
+                  if (src.startsWith("/")) return { image: `https://humisalud.com${src}` };
+                  return {};
+                })(),
                 ...(typeof p.precioMin === "number" && p.precioComprobadoEn && validoHasta
                   ? {
                       offers: {
