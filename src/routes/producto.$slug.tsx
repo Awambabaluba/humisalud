@@ -10,6 +10,7 @@ import { RatingBar } from "@/components/site/RatingBar";
 import { FAQ } from "@/components/site/FAQ";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { PRODUCT_IMAGES, PRODUCT_IMAGE_CREDITS } from "@/assets/product-images";
+import { fmt, productImageAlt } from "@/lib/product-format";
 import { HealthInsights } from "@/components/site/HealthInsights";
 import { AtributosClave } from "@/components/site/AtributosClave";
 import { CalendarDays, Droplet, Gauge, Ruler, Volume2 } from "lucide-react";
@@ -233,7 +234,7 @@ function ProductoPage() {
             <div className="-mx-6 -mt-6 mb-5 aspect-square rounded-t-3xl bg-gradient-to-br from-mist via-card to-background border-b border-border overflow-hidden">
               <img
                 src={PRODUCT_IMAGES[p.slug]}
-                alt={`${p.nombre} — imagen oficial ${PRODUCT_IMAGE_CREDITS[p.slug] ?? p.marca}`}
+                alt={productImageAlt(p)}
                 className="h-full w-full object-contain p-6"
               />
             </div>
@@ -411,9 +412,4 @@ function Block({
       </ul>
     </div>
   );
-}
-
-function fmt(v: number | "DATO_PENDIENTE" | undefined, unit: string) {
-  if (v === undefined || v === "DATO_PENDIENTE") return "—";
-  return `${v} ${unit}`;
 }

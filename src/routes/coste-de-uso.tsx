@@ -45,7 +45,7 @@ function Page() {
         <h2 className="font-display text-2xl font-semibold">Qué gasta cada tecnología</h2>
         <p className="mt-4 text-base leading-relaxed text-muted-foreground">
           La factura depende sobre todo de la tecnología. Un humidificador ultrasónico o evaporativo
-          consume muy poco —del orden de 20 a 30 W—, así que tenerlo encendido varias horas al día
+          consume muy poco (del orden de 20 a 30 W), así que tenerlo encendido varias horas al día
           apenas se nota: unos céntimos al mes. El salto de verdad lo dan los de vapor caliente:
           como hierven el agua, tiran de 200 a 400 W y pueden multiplicar por diez el gasto. Un
           modelo híbrido queda en medio según use frío o calor.

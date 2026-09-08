@@ -40,7 +40,7 @@ function OfertasPage() {
         <div className="mt-10 rounded-2xl border border-border bg-card p-10 text-center">
           <p className="font-display text-lg font-semibold">No hay ofertas activas ahora mismo</p>
           <p className="mt-2 text-sm text-muted-foreground">
-            Revisamos los precios todos los días — vuelve pronto o mira el ranking general mientras
+            Revisamos los precios todos los días. Vuelve pronto o mira el ranking general mientras
             tanto.
           </p>
           <Link

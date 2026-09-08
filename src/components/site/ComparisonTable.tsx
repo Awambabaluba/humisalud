@@ -3,6 +3,7 @@ import { AffiliateButton } from "./AffiliateButton";
 import { PriceTag } from "./PriceTag";
 import { Link } from "@tanstack/react-router";
 import { useLocale } from "@/i18n/LocaleContext";
+import { fmt } from "@/lib/product-format";
 
 export function ComparisonTable({ productos }: { productos: Producto[] }) {
   const en = useLocale() === "en";
@@ -71,8 +72,4 @@ function Th({ children, className = "" }: { children: React.ReactNode; className
 }
 function Td({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return <td className={`px-4 py-3.5 align-middle border-t border-border ${className}`}>{children}</td>;
-}
-function fmt(v: number | "DATO_PENDIENTE" | undefined, unit: string) {
-  if (v === undefined || v === "DATO_PENDIENTE") return "—";
-  return `${v} ${unit}`;
 }

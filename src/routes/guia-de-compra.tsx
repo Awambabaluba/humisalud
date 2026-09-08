@@ -69,7 +69,7 @@ function GuiaCompra() {
         <p>
           El error típico es comprar por estética: o te quedas corto de caudal o te pasas y disparas
           la humedad por encima del 65%. Lo recomendado en casa está entre el{" "}
-          <strong>40 y el 60%</strong> (RITE y Philips) — explicamos de dónde salen esas cifras en{" "}
+          <strong>40 y el 60%</strong> (RITE y Philips). Explicamos de dónde salen esas cifras en{" "}
           <Link to="/blog/$slug" params={{ slug: "humedad-ideal-en-casa-2026" }}>
             cuál es la humedad ideal en casa
           </Link>

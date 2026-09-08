@@ -126,7 +126,7 @@ function PageTitle() {
 function CategoriasSection() {
   const EN_CAT: Record<string, { titulo: string; desc: string }> = {
     bebe: { titulo: "For the baby", desc: "Silent, cool mist and safe refilling." },
-    dormitorio: { titulo: "For sleeping", desc: "Under 35 dB — won't wake you." },
+    dormitorio: { titulo: "For sleeping", desc: "Under 35 dB, so it won't wake you." },
     salon: { titulo: "Living room & large spaces", desc: "Plenty of output and tank." },
     alergias: { titulo: "Allergies", desc: "Evaporative, no white dust." },
     inteligente: { titulo: "With app", desc: "Control from your phone or voice." },

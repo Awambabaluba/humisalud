@@ -45,7 +45,7 @@ function Page() {
         <h2 className="font-display text-2xl font-semibold">What each technology costs to run</h2>
         <p className="mt-4 text-base leading-relaxed text-muted-foreground">
           Your bill depends mostly on the technology. An ultrasonic or evaporative humidifier draws
-          very little —around 20 to 30 W— so running it for several hours a day barely shows up: a
+          very little (around 20 to 30 W), so running it for several hours a day barely shows up: a
           few cents per month. The real jump comes from warm-mist units: because they boil the
           water, they pull 200 to 400 W and can multiply the cost tenfold. A hybrid model sits in
           between depending on whether it runs cool or warm.
