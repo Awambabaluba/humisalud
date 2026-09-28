@@ -325,6 +325,12 @@ async function main() {
   console.log(
     `\nNuevos: ${inserted} | Actualizados: ${updated} | Errores: ${errors} | Ofertas activas: ${ofertas} | Total: ${results.length}\n`,
   );
+
+  // Si no se ha leído NI UN precio (Amazon bloqueando), esto no puede acabar en
+  // verde: con código 0 el .bat decía «sin cambios» y nadie se enteraba. El 3 lo
+  // recoge run-check-prices.bat para avisar por Telegram.
+  const leidos = results.filter((r) => r.status !== "ERROR" && r.status !== "SKIP").length;
+  if (errors > 0 && leidos === 0) process.exitCode = 3;
 }
 
 main().catch(async (e) => {
