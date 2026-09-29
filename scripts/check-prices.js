@@ -170,7 +170,9 @@ function extractProducts(content) {
     // quede partido en dos lineas (lo hace prettier) no casaba aqui y la busqueda
     // seguia hasta el enlace del producto SIGUIENTE: a Cecotec se le asignaba el
     // precio del Levoit. Solo lo freno el guardia de subidas >60%.
-    const blockRe = new RegExp(`slug: "${slug}"((?:(?!slug: \")[\\s\\S])*?)enlaceAfiliado:\\s*"([^"]+)"`);
+    const blockRe = new RegExp(
+      `slug: "${slug}"((?:(?!slug: \")[\\s\\S])*?)enlaceAfiliado:\\s*"([^"]+)"`,
+    );
     const m = content.match(blockRe);
     if (m) links.set(slug, m[2]);
   }
