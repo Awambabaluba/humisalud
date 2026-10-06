@@ -420,6 +420,8 @@ export const blogPosts: BlogPost[] = [
     publicado: true,
     resumen:
       "Vapor frío siempre, porque el caliente quema. Qué capacidad mínima buscar, a qué distancia de la cuna va el aparato y en qué momento toca dejarlo y llamar al pediatra.",
+    metaDescripcion:
+      "Vapor frío siempre, porque el caliente quema. Qué capacidad mínima buscar, a qué distancia de la cuna colocar el aparato y cuándo llamar al pediatra.",
     imagenPortada: {
       src: "https://images.unsplash.com/photo-1749703827003-8e5046941847?auto=format&fit=crop&w=1200&q=80",
       alt: "Cuna de madera en habitación de bebé tranquila y bien iluminada",
@@ -461,6 +463,8 @@ export const blogPosts: BlogPost[] = [
     publicado: true,
     resumen:
       "La nueva gama NeoClassic de Levoit mete en el lavavajillas todas las piezas que tocan el agua, y los dos modelos grandes añaden protección antimicrobiana. Actualizado: las dos versiones conectadas ya se venden en Amazon España.",
+    metaDescripcion:
+      "La gama NeoClassic de Levoit mete en el lavavajillas todas las piezas que tocan el agua. Las versiones conectadas ya se venden en Amazon España.",
     imagenPortada: {
       src: "https://levoit.com/cdn/shop/files/neoclassic-650-humidifier-3705360.jpg?v=1778850794",
       alt: "Levoit NeoClassic 650, nuevo humidificador con piezas aptas para lavavajillas",
@@ -524,6 +528,8 @@ export const blogPosts: BlogPost[] = [
     publicado: true,
     resumen:
       "En plena ola de calor, un enfermero recuerda que el aire acondicionado deja el ambiente tan seco que acaba resecando garganta y piel. Un humidificador ayuda a compensarlo.",
+    metaDescripcion:
+      "En plena ola de calor, un enfermero recuerda que el aire acondicionado reseca garganta y piel. Un humidificador ayuda a compensarlo.",
     imagenPortada: {
       src: "https://images.unsplash.com/photo-1709745634912-2a79b938f3c2?auto=format&fit=crop&w=1200&q=80",
       alt: "Aparato de aire acondicionado blanco instalado justo encima de una cama",
