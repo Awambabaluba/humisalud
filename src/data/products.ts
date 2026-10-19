@@ -383,6 +383,94 @@ export const productos: Producto[] = [
     ],
   },
   {
+    slug: "levoit-oasismist-450s",
+    nombre: "Levoit OasisMist 450S",
+    marca: "Levoit",
+    modelo: "OasisMist 450S (LV450S)",
+    imagen: "https://levoit.es/cdn/shop/files/B0BSFX9YJ2.MAIN.png?v=1739784279&width=2000",
+    precioOrientativo: "99,99 €",
+    precioMin: 99.99,
+    precioReferencia: 99.99,
+    precioComprobadoEn: "2026-10-19",
+    rango: "Alto",
+    tecnologia: "Híbrido",
+    capacidadL: 4.5,
+    coberturaM2: 40,
+    ruidoDb: 26, // 26 dB en niebla fría baja; sube a 41 dB con niebla caliente al máximo (levoit.com)
+    autonomiaH: 45, // hasta 45 h en el nivel más bajo (levoit.es y ficha Amazon.es)
+    valoracionEditorial: 85,
+    idealPara: [
+      "Dormitorios y salones medianos",
+      "Invierno con calefacción",
+      "Quien quiere vapor caliente sin renunciar a la app",
+    ],
+    noRecomendadoPara: ["Estancias de más de 40 m²", "Presupuesto ajustado"],
+    ventajas: [
+      "Único del catálogo que junta vapor caliente y frío con control por app",
+      "4,5 L y hasta 45 h seguidas sin rellenar",
+      "26 dB en niebla fría baja: apto para dormir",
+      "Modo automático con higrostato integrado",
+      "Top-fill con doble boquilla giratoria de 360 grados",
+    ],
+    inconvenientes: [
+      "Con la niebla caliente al máximo sube a 41 dB, lejos de los 26 dB anunciados",
+      "Ultrasónico: con agua del grifo puede dejar polvo blanco",
+      "Cuesta 10 € más que el NeoClassic 650S, que tiene más depósito aunque no caliente",
+    ],
+    caracteristicas: [
+      "Ultrasónico híbrido frío y caliente, 550 ml/h",
+      "Conectado (VeSync) con modo automático y programación horaria",
+      "Top-fill 4,5 L con luz nocturna personalizable",
+      "Difusor de aceites esenciales integrado",
+      "Incluye esponja filtrante de carbón para el agua",
+    ],
+    atributos: {
+      control: {
+        higrostato: true,
+        modoAuto: true,
+        wifiApp: true,
+        asistentesVoz: PEND, // VeSync integra asistentes, pero la ficha no los nombra
+        temporizador: true,
+        apagadoAutoSinAgua: true,
+      },
+      confort: {
+        modoNoche: true,
+        luzApagable: true,
+        boquilla360: true,
+        indicadorAgua: PEND,
+        topFill: true,
+      },
+      mantenimiento: {
+        filtroRequerido: false,
+        bocaAncha: true,
+        cartuchoAntical: PEND,
+        autolimpieza: false,
+        uvc: false,
+      },
+      extras: {
+        aromaterapia: true,
+        vaporCaliente: true,
+        ionizador: false,
+        consumoW: PEND, // Levoit solo publica 280 W para la versión de 120 V
+      },
+    },
+    resumen:
+      "El único del catálogo que calienta el vapor y además se controla desde el móvil. Frente al Rowenta Aqua Boost, el otro híbrido de su tamaño, gana en casi todo lo medible: casi el doble de depósito, 45 h de autonomía frente a 15, cuatro decibelios menos y una app que el Rowenta no tiene. El pero es el de siempre en un ultrasónico: si usas agua del grifo acabarás viendo polvo blanco, y la niebla caliente al máximo se oye.",
+    enlaceAfiliado: "https://www.amazon.es/dp/B0FZK91FS5?tag=david0e98-21",
+    comercio: "Amazon",
+    fechaActualizacion: "2026-10-19",
+    fuentes: [
+      "Levoit.es ficha LV450S (19/10/2026)",
+      "Levoit.com ficha OasisMist 450S (19/10/2026)",
+      "Amazon.es ficha B0FZK91FS5 (19/10/2026)",
+    ],
+    datosPendientes: [
+      "Consumo en vatios de la versión europea (230 V)",
+      "Precio exacto en Amazon.es (99,99 € es el PVP oficial de Levoit.es)",
+      "Asistentes de voz concretos",
+    ],
+  },
+  {
     slug: "philips-hu2716-nanocloud",
     nombre: "Philips HU2716 NanoCloud",
     marca: "Philips",
