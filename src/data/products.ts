@@ -150,6 +150,91 @@ export const productos: Producto[] = [
     datosPendientes: ["dB de funcionamiento (Cecotec no lo publica)"],
   },
   {
+    slug: "dreo-713s",
+    nombre: "Dreo 713S",
+    marca: "Dreo",
+    modelo: "713S (HM713S)",
+    imagen: "https://es.dreo.com/cdn/shop/files/DR-HHM003S_Silver.png",
+    precioOrientativo: "109,99 €",
+    precioMin: 109.99,
+    precioReferencia: 109.99,
+    precioComprobadoEn: "2026-10-26",
+    rango: "Alto",
+    tecnologia: "Híbrido",
+    capacidadL: 6,
+    coberturaM2: 51, // 550 ft² en la ficha oficial Dreo; Revista Gadget lo da como 9–51 m²
+    ruidoDb: 28, // 28 dB (ficha oficial Dreo y análisis de Revista Gadget)
+    autonomiaH: 60, // hasta 60 h en niebla fría al mínimo (ficha oficial Dreo)
+    valoracionEditorial: 84,
+    idealPara: ["Salones", "Estancias grandes", "Invierno con calefacción"],
+    noRecomendadoPara: ["Presupuesto ajustado", "Quien solo piense usar agua del grifo"],
+    ventajas: [
+      "Vapor caliente y frío con control por app, que el Winix L500 no tiene",
+      "500 ml/h en niebla caliente y 300 ml/h en fría, para unos 51 m²",
+      "28 dB y hasta 60 h seguidas sin rellenar",
+      "Modo automático con precisión de ±5 % y objetivo ajustable entre 30 y 90 % de humedad",
+      "Top-fill de 6 L con dos bandejas para aceites esenciales",
+    ],
+    inconvenientes: [
+      "El cartucho antical se vende aparte, así que con agua del grifo deja polvo blanco",
+      "Con la niebla caliente el consumo sube de 26 W a 280 W",
+      "Las 60 h de autonomía son con niebla fría al mínimo; en caliente baja mucho",
+    ],
+    caracteristicas: [
+      "Ultrasónico híbrido, 300 ml/h en frío y 500 ml/h en caliente",
+      "Conectado (app Dreo) con Alexa y Google Home",
+      "Top-fill 6 L con tubo de salida desmontable",
+      "Tres modos: manual con tres niveles, automático y Sueño",
+      "26 W en niebla fría y 280 W en niebla caliente (ficha oficial Dreo)",
+    ],
+    atributos: {
+      control: {
+        higrostato: true,
+        modoAuto: true,
+        wifiApp: true,
+        asistentesVoz: ["Alexa", "Google"],
+        temporizador: true,
+        apagadoAutoSinAgua: true,
+      },
+      confort: {
+        modoNoche: true,
+        luzApagable: true,
+        boquilla360: PEND,
+        indicadorAgua: true,
+        topFill: true,
+      },
+      mantenimiento: {
+        filtroRequerido: false,
+        bocaAncha: PEND,
+        cartuchoAntical: false, // compatible, pero Dreo lo vende por separado
+        autolimpieza: false,
+        uvc: false,
+      },
+      extras: {
+        aromaterapia: true,
+        vaporCaliente: true,
+        ionizador: false,
+        consumoW: 26, // en niebla fría; 280 W con la caliente
+      },
+    },
+    resumen:
+      "El primer Dreo del catálogo, pensado para el salón. Frente al Winix L500, el otro híbrido de depósito grande, sube de 400 a 500 ml/h de vapor caliente, baja de 30 a 28 dB, añade app con Alexa y Google y cuesta unos 20 € menos, aunque se queda en 6 L en vez de 7,5 L. El cartucho antical se vende aparte, así que con agua del grifo acabarás viendo polvo blanco, y la niebla caliente dispara el consumo de 26 W a 280 W.",
+    enlaceAfiliado: "https://www.amazon.es/dp/B0CB4CK3ZS?tag=david0e98-21",
+    comercio: "Amazon",
+    fechaActualizacion: "2026-10-26",
+    fuentes: [
+      "Dreo.com ficha HM713S (26/10/2026)",
+      "Es.dreo.com ficha Humidificador 713S (26/10/2026)",
+      "Revista Gadget, análisis del Dreo HM713S (03/03/2026)",
+      "Amazon.es ficha B0CB4CK3ZS (26/10/2026)",
+    ],
+    datosPendientes: [
+      "Precio exacto en Amazon.es: los 109,99 € salen de fuentes secundarias, la ficha no se pudo leer directamente (la tienda oficial Dreo España lo marca a 99,99 €)",
+      "Boquilla orientable 360 grados (la ficha no lo especifica)",
+      "Temperatura real de la niebla caliente: Dreo España dice 56 °C y Revista Gadget midió unos 30 °C",
+    ],
+  },
+  {
     slug: "levoit-dual-200s",
     nombre: "Levoit Dual 200S",
     marca: "Levoit",
@@ -767,7 +852,7 @@ export const mejoresPorCategoria = {
   bebe: "philips-hu2716-nanocloud",
   dormitorioSilencioso: "levoit-neoclassic-450s",
   alergias: "philips-hu2716-nanocloud",
-  salon: "winix-l500",
+  salon: "dreo-713s",
   inteligente: "levoit-dual-200s",
-  estanciasGrandes: "winix-l500",
+  estanciasGrandes: "dreo-713s",
 } as const;
