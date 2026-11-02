@@ -1,10 +1,14 @@
 // Imágenes oficiales de producto. Fuente: webs de los fabricantes
-// (Cecotec, Levoit/VeSync, Philips/Versuni, Rowenta/Groupe SEB, Xiaomi, Winix).
+// (Cecotec, Levoit/VeSync, Philips/Versuni, Rowenta/Groupe SEB, Xiaomi, Winix, Dreo)
+// y, cuando la marca no la publica aparte, la foto principal de la ficha de Amazon.es.
 // Uso editorial / referencial sobre los productos enlazados.
 import cecotec from "./products/cecotec-pure-aroma-300-yang.webp";
+import cecotecBreezecare from "./products/cecotec-breezecare-2900-smart.webp";
+import dreo713s from "./products/dreo-713s.webp";
 import levoit from "./products/levoit-dual-200s.webp";
 import levoitNeoclassic from "./products/levoit-neoclassic-450s.webp";
 import levoitNeoclassic650 from "./products/levoit-neoclassic-650s.webp";
+import levoitOasismist from "./products/levoit-oasismist-450s.webp";
 import philips from "./products/philips-hu2716-nanocloud.webp";
 import rowenta from "./products/rowenta-aqua-perfect.webp";
 import xiaomi from "./products/xiaomi-smart-humidifier-2.webp";
@@ -12,9 +16,12 @@ import winix from "./products/winix-l500.webp";
 
 export const PRODUCT_IMAGES: Record<string, string> = {
   "cecotec-pure-aroma-300-yang": cecotec,
+  "cecotec-breezecare-2900-smart": cecotecBreezecare,
+  "dreo-713s": dreo713s,
   "levoit-dual-200s": levoit,
   "levoit-neoclassic-450s": levoitNeoclassic,
   "levoit-neoclassic-650s": levoitNeoclassic650,
+  "levoit-oasismist-450s": levoitOasismist,
   "philips-hu2716-nanocloud": philips,
   "rowenta-aqua-perfect": rowenta,
   "xiaomi-smart-humidifier-2": xiaomi,
@@ -23,9 +30,12 @@ export const PRODUCT_IMAGES: Record<string, string> = {
 
 export const PRODUCT_IMAGE_CREDITS: Record<string, string> = {
   "cecotec-pure-aroma-300-yang": "Cecotec",
+  "cecotec-breezecare-2900-smart": "Cecotec (ficha de Amazon.es)",
+  "dreo-713s": "Dreo",
   "levoit-dual-200s": "Levoit / VeSync",
   "levoit-neoclassic-450s": "Levoit / VeSync",
   "levoit-neoclassic-650s": "Levoit / VeSync",
+  "levoit-oasismist-450s": "Levoit / VeSync",
   "philips-hu2716-nanocloud": "Philips / Versuni",
   "rowenta-aqua-perfect": "Rowenta / Groupe SEB",
   "xiaomi-smart-humidifier-2": "Xiaomi",
