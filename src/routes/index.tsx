@@ -105,6 +105,13 @@ function PageTitle() {
             </span>
           ))}
         </div>
+        <Link
+          to="/black-friday-humidificadores"
+          className="mx-auto mt-6 inline-flex items-center gap-2 rounded-full border border-affiliate/40 bg-affiliate/10 px-4 py-2 text-sm font-medium text-foreground hover:bg-affiliate/15"
+        >
+          Black Friday 2026: qué humidificador compensa y cómo detectar una rebaja falsa
+          <ArrowRight className="h-4 w-4" aria-hidden />
+        </Link>
         <dl className="mx-auto mt-10 grid max-w-md grid-cols-3 gap-4 rounded-2xl border border-border bg-secondary/40 p-5 sm:p-6">
           <div>
             <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">

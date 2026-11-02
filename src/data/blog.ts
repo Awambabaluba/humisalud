@@ -7,6 +7,9 @@ import rowentaImg from "@/assets/products/rowenta-aqua-perfect.webp";
 import xiaomiPuri3ProImg from "@/assets/products/xiaomi-purifying-humidifier-3-pro.webp";
 import xiaomiPuri3ProLlenadoImg from "@/assets/products/xiaomi-purifying-humidifier-3-pro-llenado.webp";
 import xiaomiPuri3ProPantallaImg from "@/assets/products/xiaomi-purifying-humidifier-3-pro-pantalla.webp";
+import levoitNeoclassic450Img from "@/assets/products/levoit-neoclassic-450s.webp";
+import levoitNeoclassic650Img from "@/assets/products/levoit-neoclassic-650s.webp";
+import dreo713sImg from "@/assets/products/dreo-713s.webp";
 
 export interface BlogPostImagen {
   src: string;
@@ -17,6 +20,8 @@ export interface BlogPostImagen {
 export interface BlogPostAfiliado {
   comercio: string;
   href: string;
+  /** Slug del producto del catálogo al que lleva el enlace. Si está, el botón dice qué modelo es (útil cuando un artículo enlaza varios). */
+  producto?: string;
 }
 
 export interface BlogPost {
@@ -733,6 +738,223 @@ export const blogPosts: BlogPost[] = [
     afiliados: [
       {
         comercio: "Amazon",
+        href: "https://www.amazon.es/dp/B08LW4K16N?tag=david0e98-21",
+      },
+    ],
+  },
+  {
+    slug: "aire-seco-calefaccion-sintomas-soluciones",
+    titulo: "Aire seco en casa por la calefacción: síntomas y cómo arreglarlo",
+    metaTitulo: "Aire seco por calefacción: síntomas y soluciones",
+    fecha: "2026-11-02",
+    categoria: "Salud",
+    publicado: true,
+    resumen:
+      "Garganta seca al despertar, labios cortados y chispazos al tocar el pomo de la puerta. Por qué la calefacción reseca el aire, cómo comprobarlo con un número y qué hacer, empezando por lo que no cuesta dinero.",
+    metaDescripcion:
+      "Garganta seca, labios cortados, chispazos al tocar el pomo. Por qué la calefacción reseca el aire, cómo medirlo y qué hacer, de lo gratis a lo que cuesta.",
+    imagenPortada: {
+      src: levoitNeoclassic650Img,
+      alt: "Levoit NeoClassic 650S, humidificador de vapor frío con higrostato para salones",
+      credito: "Imagen: Levoit / VeSync",
+    },
+    contenido: [
+      "Pasa todos los años por estas fechas. Se enciende la calefacción, la casa por fin está a gusto y a la semana empiezan las quejas pequeñas. Te levantas con la garganta como si hubieras dormido con la boca abierta, los labios se cortan, la piel de las manos tira y cada vez que tocas el grifo o el pomo de una puerta salta un chispazo. Casi nadie lo relaciona con el aire de casa, y casi siempre tiene que ver.",
+      "La explicación es física de bachillerato. El aire de fuera en invierno lleva muy poca agua, aunque el parte diga que la humedad exterior es del 80 %. Ese porcentaje es humedad relativa, es decir, cuánta agua lleva el aire comparado con la que podría llevar a esa temperatura, y el aire frío admite muy poca. Cuando ese mismo aire entra en casa y la calefacción lo sube a 21 grados, su capacidad para contener agua se multiplica y el porcentaje se desploma. Hecho el cálculo, un aire a 5 grados con un 80 % de humedad que se calienta hasta 21 grados se queda en torno al 30 % si no hay nada más que aporte vapor. En la práctica cocinar, ducharse o respirar suben algo esa cifra, pero en una casa con muchas horas de radiador es normal ver lecturas por debajo del 35 % en el dormitorio.",
+      "Los síntomas típicos son bastante reconocibles. Sequedad de garganta y de nariz al despertar, a veces con costras o algún pequeño sangrado al sonarte. Labios y nudillos agrietados. Ojos que pican, sobre todo si llevas lentillas o pasas horas delante de una pantalla. Electricidad estática en la ropa y en los pomos. Y en la casa, juntas del parqué que se abren y muebles de madera que crujen más de la cuenta. Ninguno de estos síntomas demuestra por sí solo que el aire esté seco, porque también los provocan un catarro, el aire acondicionado o simplemente beber poca agua. Son una pista, y la pista se confirma midiendo.",
+      "Para medir basta un higrómetro, que cuesta poco y muchas veces viene integrado en un reloj despertador o en una estación meteorológica de casa. Ponlo en el dormitorio, a media altura y lejos del radiador y de la ventana, y déjalo un par de días antes de fiarte del número, porque la lectura cambia a lo largo del día. Lo que buscas en invierno es un valor entre el 40 % y el 50 %. Es el intervalo que el RITE, el reglamento español de instalaciones térmicas, usa como referencia de confort con calefacción, y la Agencia de Protección Ambiental de Estados Unidos (EPA) aconseja no humidificar por encima del 50 %. Ya contamos con más detalle de dónde salen esas cifras en nuestro artículo sobre [la humedad ideal en casa](/blog/humedad-ideal-en-casa-2026).",
+      "Si el higrómetro marca por debajo del 40 % de forma sostenida, toca actuar, y hay cosas que no cuestan nada. La primera es bajar un poco el termostato. Con el mismo aire, la humedad relativa sube cuando la temperatura baja, y pasar de 23 a 20 grados se traduce en unos cinco puntos más de humedad, además de un ahorro en la factura. No resuelve un aire muy seco, pero ayuda y es gratis.",
+      "La segunda es ventilar bien, que no es ventilar mucho. Cinco o diez minutos con la ventana abierta de par en par renuevan el aire y se llevan el CO₂ acumulado sin enfriar paredes y muebles. Dejar una ventana entreabierta durante horas en invierno hace lo contrario de lo que buscas, porque mete sin parar aire exterior muy seco que la calefacción vuelve a calentar.",
+      "Luego están los remedios de toda la vida. Tender la ropa dentro de casa, dejar la puerta del baño abierta después de la ducha o poner recipientes con agua sobre los radiadores aportan algo de vapor, y en una habitación pequeña se nota un poco. Las plantas aportan muy poco. Sirven para salir del paso, pero cuando la calefacción funciona muchas horas al día, la cantidad de agua que se evapora así se queda corta frente al volumen de aire de una habitación entera.",
+      "Ahí es donde un humidificador tiene sentido. La condición es que lleve higrostato, el sensor que mide la humedad, y modo automático, para que pare solo cuando la habitación llega a la cifra que le marcas. Sin eso es fácil pasarse, y pasarse también tiene consecuencias. Antes de comprar, mete los metros y la altura del techo en la [calculadora](/calculadora), porque un aparato pequeño en una habitación grande se pasa la noche al máximo sin llegar nunca.",
+      "Para un dormitorio, el [Levoit NeoClassic 450S](/producto/levoit-neoclassic-450s) es el que mejor encaja de lo que tenemos analizado. Va a 21 dB en modo Sueño, tiene depósito para toda la noche y el modo automático evita humidificar de más mientras duermes. Si el presupuesto es más ajustado, el [Cecotec BreezeCare 2900 Smart](/producto/cecotec-breezecare-2900-smart) trae higrostato y 4,5 litros por bastante menos. Su objetivo de humedad no baja del 45 %, que en invierno no es un problema, y Cecotec no publica cuánto ruido hace.",
+      "En un salón la cosa cambia, porque hace falta más caudal y más depósito. El [Levoit NeoClassic 650S](/producto/levoit-neoclassic-650s) cubre casi 50 m² en vapor frío y con app. Si además quieres vapor templado, el [Dreo 713S](/producto/dreo-713s) lo ofrece, aunque con la niebla caliente el consumo sube mucho. Tienes más opciones en las categorías de [dormitorio](/categoria/dormitorio) y [salón](/categoria/salon).",
+      "Si en tu zona el agua es dura, algo habitual en casi toda la mitad sur y en buena parte del interior, piénsalo dos veces antes de llenar un ultrasónico con agua del grifo. La EPA explica que este tipo de aparatos dispersa en el aire los minerales del agua, y eso es el polvo blanco que acaba sobre los muebles. O usas agua destilada o te vas a un evaporativo como el [Philips HU2716 NanoCloud](/producto/philips-hu2716-nanocloud), que deja la cal en el filtro a cambio de tener que cambiarlo cada pocos meses.",
+      "Hay tres errores que vemos repetirse cada invierno. El primero es poner el aparato a tope sin higrostato y acabar por encima del 60 %. Con ese nivel aparecen condensación en los cristales y moho en las esquinas, y la Organización Mundial de la Salud, en sus directrices sobre humedad y moho en interiores, relaciona esa humedad excesiva con más síntomas respiratorios y más asma. El segundo es no limpiarlo. La propia EPA recomienda vaciar y rellenar el depósito cada día y limpiar el aparato cada tres días, porque en el agua estancada crecen microorganismos que luego salen al aire. El tercero es colocarlo pegado a la cama o a un enchufe, cuando lo razonable es dejarlo a media altura y a cierta distancia de personas y aparatos.",
+      "¿Y la factura? Menos de lo que se suele pensar. Un ultrasónico o un evaporativo consumen del orden de 20 a 30 vatios, muy lejos de lo que gasta el radiador que está secando el aire. Los de vapor caliente sí se notan. Tienes los números para tu caso en la página de [coste de uso](/coste-de-uso).",
+      "Por último, un aviso. Si con la humedad ya entre el 40 % y el 50 % siguen la sequedad de garganta, los sangrados de nariz frecuentes o la tos, el aire de casa deja de ser la explicación más probable y conviene que lo vea un médico. Un humidificador corrige el aire, no trata enfermedades.",
+    ],
+    imagenes: [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      {
+        src: levoitNeoclassic450Img,
+        alt: "Levoit NeoClassic 450S, humidificador silencioso de vapor frío para el dormitorio",
+        credito: "Imagen: Levoit / VeSync",
+      },
+      {
+        src: dreo713sImg,
+        alt: "Dreo 713S, humidificador híbrido de 6 litros con vapor frío y caliente",
+        credito: "Imagen: Dreo",
+      },
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ],
+    afiliados: [
+      {
+        comercio: "Amazon",
+        producto: "levoit-neoclassic-450s",
+        href: "https://www.amazon.es/dp/B0GXVQVRKC?tag=david0e98-21",
+      },
+      {
+        comercio: "Amazon",
+        producto: "cecotec-breezecare-2900-smart",
+        href: "https://www.amazon.es/dp/B0DW4G7RXS?tag=david0e98-21",
+      },
+      {
+        comercio: "Amazon",
+        producto: "levoit-neoclassic-650s",
+        href: "https://www.amazon.es/dp/B0GXVZ4FXB?tag=david0e98-21",
+      },
+      {
+        comercio: "Amazon",
+        producto: "philips-hu2716-nanocloud",
+        href: "https://www.amazon.es/dp/B08LW4K16N?tag=david0e98-21",
+      },
+    ],
+  },
+  {
+    slug: "humidificador-bebe-cual-elegir-uso-seguro",
+    titulo: "Humidificador para el bebé: cuál elegir y cómo usarlo sin riesgos",
+    metaTitulo: "Humidificador de bebé: cuál elegir y uso seguro",
+    fecha: "2026-11-02",
+    categoria: "Guías",
+    publicado: true,
+    resumen:
+      "Qué modelos de vapor frío encajan en el cuarto de un bebé, cuáles descartaríamos y la rutina de agua, limpieza y colocación que hace que el aparato ayude en vez de dar problemas.",
+    metaDescripcion:
+      "Qué humidificador poner en el cuarto del bebé, cuáles descartar y la rutina de agua, limpieza y colocación que recomiendan pediatras y la EPA.",
+    imagenPortada: {
+      src: levoitNeoclassic450Img,
+      alt: "Levoit NeoClassic 450S, humidificador de vapor frío de 21 dB para la habitación del bebé",
+      credito: "Imagen: Levoit / VeSync",
+    },
+    contenido: [
+      "Con el primer invierno del bebé llega casi siempre la misma duda. La calefacción está encendida, el niño tiene la nariz seca o con mocos pegados, alguien en la familia recomienda un humidificador y en la tienda hay decenas. Ya contamos en otro artículo [por qué en el cuarto de un bebé el vapor tiene que ser frío y dónde colocar el aparato](/blog/humidificador-para-bebe-vapor-frio-caliente-donde-poner). Este va un paso más allá. Qué modelo elegir de los que tenemos analizados y cómo usarlo para que ayude de verdad.",
+      "La regla que no se discute es el vapor frío. Mayo Clinic lo resume sin rodeos, para niños siempre humidificadores de vapor frío, porque el agua caliente o el vapor de un aparato de vapor caliente pueden quemar a un niño que se acerque demasiado. El Hospital Infantil de Filadelfia (CHOP) recuerda que es también la recomendación de la Academia Americana de Pediatría. Eso deja fuera los de vapor caliente y obliga a tener cuidado con los híbridos, que hacen las dos cosas.",
+      "Con ese filtro, lo siguiente que importa es el ruido, que el aparato se pare solo y que se limpie con facilidad. Un bebé duerme muchas horas, así que el humidificador va a estar encendido buena parte de la noche, y uno sin higrostato puede subir la humedad del cuarto muy por encima de lo recomendable sin que nadie se entere.",
+      "El que mejor encaja de nuestro catálogo es el [Levoit NeoClassic 450S](/producto/levoit-neoclassic-450s). Funciona a 21 dB en modo Sueño, que es de lo más silencioso que hemos fichado, lleva higrostato con modo automático, tiene depósito para toda la noche y las piezas en contacto con el agua se desmontan y van al lavavajillas, algo que agradecerás en la tercera semana de limpiezas. El pero es que lleva poco tiempo en Amazon España y todavía tiene pocas opiniones.",
+      "Si prefieres algo con más recorrido, el [Levoit Dual 200S](/producto/levoit-dual-200s) es el que más rodaje tiene entre los conectados de gama media. Hace 28 dB en el modo más bajo, se rellena por arriba y tiene modo automático. Tanto este como el NeoClassic son ultrasónicos, así que si usas agua del grifo dura soltarán polvo blanco, y en el cuarto de un bebé lo sensato es llenarlos con agua destilada.",
+      "Si no quieres depender del agua destilada, la alternativa es un evaporativo. El [Philips HU2716 NanoCloud](/producto/philips-hu2716-nanocloud) es el que elegimos como mejor opción para bebé en nuestro ranking. No suelta polvo blanco porque la cal se queda en el filtro, y como funciona por evaporación es muy difícil que se pase de humedad. Es algo más ruidoso que los Levoit, 34 dB según Philips, y el filtro hay que cambiarlo como mucho cada seis meses. Tienes todas las opciones juntas en la [categoría de bebé](/categoria/bebe).",
+      "Hay modelos que no pondríamos en ese cuarto. Los híbridos como el [Dreo 713S](/producto/dreo-713s), el [Levoit OasisMist 450S](/producto/levoit-oasismist-450s) o el [Rowenta Aqua Boost](/producto/rowenta-aqua-perfect) son buenos aparatos, pero su gracia es el vapor caliente, y en la habitación de un bebé ese modo no se usa. Tampoco recomendaríamos un difusor pequeño como el [Cecotec Pure Aroma 300 Yang](/producto/cecotec-pure-aroma-300-yang), que con 300 ml no aguanta una noche. El [Cecotec BreezeCare 2900 Smart](/producto/cecotec-breezecare-2900-smart) es de vapor frío y tiene higrostato, pero su objetivo de humedad no baja del 45 % y Cecotec no publica cuánto ruido hace, dos datos que para un dormitorio infantil nos gustaría tener.",
+      "Elegir bien es la mitad. La otra mitad es la rutina, y aquí es donde un humidificador pasa de ayudar a dar problemas. En el agua estancada del depósito crecen bacterias y hongos, y un ultrasónico los lanza al aire con el vapor. Por eso la EPA recomienda vaciar el depósito, secarlo y rellenarlo con agua limpia cada día, y limpiar el aparato a fondo cada tres días. CHOP lo deja en cada dos o tres días de uso. Nunca rellenes encima del agua del día anterior.",
+      "Con el agua pasa lo mismo. En los ultrasónicos, agua destilada o desmineralizada. La EPA explica que la destilación es la forma más eficaz de quitar los minerales que, de otro modo, acaban flotando en el aire. En los evaporativos puedes usar agua del grifo, pero el filtro se cambia cuando toca y no cuando se acuerda alguien.",
+      "La humedad objetivo es la misma que para un adulto. Entre el 40 % y el 50 % en invierno, que es el rango que el RITE toma como confort con calefacción y el techo que marca la EPA. Pon un higrómetro en la habitación y fija ese valor en el modo automático. Por encima del 60 % aparecen condensación, moho y ácaros, que no ayudan precisamente a un bebé con mocos.",
+      "La colocación tiene su lista. El aparato va sobre una superficie firme y a media altura, nunca en el suelo donde un niño que gatea pueda tirarlo, y con el cable fuera de su alcance. CHOP habla de dejar alrededor de un metro entre el humidificador y el niño, y que la boquilla no apunte hacia la cuna. Si al día siguiente notas la ropa de cama o la pared húmedas, está demasiado cerca o demasiado alto.",
+      "Sobre los aceites esenciales, nosotros no los pondríamos en el cuarto de un bebé. Si te lo planteas, pregúntalo antes al pediatra, y en ningún caso eches aceites o medicamentos en el depósito de agua salvo que el fabricante lo permita en una bandeja específica.",
+      "Un humidificador tampoco sustituye lo que recomienda la Asociación Española de Pediatría para los mocos, que son los lavados nasales con suero fisiológico y mantener al bebé algo incorporado. Y hay señales que no se arreglan con ningún aparato. Si notas que se le marcan las costillas al respirar, que respira muy rápido, que tiene pausas al respirar o los labios azulados, que está muy decaído o que rechaza las tomas, llama al pediatra o ve a urgencias sin esperar.",
+      "Bien elegido y bien cuidado, un humidificador de vapor frío con higrostato hace que el aire de la habitación no reseque más la nariz del bebé durante la noche. No cura nada. Hace más cómodas esas semanas de calefacción, y para eso merece la pena.",
+    ],
+    imagenes: [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      {
+        src: levoitImg,
+        alt: "Levoit Dual 200S, humidificador ultrasónico con rellenado superior",
+        credito: "Imagen: Levoit / VeSync",
+      },
+      {
+        src: philipsImg,
+        alt: "Philips HU2716 NanoCloud, humidificador evaporativo sin polvo blanco",
+        credito: "Imagen: Philips / Versuni",
+      },
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ],
+    afiliados: [
+      {
+        comercio: "Amazon",
+        producto: "levoit-neoclassic-450s",
+        href: "https://www.amazon.es/dp/B0GXVQVRKC?tag=david0e98-21",
+      },
+      {
+        comercio: "Amazon",
+        producto: "levoit-dual-200s",
+        href: "https://www.amazon.es/dp/B0DQP1G2B2?tag=david0e98-21",
+      },
+      {
+        comercio: "Amazon",
+        producto: "philips-hu2716-nanocloud",
+        href: "https://www.amazon.es/dp/B08LW4K16N?tag=david0e98-21",
+      },
+    ],
+  },
+  {
+    slug: "humidificador-resfriado-tos-congestion",
+    titulo: "Humidificador con resfriado, tos o congestión: cuándo ayuda y cuándo no",
+    metaTitulo: "Humidificador con resfriado: cuándo ayuda",
+    fecha: "2026-11-02",
+    categoria: "Salud",
+    publicado: true,
+    resumen:
+      "Un humidificador no cura un catarro ni lo acorta. Puede hacer más llevaderas la nariz seca y la tos irritativa cuando el aire de casa está seco, y en otros casos no aporta nada o empeora las cosas. Lo que dice la evidencia y cuándo hay que ir al médico.",
+    metaDescripcion:
+      "No cura un resfriado, pero puede aliviar la nariz seca y la tos irritativa si el aire de casa está seco. Qué dice la evidencia y cuándo ir al médico.",
+    imagenPortada: {
+      src: philipsImg,
+      alt: "Philips HU2716 NanoCloud, humidificador evaporativo de vapor frío",
+      credito: "Imagen: Philips / Versuni",
+    },
+    contenido: [
+      "Cada invierno llegan a la web búsquedas del tipo «humidificador para la tos» o «humidificador para la congestión», y entendemos por qué. Cuando tienes la nariz taponada y no paras de toser de noche, cualquier cosa que prometa alivio parece buena idea. Vamos a ser claros desde el principio, porque es un tema de salud y aquí no caben exageraciones. Un humidificador no cura un resfriado, no lo acorta y no sustituye a nada que te haya dicho tu médico. Lo que sí puede hacer, en ciertos casos, es que esos días sean algo más llevaderos.",
+      "Lo que dice la evidencia es menos de lo que cuenta la publicidad. La revisión Cochrane sobre aire caliente humidificado para el resfriado común, actualizada en 2017, reunió seis ensayos con 387 participantes y concluyó que no hay pruebas de beneficio ni de daño, con una calidad de la evidencia baja. Esa revisión estudia aire caliente inhalado con un dispositivo concreto, no un humidificador en la habitación, pero da una idea de lo poco estudiado que está el tema. La revista Consumer recoge la misma idea de boca de pediatras, que insisten en que su eficacia frente a los síntomas respiratorios no se ha demostrado científicamente.",
+      "Dicho esto, hay situaciones en las que tiene lógica. El Hospital Infantil de Filadelfia (CHOP) explica que añadir humedad al aire de casa puede aliviar la congestión, calmar una garganta irritada y suavizar la tos, y la Asociación Española de Pediatría, en su información para familias sobre la laringitis, indica que algunos niños se alivian respirando aire húmedo. Ninguna de las dos fuentes habla de curar nada. Hablan de comodidad, y esa comodidad tiene más sentido cuanto más seco está el aire de partida.",
+      "Ayuda, sobre todo, cuando el aire de casa está por debajo del 40 % de humedad, cosa frecuente con la calefacción encendida muchas horas. En ese ambiente las mucosas de la nariz y la garganta se resecan, los mocos se vuelven espesos y forman costras, y aparece esa tos seca e irritativa que empeora de noche. Subir la humedad hasta el 40 o el 45 % suele hacer que la nariz moleste menos y que la garganta no amanezca en carne viva. Si no sabes en qué punto estás, un higrómetro te lo dice en un rato, y en nuestro artículo sobre [el aire seco por la calefacción](/blog/aire-seco-calefaccion-sintomas-soluciones) explicamos cómo medir bien.",
+      "No ayuda, o directamente sobra, cuando la casa ya está por encima del 50 %. En la costa y en el norte es habitual, y ahí añadir vapor solo trae condensación en los cristales, moho y más ácaros. Si en casa hay alguien alérgico a los ácaros o con asma, pasarse de humedad puede empeorar sus síntomas, así que el higrostato deja de ser un extra y pasa a ser imprescindible. Tienes los modelos más indicados en la categoría de [alergias](/categoria/alergias).",
+      "Tampoco cambia nada en lo importante del catarro. La fiebre, el malestar general o una tos con flemas que dura semanas no dependen del aire de la habitación, y esperar a que el humidificador los arregle solo retrasa ir al médico.",
+      "Hay cosas que conviene no hacer. Con niños, nada de vapor caliente ni de vahos con agua hirviendo, porque el riesgo de quemaduras es real y Mayo Clinic recomienda siempre vapor frío para ellos. No eches medicamentos ni aceites en el depósito de agua salvo que el fabricante lo permita en una bandeja específica, y con niños pequeños o personas con asma consulta antes de usar aceites esenciales. Y no lo pongas a tope toda la noche sin control. Más humedad no es más alivio.",
+      "La higiene importa todavía más cuando hay alguien enfermo en casa. Un depósito con agua de varios días es un buen sitio para que crezcan bacterias y hongos, y un ultrasónico los reparte por la habitación. La EPA recomienda vaciar, secar y rellenar el depósito cada día y limpiar el aparato cada tres días. Si usas un ultrasónico, mejor con agua destilada.",
+      "Si vas a comprar uno, busca vapor frío, higrostato y que sea fácil de limpiar. Para un dormitorio, el [Levoit NeoClassic 450S](/producto/levoit-neoclassic-450s) es silencioso, para solo al llegar a la humedad que marques y sus piezas van al lavavajillas. El [Levoit Dual 200S](/producto/levoit-dual-200s) es una alternativa con más opiniones de compradores. Si el agua de tu zona es dura o en casa hay alergias, el [Philips HU2716 NanoCloud](/producto/philips-hu2716-nanocloud) es evaporativo, no suelta polvo blanco y es difícil que se pase de humedad. Para acertar con el tamaño, la [calculadora](/calculadora) te dice el caudal que necesita tu habitación.",
+      "Y lo más importante. Hay síntomas que no se tratan en casa con ningún aparato. En un adulto, la dificultad para respirar, el dolor en el pecho, la fiebre alta que no baja en varios días o una tos que pasa de tres semanas son motivo para ir al médico. En niños, las señales de alarma que señala la Asociación Española de Pediatría son que se le marquen las costillas al respirar, que respire muy rápido o haga pausas, que tenga los labios azulados, que esté muy decaído o que rechace comer o beber. Si es un bebé, en nuestro artículo sobre [cómo elegir y usar un humidificador para el bebé](/blog/humidificador-bebe-cual-elegir-uso-seguro) tienes la rutina completa.",
+      "En resumen, si el aire de casa está seco y tienes la nariz y la garganta resentidas, un humidificador de vapor frío bien regulado hace que el catarro se lleve mejor, sobre todo de noche. Si la humedad ya es correcta, no esperes nada de él. Y si algo te preocupa, la consulta del médico va antes que la tienda.",
+    ],
+    imagenes: [
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      {
+        src: levoitNeoclassic450Img,
+        alt: "Levoit NeoClassic 450S, humidificador de vapor frío con higrostato",
+        credito: "Imagen: Levoit / VeSync",
+      },
+      undefined,
+      undefined,
+    ],
+    afiliados: [
+      {
+        comercio: "Amazon",
+        producto: "levoit-neoclassic-450s",
+        href: "https://www.amazon.es/dp/B0GXVQVRKC?tag=david0e98-21",
+      },
+      {
+        comercio: "Amazon",
+        producto: "levoit-dual-200s",
+        href: "https://www.amazon.es/dp/B0DQP1G2B2?tag=david0e98-21",
+      },
+      {
+        comercio: "Amazon",
+        producto: "philips-hu2716-nanocloud",
         href: "https://www.amazon.es/dp/B08LW4K16N?tag=david0e98-21",
       },
     ],

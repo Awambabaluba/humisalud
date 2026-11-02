@@ -24,6 +24,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/guia-de-compra", changefreq: "monthly", priority: "0.8" },
           { path: "/blog", changefreq: "weekly", priority: "0.8" },
           { path: "/ofertas", changefreq: "daily", priority: "0.8" },
+          { path: "/black-friday-humidificadores", changefreq: "weekly", priority: "0.8" },
           { path: "/metodologia", changefreq: "monthly", priority: "0.6" },
           { path: "/sobre-nosotros", changefreq: "monthly", priority: "0.4" },
           { path: "/en", changefreq: "weekly", priority: "0.9" },

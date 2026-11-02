@@ -23,6 +23,7 @@ import { Route as CosteDeUsoRouteImport } from './routes/coste-de-uso'
 import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as CalculadoraRouteImport } from './routes/calculadora'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as BlackFridayHumidificadoresRouteImport } from './routes/black-friday-humidificadores'
 import { Route as AvisoAfiliacionRouteImport } from './routes/aviso-afiliacion'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EnIndexRouteImport } from './routes/en.index'
@@ -103,6 +104,12 @@ const BlogRoute = BlogRouteImport.update({
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlackFridayHumidificadoresRoute =
+  BlackFridayHumidificadoresRouteImport.update({
+    id: '/black-friday-humidificadores',
+    path: '/black-friday-humidificadores',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const AvisoAfiliacionRoute = AvisoAfiliacionRouteImport.update({
   id: '/aviso-afiliacion',
   path: '/aviso-afiliacion',
@@ -152,6 +159,7 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aviso-afiliacion': typeof AvisoAfiliacionRoute
+  '/black-friday-humidificadores': typeof BlackFridayHumidificadoresRoute
   '/blog': typeof BlogRouteWithChildren
   '/calculadora': typeof CalculadoraRoute
   '/cookies': typeof CookiesRoute
@@ -177,6 +185,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aviso-afiliacion': typeof AvisoAfiliacionRoute
+  '/black-friday-humidificadores': typeof BlackFridayHumidificadoresRoute
   '/calculadora': typeof CalculadoraRoute
   '/cookies': typeof CookiesRoute
   '/coste-de-uso': typeof CosteDeUsoRoute
@@ -201,6 +210,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aviso-afiliacion': typeof AvisoAfiliacionRoute
+  '/black-friday-humidificadores': typeof BlackFridayHumidificadoresRoute
   '/blog': typeof BlogRouteWithChildren
   '/calculadora': typeof CalculadoraRoute
   '/cookies': typeof CookiesRoute
@@ -228,6 +238,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/aviso-afiliacion'
+    | '/black-friday-humidificadores'
     | '/blog'
     | '/calculadora'
     | '/cookies'
@@ -253,6 +264,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/aviso-afiliacion'
+    | '/black-friday-humidificadores'
     | '/calculadora'
     | '/cookies'
     | '/coste-de-uso'
@@ -276,6 +288,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/aviso-afiliacion'
+    | '/black-friday-humidificadores'
     | '/blog'
     | '/calculadora'
     | '/cookies'
@@ -302,6 +315,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AvisoAfiliacionRoute: typeof AvisoAfiliacionRoute
+  BlackFridayHumidificadoresRoute: typeof BlackFridayHumidificadoresRoute
   BlogRoute: typeof BlogRouteWithChildren
   CalculadoraRoute: typeof CalculadoraRoute
   CookiesRoute: typeof CookiesRoute
@@ -420,6 +434,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/black-friday-humidificadores': {
+      id: '/black-friday-humidificadores'
+      path: '/black-friday-humidificadores'
+      fullPath: '/black-friday-humidificadores'
+      preLoaderRoute: typeof BlackFridayHumidificadoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/aviso-afiliacion': {
       id: '/aviso-afiliacion'
       path: '/aviso-afiliacion'
@@ -515,6 +536,7 @@ const EnRouteWithChildren = EnRoute._addFileChildren(EnRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AvisoAfiliacionRoute: AvisoAfiliacionRoute,
+  BlackFridayHumidificadoresRoute: BlackFridayHumidificadoresRoute,
   BlogRoute: BlogRouteWithChildren,
   CalculadoraRoute: CalculadoraRoute,
   CookiesRoute: CookiesRoute,
