@@ -78,6 +78,101 @@ const PEND = "DATO_PENDIENTE" as const;
 
 export const productos: Producto[] = [
   {
+    slug: "cecotec-breezecare-2900-smart",
+    nombre: "Cecotec BreezeCare 2900 Smart",
+    marca: "Cecotec",
+    modelo: "BreezeCare 2900 Smart",
+    precioOrientativo: "39,90 €",
+    precioMin: 39.9,
+    precioReferencia: 39.9,
+    precioComprobadoEn: "2026-11-02",
+    rango: "Económico",
+    tecnologia: "Ultrasónico",
+    capacidadL: 4.5,
+    coberturaM2: 30,
+    ruidoDb: PEND, // Cecotec no publica dB oficiales de esta gama
+    autonomiaH: 15, // 4,5 L ÷ 300 mL/h a máximo
+    valoracionEditorial: 78,
+    idealPara: [
+      "Dormitorios y despachos de hasta 30 m²",
+      "Primer humidificador con higrostato",
+      "Presupuesto ajustado sin renunciar al modo automático",
+    ],
+    noRecomendadoPara: [
+      "Salones grandes",
+      "Quien quiera app o asistentes de voz",
+      "Quien necesite fijar el objetivo de humedad por debajo del 45 %",
+    ],
+    ventajas: [
+      "4,5 L de depósito por menos de 40 €",
+      "Higrostato digital con modo automático, regulable entre el 45 % y el 90 %",
+      "300 ml/h, suficiente para unos 30 m²",
+      "Pantalla táctil y mando a distancia incluido",
+      "Temporizador programable de hasta 8 h",
+    ],
+    inconvenientes: [
+      "El objetivo de humedad no baja del 45 %, por encima del 40 % que el RITE fija como suelo del confort",
+      "Sin wifi ni asistentes de voz, a diferencia del Xiaomi Smart Humidifier 2, que cuesta pocos euros más",
+      "Cecotec no publica los decibelios, así que para un dormitorio no hay dato de ruido",
+      "Ultrasónico: con agua del grifo puede dejar polvo blanco",
+    ],
+    caracteristicas: [
+      "Ultrasónico de vapor frío, 300 ml/h",
+      "Depósito 4,5 L con higrostato digital del 45 % al 90 %",
+      "Pantalla táctil, mando a distancia y temporizador de hasta 8 h",
+      "Filtro cerámico extraíble",
+      "25 W de consumo (ficha Amazon.es)",
+    ],
+    atributos: {
+      control: {
+        higrostato: true,
+        modoAuto: true,
+        wifiApp: false, // el "Smart" es el higrostato digital; el conectado de la gama es el 4000 Connected
+        asistentesVoz: [],
+        temporizador: true,
+        apagadoAutoSinAgua: PEND,
+      },
+      confort: {
+        modoNoche: PEND,
+        luzApagable: PEND,
+        boquilla360: PEND,
+        indicadorAgua: PEND,
+        topFill: PEND,
+      },
+      mantenimiento: {
+        filtroRequerido: true, // filtro cerámico extraíble; Cecotec no publica periodicidad ni precio del recambio
+        bocaAncha: PEND,
+        cartuchoAntical: PEND,
+        autolimpieza: false,
+        uvc: false,
+      },
+      extras: {
+        aromaterapia: PEND,
+        vaporCaliente: false, // el de vapor caliente de la gama es el BreezeCare 3500 Warm
+        ionizador: false,
+        consumoW: 25,
+      },
+    },
+    resumen:
+      "Llena el hueco que tenía el catálogo entre el difusor de 300 ml y los conectados de más de 50 €. Por 39,90 € trae 4,5 L, 300 ml/h para unos 30 m² y un higrostato con modo automático que corta cuando la habitación ya está húmeda, que es justo lo que no tiene el Pure Aroma 300 Yang. Dos avisos antes de pasar por caja: el objetivo de humedad no se puede bajar del 45 %, por encima del 40 % que el RITE marca como suelo del rango de confort, y Cecotec no publica los decibelios, así que para el dormitorio no podemos decirte cuánto se oye.",
+    enlaceAfiliado: "https://www.amazon.es/dp/B0DW4G7RXS?tag=david0e98-21",
+    comercio: "Amazon",
+    fechaActualizacion: "2026-11-02",
+    fuentes: [
+      "Cecotec.es ficha BreezeCare 2900 Smart (02/11/2026)",
+      "Amazon.es ficha B0DW4G7RXS (02/11/2026)",
+      "PcComponentes ficha BreezeCare 2900 Smart (02/11/2026)",
+    ],
+    datosPendientes: [
+      "Decibelios de funcionamiento (Cecotec no los publica)",
+      "Precio exacto en Amazon.es: los 39,90 € son el PVP oficial de Cecotec y el precio de PcComponentes; la ficha de Amazon.es no se pudo leer entera",
+      "Apagado automático por falta de agua (no consta en la ficha de Cecotec)",
+      "Aromaterapia, llenado superior y modo noche (no constan en ficha)",
+      "Autonomía oficial a velocidad mínima",
+      "Periodicidad y precio del recambio del filtro cerámico",
+    ],
+  },
+  {
     slug: "cecotec-pure-aroma-300-yang",
     nombre: "Cecotec Pure Aroma 300 Yang",
     marca: "Cecotec",
