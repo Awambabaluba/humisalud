@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { AffiliateButton } from "@/components/site/AffiliateButton";
 import { AffiliateDisclosure } from "@/components/site/AffiliateDisclosure";
 import { getBlogPost, blogPostsOrdenados } from "@/data/blog";
+import { getProducto } from "@/data/products";
 import { CalendarDays } from "lucide-react";
 
 /**
@@ -87,14 +88,14 @@ export const Route = createFileRoute("/blog/$slug")({
 function BlogPostPage() {
   const { post } = Route.useLoaderData();
   // Relacionados: primero los de la MISMA categoria, luego se completa rotando
-// desde la posicion del articulo actual. Antes se cogian siempre los 2 mas
-// recientes, asi que los articulos antiguos no recibian NINGUN enlace interno
-// y Search Console los dejaba en "Descubierta: actualmente sin indexar".
-const resto = blogPostsOrdenados.filter((p) => p.slug !== post.slug);
-const mismaCat = resto.filter((p) => p.categoria === post.categoria);
-const posicion = blogPostsOrdenados.findIndex((p) => p.slug === post.slug);
-const rotados = resto.map((_, i) => resto[(posicion + 1 + i) % resto.length]);
-const otros = [...new Set([...mismaCat, ...rotados])].slice(0, 3);
+  // desde la posicion del articulo actual. Antes se cogian siempre los 2 mas
+  // recientes, asi que los articulos antiguos no recibian NINGUN enlace interno
+  // y Search Console los dejaba en "Descubierta: actualmente sin indexar".
+  const resto = blogPostsOrdenados.filter((p) => p.slug !== post.slug);
+  const mismaCat = resto.filter((p) => p.categoria === post.categoria);
+  const posicion = blogPostsOrdenados.findIndex((p) => p.slug === post.slug);
+  const rotados = resto.map((_, i) => resto[(posicion + 1 + i) % resto.length]);
+  const otros = [...new Set([...mismaCat, ...rotados])].slice(0, 3);
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-12 sm:py-16 prose-editorial">
@@ -166,16 +167,30 @@ const otros = [...new Set([...mismaCat, ...rotados])].slice(0, 3);
 
       {post.afiliados && post.afiliados.length > 0 && (
         <section className="mt-10 not-prose rounded-2xl border border-border bg-card p-6">
-          <h2 className="font-display text-lg font-semibold">¿Te interesa este modelo?</h2>
+          <h2 className="font-display text-lg font-semibold">
+            {post.afiliados.length > 1
+              ? "Los modelos de este artículo"
+              : "¿Te interesa este modelo?"}
+          </h2>
           <div className="mt-4 flex flex-wrap gap-3">
-            {post.afiliados.map((a) => (
-              <AffiliateButton
-                key={a.comercio}
-                href={a.href}
-                comercio={a.comercio}
-                posicion="blog-articulo"
-              />
-            ))}
+            {post.afiliados.map((a, i) => {
+              // Si el enlace dice a qué ficha corresponde, el botón nombra el
+              // modelo: con varios enlaces a Amazon, todos decían lo mismo.
+              const prod = a.producto ? getProducto(a.producto) : undefined;
+              return (
+                <AffiliateButton
+                  key={`${a.comercio}-${a.producto ?? i}`}
+                  href={a.href}
+                  comercio={a.comercio}
+                  producto={prod?.slug}
+                  nombre={prod?.nombre}
+                  marca={prod?.marca}
+                  posicion="blog-articulo"
+                >
+                  {prod ? `Ver ${prod.nombre} en ${a.comercio}` : undefined}
+                </AffiliateButton>
+              );
+            })}
           </div>
           <div className="mt-4">
             <AffiliateDisclosure />
