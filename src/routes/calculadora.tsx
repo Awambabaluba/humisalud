@@ -4,13 +4,16 @@ import { CalculatorWidget } from "@/components/site/CalculatorWidget";
 export const Route = createFileRoute("/calculadora")({
   head: () => ({
     meta: [
-      { title: "Calculadora de humidificador por m² — HumiSalud" },
+      { title: "Qué humidificador necesito por m²: calculadora — HumiSalud" },
       {
         name: "description",
         content:
-          "Calcula el caudal (g/h) y el depósito que necesitas según el volumen de tu habitación y la humedad objetivo. Fórmula transparente, sin datos inventados.",
+          "Mete los m² y la altura del techo y te decimos el caudal (g/h) y el depósito que necesita tu habitación, con modelos que llegan. Gratis y sin registro.",
       },
-      { property: "og:title", content: "Calculadora de humidificador por m² — HumiSalud" },
+      {
+        property: "og:title",
+        content: "Qué humidificador necesito por m²: calculadora — HumiSalud",
+      },
       { property: "og:url", content: "https://humisalud.com/calculadora" },
     ],
     links: [

@@ -9,9 +9,9 @@ import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { getBlogPost } from "@/data/blog";
 import { ArrowRight } from "lucide-react";
 
-const TITLE = "Mejores humidificadores 2026: ranking editorial HumiSalud";
+const TITLE = "Mejores humidificadores 2026 por habitación | HumiSalud";
 const DESC =
-  "Ranking 2026 con cálculo por m², cuánto gastan de luz y nivel de ruido. Mejor opción general, calidad-precio, barato, bebé y dormitorio.";
+  "Ranking 2026 por habitación: el mejor para dormitorio, bebé, salón y alergias, con precio comprobado, ruido en dB y gasto de luz al mes.";
 
 export const Route = createFileRoute("/mejores-humidificadores")({
   head: () => ({

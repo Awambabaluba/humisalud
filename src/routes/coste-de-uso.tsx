@@ -4,13 +4,16 @@ import { CostTable } from "@/components/site/CostTable";
 export const Route = createFileRoute("/coste-de-uso")({
   head: () => ({
     meta: [
-      { title: "Cuánto consume un humidificador: coste en luz | HumiSalud" },
+      { title: "Cuánto consume un humidificador: W, kWh y €/mes | HumiSalud" },
       {
         name: "description",
         content:
-          "Cuánto cuesta tener un humidificador encendido cada día: €/mes y €/año por tecnología (ultrasónico, evaporativo, vapor caliente, híbrido).",
+          "Un ultrasónico gasta unos 30 W y uno de vapor caliente, diez veces más. Calcula tu gasto en €/mes con tus horas y tu precio del kWh.",
       },
-      { property: "og:title", content: "Cuánto consume un humidificador: coste en luz | HumiSalud" },
+      {
+        property: "og:title",
+        content: "Cuánto consume un humidificador: W, kWh y €/mes | HumiSalud",
+      },
       { property: "og:url", content: "https://humisalud.com/coste-de-uso" },
     ],
     links: [

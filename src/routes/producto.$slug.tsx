@@ -52,6 +52,18 @@ function precioValidoHasta(comprobadoEn: string): string | null {
   return hasta.toISOString().slice(0, 10);
 }
 
+/**
+ * Título y descripción a mano para fichas con impresiones en Search Console y
+ * CTR bajo. El resto usa la plantilla genérica. Sin precios: cambian cada
+ * semana y el título se quedaría desfasado.
+ */
+const SEO_FICHA: Record<string, { title: string; desc: string }> = {
+  "levoit-neoclassic-450s": {
+    title: "Levoit NeoClassic 450S: análisis, 21 dB y precio — HumiSalud",
+    desc: "21 dB en modo Sueño, 4,2 L para hasta 42 h y modo automático. Lo que hace bien, sus pegas y para quién es, con el precio comprobado en Amazon.",
+  },
+};
+
 export const Route = createFileRoute("/producto/$slug")({
   loader: ({ params }) => {
     const p = getProducto(params.slug);
@@ -60,10 +72,17 @@ export const Route = createFileRoute("/producto/$slug")({
   },
   head: ({ loaderData }) => {
     const p = loaderData?.producto;
-    const title = p ? `${p.nombre} — análisis HumiSalud` : "Análisis de producto — HumiSalud";
-    const desc = p
-      ? `Análisis editorial del ${p.nombre} (${p.marca}): tecnología ${p.tecnologia}, ventajas, inconvenientes y para quién es.`
-      : "";
+    const seo = p ? SEO_FICHA[p.slug] : undefined;
+    const title = seo
+      ? seo.title
+      : p
+        ? `${p.nombre} — análisis HumiSalud`
+        : "Análisis de producto — HumiSalud";
+    const desc = seo
+      ? seo.desc
+      : p
+        ? `Análisis editorial del ${p.nombre} (${p.marca}): tecnología ${p.tecnologia}, ventajas, inconvenientes y para quién es.`
+        : "";
     // null cuando el precio comprobado ya ha caducado -> no se publica `offers`.
     const validoHasta = p?.precioComprobadoEn ? precioValidoHasta(p.precioComprobadoEn) : null;
     return {
