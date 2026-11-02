@@ -35,6 +35,16 @@ function OfertasPage() {
         Comprobamos el precio de cada humidificador en Amazon todos los días. Aquí solo aparecen los
         que tienen una bajada de precio real detectada, nunca descuentos inventados.
       </p>
+      <p className="mt-3 text-sm text-muted-foreground max-w-2xl">
+        ¿Esperando al Black Friday?{" "}
+        <Link
+          to="/black-friday-humidificadores"
+          className="font-medium text-primary underline underline-offset-4"
+        >
+          Mira qué humidificador compensa y cómo saber si una rebaja es real
+        </Link>
+        .
+      </p>
 
       {ofertas.length === 0 ? (
         <div className="mt-10 rounded-2xl border border-border bg-card p-10 text-center">

@@ -8,15 +8,22 @@ export function Footer() {
 
   const intro = en ? (
     <>
-      Independent editorial guide on humidifiers. We don't run physical tests:
-      we analyse official spec sheets, synthesise verified reviews and compute
-      m² coverage and running cost. <Link to="/metodologia" className="underline underline-offset-4 hover:text-foreground">Read the methodology</Link>.
+      Independent editorial guide on humidifiers. We don't run physical tests: we analyse official
+      spec sheets, synthesise verified reviews and compute m² coverage and running cost.{" "}
+      <Link to="/metodologia" className="underline underline-offset-4 hover:text-foreground">
+        Read the methodology
+      </Link>
+      .
     </>
   ) : (
     <>
-      Guía editorial independiente sobre humidificadores. No realizamos pruebas físicas:
-      analizamos fichas técnicas oficiales, sintetizamos reseñas verificadas y calculamos
-      cobertura por m² y coste de uso. <Link to="/metodologia" className="underline underline-offset-4 hover:text-foreground">Lee la metodología</Link>.
+      Guía editorial independiente sobre humidificadores. No realizamos pruebas físicas: analizamos
+      fichas técnicas oficiales, sintetizamos reseñas verificadas y calculamos cobertura por m² y
+      coste de uso.{" "}
+      <Link to="/metodologia" className="underline underline-offset-4 hover:text-foreground">
+        Lee la metodología
+      </Link>
+      .
     </>
   );
 
@@ -34,6 +41,7 @@ export function Footer() {
         { to: "/guia-de-compra", label: "Guía de compra" },
         { to: "/categoria/bebe", label: "Para bebé" },
         { to: "/categoria/dormitorio", label: "Dormitorio silencioso" },
+        { to: "/black-friday-humidificadores", label: "Black Friday 2026" },
       ];
 
   const legalLinks = en
@@ -71,7 +79,10 @@ export function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="mx-auto max-w-6xl px-5 py-5 text-xs text-muted-foreground flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} HumiSalud. {en ? "All rights reserved." : "Todos los derechos reservados."}</p>
+          <p>
+            © {new Date().getFullYear()} HumiSalud.{" "}
+            {en ? "All rights reserved." : "Todos los derechos reservados."}
+          </p>
           <p>
             {en
               ? "HumiSalud takes part in affiliate programmes. We may earn a commission on purchases made through our links, at no extra cost to you."
@@ -86,11 +97,16 @@ export function Footer() {
 function FooterCol({ title, links }: { title: string; links: { to: string; label: string }[] }) {
   return (
     <div>
-      <h3 className="font-display text-sm font-semibold tracking-wide uppercase text-foreground/80">{title}</h3>
+      <h3 className="font-display text-sm font-semibold tracking-wide uppercase text-foreground/80">
+        {title}
+      </h3>
       <ul className="mt-4 space-y-2.5 text-sm">
         {links.map((l) => (
           <li key={l.to}>
-            <Link to={l.to} className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              to={l.to}
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
               {l.label}
             </Link>
           </li>
