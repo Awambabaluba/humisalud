@@ -40,7 +40,8 @@ export function Footer() {
         { to: "/selector", label: "Selector personalizado" },
         { to: "/guia-de-compra", label: "Guía de compra" },
         { to: "/categoria/bebe", label: "Para bebé" },
-        { to: "/categoria/dormitorio", label: "Dormitorio silencioso" },
+        { to: "/categoria/dormitorio", label: "Humidificador para dormir" },
+        { to: "/categoria/economico", label: "Humidificadores baratos" },
         { to: "/black-friday-humidificadores", label: "Black Friday 2026" },
       ];
 

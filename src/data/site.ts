@@ -27,9 +27,9 @@ export const NAV_EN = [
 
 export const CATEGORIAS = [
   { slug: "bebe", titulo: "Para el bebé", desc: "Silencio, vapor frío y rellenado seguro.", icon: "baby" },
-  { slug: "dormitorio", titulo: "Para dormir", desc: "Por debajo de 35 dB, sin despertarte.", icon: "moon" },
+  { slug: "dormitorio", titulo: "Para dormir", desc: "Silenciosos, sin despertarte.", icon: "moon" },
   { slug: "salon", titulo: "Salón y espacios grandes", desc: "Caudal y depósito de sobra.", icon: "sofa" },
   { slug: "alergias", titulo: "Alergias", desc: "Evaporativos, sin polvo blanco.", icon: "leaf" },
   { slug: "inteligente", titulo: "Con app", desc: "Control desde el móvil o por voz.", icon: "wifi" },
-  { slug: "economico", titulo: "Barato", desc: "Por menos de 35 €.", icon: "wallet" },
+  { slug: "economico", titulo: "Barato", desc: "Por menos de 40 €.", icon: "wallet" },
 ] as const;

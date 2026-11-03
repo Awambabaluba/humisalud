@@ -21,7 +21,7 @@ const COPY: Record<
 > = {
   bebe: {
     h1: "Mejores humidificadores para bebé en 2026",
-    lead: "Vapor frío, por debajo de 35 dB y fáciles de rellenar sin acrobacias. En la habitación del bebé, vapor caliente nunca.",
+    lead: "Vapor frío, silenciosos y fáciles de rellenar sin acrobacias. En la habitación del bebé, vapor caliente nunca.",
     title: "Humidificador para bebé 2026 — HumiSalud",
     desc: "Humidificadores seguros para el cuarto del bebé: vapor frío, silenciosos y fáciles de limpiar.",
     filtro: (p) =>
@@ -30,10 +30,26 @@ const COPY: Record<
     mejor: "bebe",
   },
   dormitorio: {
-    h1: "Humidificadores silenciosos para dormir",
-    lead: "Menos de 35 dB y con depósito suficiente para no quedarte a medias a las cuatro de la mañana.",
-    title: "Humidificador silencioso para dormitorio — HumiSalud",
-    desc: "Modelos pensados para el dormitorio: silenciosos, con autonomía nocturna y fáciles de limpiar.",
+    h1: "Humidificador para dormir: los más silenciosos",
+    lead: "Poco ruido y con depósito suficiente para no quedarte a medias a las cuatro de la mañana.",
+    title: "Humidificador para dormir 2026: silenciosos y toda la noche",
+    desc: "Humidificadores para dormir sin ruido: modo noche, vapor frío y autonomía para toda la noche. Comparativa con decibelios y precios actualizados.",
+    intro:
+      "Para dormir, lo primero es el ruido: por debajo de 30 dB un humidificador se oye como un susurro, y a partir de 35 dB ya hay quien lo nota con la luz apagada. Mira el dato en modo noche, no a máxima potencia, que es como lo vas a usar. Lo segundo es la autonomía: si el depósito no aguanta ocho horas a nivel bajo, se apagará antes de que suene el despertador. Y lo tercero, la luz: busca que la pantalla y el piloto se puedan apagar. En el dormitorio, mejor vapor frío, a uno o dos metros de la cama y sin apuntarte a la cara. Con la humedad entre el 40 % y el 60 % se descansa mejor y amaneces sin la garganta seca.",
+    faq: [
+      {
+        q: "¿Es bueno dormir con el humidificador encendido?",
+        a: "Sí, siempre que la humedad del cuarto se quede entre el 40 % y el 60 %. Por encima aparecen condensación y moho; por eso conviene un modelo con higrostato o un higrómetro aparte.",
+      },
+      {
+        q: "¿Cuántos decibelios son silenciosos para dormir?",
+        a: "Por debajo de 30 dB es un susurro y no molesta a casi nadie. Entre 30 y 35 dB se oye en una habitación muy silenciosa. Fíjate en el dato del modo noche.",
+      },
+      {
+        q: "¿Dónde pongo el humidificador en el dormitorio?",
+        a: "A uno o dos metros de la cama, sobre una superficie alta y que no sea de madera delicada, y sin que el chorro te dé en la cara ni moje la pared.",
+      },
+    ],
     filtro: (p) => p.idealPara.some((u) => /dormitorio|nocturno/i.test(u)),
     mejor: "dormitorioSilencioso",
   },
@@ -96,12 +112,12 @@ const COPY: Record<
     mejor: "inteligente",
   },
   economico: {
-    h1: "Humidificadores baratos (por menos de 35 €)",
+    h1: "Humidificadores baratos (por menos de 40 €)",
     lead: "Para habitaciones pequeñas o si solo lo vas a encender alguna noche suelta.",
-    title: "Humidificador económico — HumiSalud",
-    desc: "Humidificadores baratos con calidad decente para dormitorios pequeños y uso ocasional.",
+    title: "Humidificador barato 2026: los que cumplen por menos de 40 €",
+    desc: "Humidificadores baratos que sí cumplen: menos de 40 €, para dormitorios pequeños y uso ocasional. Qué esperar de ellos y cuándo compensa pagar algo más.",
     intro:
-      "Por debajo de 35 € encontrarás sobre todo ultrasónicos pequeños, pensados para un dormitorio de pocos metros o para un uso puntual. Cumplen, pero conviene conocer sus límites: depósitos pequeños (más rellenados), sin modo automático y con menos cobertura. Si vives en una zona de agua dura, usa agua destilada para evitar el polvo blanco típico del ultrasónico. Para la habitación de un niño o una mesita de noche son una compra sensata; para humidificar todo el salón se te quedarán cortos.",
+      "Por debajo de 40 € encontrarás sobre todo ultrasónicos pequeños, pensados para un dormitorio de pocos metros o para un uso puntual. Cumplen, pero conviene conocer sus límites: depósitos pequeños (más rellenados), menos cobertura y, salvo excepciones como el BreezeCare, sin modo automático. Si vives en una zona de agua dura, usa agua destilada para evitar el polvo blanco típico del ultrasónico. Para la habitación de un niño o una mesita de noche son una compra sensata; para humidificar todo el salón se te quedarán cortos.",
     faq: [
       {
         q: "¿De verdad sirve un humidificador barato?",
@@ -114,6 +130,10 @@ const COPY: Record<
       {
         q: "¿Cuánto dura uno económico?",
         a: "Con uso frecuente, entre uno y dos años. Alargas su vida limpiándolo cada semana para que no críe moho ni acumule cal.",
+      },
+      {
+        q: "¿Cuándo compensa pagar algo más?",
+        a: "Si lo vas a usar todas las noches o en una habitación de más de 20 m². Entre 45 y 70 € ya hay modelos con depósito grande, modo automático y menos ruido, y el gasto se amortiza en pocos inviernos.",
       },
     ],
     filtro: (p) => p.rango === "Económico",
