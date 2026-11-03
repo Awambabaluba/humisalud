@@ -22,8 +22,28 @@ const COPY: Record<
   bebe: {
     h1: "Mejores humidificadores para bebé en 2026",
     lead: "Vapor frío, silenciosos y fáciles de rellenar sin acrobacias. En la habitación del bebé, vapor caliente nunca.",
-    title: "Humidificador para bebé 2026 — HumiSalud",
-    desc: "Humidificadores seguros para el cuarto del bebé: vapor frío, silenciosos y fáciles de limpiar.",
+    title: "Humidificador para bebé 2026: vapor frío, silencioso y seguro",
+    desc: "Qué humidificador poner en el cuarto del bebé: vapor frío, poco ruido, humedad entre 40 y 60 % y fácil de limpiar. Modelos comparados con decibelios y precio.",
+    intro:
+      "En la habitación del bebé, vapor frío siempre: los de vapor caliente calientan el agua y, si se vuelcan o el niño llega a la salida, pueden quemar. Después, el ruido: busca menos de 30 dB en modo noche para que no le despierte; algunos modelos de esta lista bajan a 21-28 dB. Mantén la humedad entre el 40 % y el 60 %, mejor con higrostato o con un higrómetro aparte, porque pasarse favorece el moho y los ácaros. Colócalo a uno o dos metros de la cuna, en alto, fuera de su alcance y con el cable recogido. Vacíalo y sécalo cada día y límpialo a fondo una vez por semana. Si el agua de tu zona es dura, un evaporativo o agua destilada evitan el polvo blanco.",
+    faq: [
+      {
+        q: "¿Vapor frío o caliente para el bebé?",
+        a: "Frío. Humidifica igual de bien y no hay riesgo de quemaduras si se vuelca o el niño toca la salida del vapor.",
+      },
+      {
+        q: "¿Es bueno dejar el humidificador encendido toda la noche con el bebé?",
+        a: "Sí, si la humedad no pasa del 60 % y el aparato está limpio. Un modelo con higrostato se apaga solo al llegar al nivel que fijes.",
+      },
+      {
+        q: "¿A qué distancia de la cuna lo pongo?",
+        a: "A uno o dos metros, en una superficie alta y estable, sin que el vapor vaya directo a la cuna y con el cable fuera de su alcance.",
+      },
+      {
+        q: "¿Puedo echarle aceites esenciales?",
+        a: "En el cuarto del bebé, mejor no: pueden irritar sus vías respiratorias. Agua sola, y destilada si la del grifo es muy dura.",
+      },
+    ],
     filtro: (p) =>
       p.idealPara.some((u) => /bebé|infantil/i.test(u)) ||
       ["Ultrasónico", "Evaporativo"].includes(p.tecnologia),
@@ -56,16 +76,32 @@ const COPY: Record<
   salon: {
     h1: "Humidificadores para salón y estancias grandes",
     lead: "Caudal de sobra, depósito amplio y modo automático para espacios de 25 a 55 m².",
-    title: "Humidificador para salón 2026 — HumiSalud",
-    desc: "Humidificadores con cobertura suficiente para salones y habitaciones grandes.",
+    title: "Humidificador para salón 2026: para espacios de 30 a 50 m²",
+    desc: "Humidificadores para salones y estancias grandes: cobertura de 30 a 50 m², depósitos de 6 litros o más y modo automático. Comparativa con datos y precios.",
+    intro:
+      "Un salón pide otra liga que un dormitorio. Mira primero la cobertura: el fabricante la da en m², así que compárala con tu salón y, si es abierto a la cocina o tiene techos altos, súmale margen. Después, el depósito: con menos de 4 litros lo rellenarás a diario; los de esta lista llegan a 6 o 7,5 litros. El modo automático con higrostato es casi obligatorio en una estancia grande, porque evita pasarse de humedad y gastar agua y luz de más. Colócalo en una zona despejada, a un metro de muebles de madera, cortinas y aparatos electrónicos, para que el vapor se reparta antes de tocar ninguna superficie.",
+    faq: [
+      {
+        q: "¿Qué tamaño de humidificador necesito para mi salón?",
+        a: "Uno cuya cobertura iguale o supere los m² del salón. Si es diáfano o tiene techos altos, elige el siguiente escalón. Nuestra calculadora te da la cifra exacta.",
+      },
+      {
+        q: "¿Basta un humidificador para toda la casa?",
+        a: "No. Humidifica bien la estancia donde está y algo las de al lado si dejas las puertas abiertas. Para varias habitaciones, mejor uno por estancia.",
+      },
+      {
+        q: "¿Híbrido o ultrasónico para un salón grande?",
+        a: "Los dos sirven. Los híbridos suman un evaporador o calentador y reparten mejor la humedad en invierno, aunque los que calientan el agua gastan más luz.",
+      },
+    ],
     filtro: (p) => typeof p.coberturaM2 === "number" && p.coberturaM2 >= 30,
     mejor: "salon",
   },
   alergias: {
     h1: "Humidificadores para alergias y asma",
     lead: "Evaporativos: ni rastro de polvo blanco, y modelos con filtración cuidada.",
-    title: "Humidificador para alergias — HumiSalud",
-    desc: "Humidificadores recomendados para personas con alergias o asma: evaporativos sin polvo blanco.",
+    title: "Humidificador para alergias y asma 2026: sin polvo blanco",
+    desc: "Qué humidificador conviene si tienes alergia o asma: evaporativos sin polvo blanco, humedad entre 40 y 50 % y limpieza fácil. Modelos comparados.",
     intro:
       "Si tienes alergia o asma, el tipo de humidificador importa más que la marca. Los ultrasónicos pulverizan los minerales del agua en forma de polvo blanco que puede irritar las vías respiratorias; por eso recomendamos los evaporativos, que expulsan aire húmedo sin ese residuo. La humedad ideal está entre el 40 % y el 50 %: por debajo se resecan las mucosas y por encima se disparan los ácaros y el moho, que son justo los que empeoran los síntomas. Limpia el depósito cada pocos días para no dispersar bacterias por la habitación.",
     faq: [
@@ -89,8 +125,8 @@ const COPY: Record<
   inteligente: {
     h1: "Humidificadores con app y conectados",
     lead: "Control desde el móvil, Alexa o Google, y programación automática.",
-    title: "Humidificador inteligente — HumiSalud",
-    desc: "Humidificadores conectados con app, Alexa, Google y modos automáticos.",
+    title: "Humidificador inteligente 2026: con app, Alexa y modo automático",
+    desc: "Humidificadores inteligentes con Wi-Fi: control desde el móvil, Alexa o Google y higrostato que mantiene la humedad sola. Cuáles merecen la pena.",
     intro:
       "Un humidificador «inteligente» se controla desde el móvil por Wi-Fi, obedece a Alexa o Google Assistant y, sobre todo, incorpora un higrostato que mantiene exactamente la humedad que le pides. Ese modo automático es lo que de verdad marca la diferencia: enciende y apaga la nebulización solo, para no pasarse de humedad ni gastar agua de más. También permite programar horarios (por ejemplo, solo de noche) y avisa cuando toca rellenar el depósito. Los modelos con Wi-Fi integran los asistentes de voz; los de solo Bluetooth se manejan desde su propia app.",
     faq: [
