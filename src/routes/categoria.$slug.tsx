@@ -22,7 +22,7 @@ const COPY: Record<
   bebe: {
     h1: "Mejores humidificadores para bebé en 2026",
     lead: "Vapor frío, silenciosos y fáciles de rellenar sin acrobacias. En la habitación del bebé, vapor caliente nunca.",
-    title: "Humidificador para bebé 2026: vapor frío, silencioso y seguro",
+    title: "Humidificador para bebé 2026: frío, silencioso y seguro",
     desc: "Qué humidificador poner en el cuarto del bebé: vapor frío, poco ruido, humedad entre 40 y 60 % y fácil de limpiar. Modelos comparados con decibelios y precio.",
     intro:
       "En la habitación del bebé, vapor frío siempre: los de vapor caliente calientan el agua y, si se vuelcan o el niño llega a la salida, pueden quemar. Después, el ruido: busca menos de 30 dB en modo noche para que no le despierte; algunos modelos de esta lista bajan a 21-28 dB. Mantén la humedad entre el 40 % y el 60 %, mejor con higrostato o con un higrómetro aparte, porque pasarse favorece el moho y los ácaros. Colócalo a uno o dos metros de la cuna, en alto, fuera de su alcance y con el cable recogido. Vacíalo y sécalo cada día y límpialo a fondo una vez por semana. Si el agua de tu zona es dura, un evaporativo o agua destilada evitan el polvo blanco.",
@@ -125,7 +125,7 @@ const COPY: Record<
   inteligente: {
     h1: "Humidificadores con app y conectados",
     lead: "Control desde el móvil, Alexa o Google, y programación automática.",
-    title: "Humidificador inteligente 2026: con app, Alexa y modo automático",
+    title: "Humidificador inteligente 2026: app y modo automático",
     desc: "Humidificadores inteligentes con Wi-Fi: control desde el móvil, Alexa o Google y higrostato que mantiene la humedad sola. Cuáles merecen la pena.",
     intro:
       "Un humidificador «inteligente» se controla desde el móvil por Wi-Fi, obedece a Alexa o Google Assistant y, sobre todo, incorpora un higrostato que mantiene exactamente la humedad que le pides. Ese modo automático es lo que de verdad marca la diferencia: enciende y apaga la nebulización solo, para no pasarse de humedad ni gastar agua de más. También permite programar horarios (por ejemplo, solo de noche) y avisa cuando toca rellenar el depósito. Los modelos con Wi-Fi integran los asistentes de voz; los de solo Bluetooth se manejan desde su propia app.",
