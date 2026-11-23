@@ -786,6 +786,101 @@ export const productos: Producto[] = [
     datosPendientes: [],
   },
   {
+    slug: "xiaomi-smart-evaporative-humidifier-pro",
+    nombre: "Xiaomi Smart Evaporative Humidifier Pro",
+    marca: "Xiaomi",
+    modelo: "Mijia Smart Evaporative Humidifier Pro (CJSJSQ06ZMZUE)",
+    imagen: "https://m.media-amazon.com/images/I/6148d2MArUL._AC_SX679_.jpg",
+    precioOrientativo: "99,99 € (91,36 € en PcComponentes)",
+    rango: "Alto",
+    tecnologia: "Evaporativo",
+    capacidadL: 5,
+    coberturaM2: 30, // 20–30 m² recomendados (ficha Xiaomi)
+    ruidoDb: 31, // 30,7 dB(A) en modo suspensión; a máxima potencia solo se publica un tope de 55 dB(A)
+    autonomiaH: 20, // hasta 20 h seguidas en modo suspensión
+    valoracionEditorial: 83,
+    idealPara: [
+      "Cuartos de bebé y dormitorios infantiles",
+      "Zonas de agua dura",
+      "Quien no quiere polvo blanco ni cargar con garrafas de agua destilada",
+    ],
+    noRecomendadoPara: [
+      "Estancias de más de 30 m²",
+      "Quien busque vapor caliente",
+      "Quien no quiera cambiar un filtro una o dos veces al año",
+    ],
+    ventajas: [
+      "Evaporativo: la cal se queda en el filtro y no acaba en forma de polvo blanco sobre los muebles",
+      "5 L y 600 ml/h, frente a los 2 L y 200 ml/h del Philips HU2716",
+      "30,7 dB(A) en modo suspensión y hasta 20 h seguidas sin rellenar",
+      "Sensor de humedad con modo automático, ajustable entre el 40 % y el 70 % desde la app",
+      "13 W de consumo, el más bajo del catálogo",
+      "Filtro antibacteriano lavable, con una vida declarada de 6 a 12 meses",
+    ],
+    inconvenientes: [
+      "Los 30,7 dB son los del modo suspensión; Xiaomi no publica el ruido a máxima potencia más allá de un tope de 55 dB(A)",
+      "Cubre de 20 a 30 m², bastante menos que los conectados de salón",
+      "El filtro de repuesto cuesta unos 26 € y hay que cambiarlo una o dos veces al año",
+      "En Amazon España la venta ha ido pasando por vendedores externos, mientras que en PcComponentes y en la tienda oficial de Xiaomi hay venta directa",
+    ],
+    caracteristicas: [
+      "Evaporativo sin niebla, 600 ml/h",
+      "Depósito de 5 L con filtro antibacteriano 3D lavable",
+      "Conectado (app Xiaomi Home) con modo de humedad constante del 40 % al 70 %",
+      "13 W de consumo (ficha oficial)",
+      "Versión europea CJSJSQ06ZMZUE / BHR082TEU",
+    ],
+    atributos: {
+      control: {
+        higrostato: true,
+        modoAuto: true,
+        wifiApp: true,
+        asistentesVoz: PEND, // la ficha europea solo nombra la app Xiaomi Home
+        temporizador: true, // programación horaria desde la app
+        apagadoAutoSinAgua: PEND,
+      },
+      confort: {
+        modoNoche: true,
+        luzApagable: PEND,
+        boquilla360: false, // no tiene boquilla: la salida es el aro superior
+        indicadorAgua: PEND,
+        topFill: PEND,
+      },
+      mantenimiento: {
+        filtroRequerido: true,
+        bocaAncha: PEND,
+        cartuchoAntical: false, // no hace falta: la cal queda retenida en el filtro
+        autolimpieza: PEND,
+        uvc: false, // la higiene la fía a un módulo de iones de plata, no a luz UV
+      },
+      extras: {
+        aromaterapia: PEND,
+        vaporCaliente: false,
+        ionizador: false,
+        consumoW: 13,
+      },
+    },
+    resumen:
+      "El segundo evaporativo del catálogo y el que mejor encaja si el agua de tu zona es dura. Al evaporar el agua en un filtro en vez de pulverizarla, no reparte minerales por la habitación, que es justo lo que se busca en el cuarto de un bebé sin tener que comprar garrafas de agua destilada. Frente al Philips HU2716, el otro evaporativo que analizamos, pasa de 2 a 5 L de depósito y de 200 a 600 ml/h, y baja de 34 a 30,7 dB en modo suspensión. A cambio cubre menos superficie, de 20 a 30 m², y el filtro de repuesto cuesta unos 26 €.",
+    enlaceAfiliado: "https://www.amazon.es/dp/B0G6G6RXZW?tag=david0e98-21",
+    comercio: "Amazon",
+    fechaActualizacion: "2026-11-23",
+    fuentes: [
+      "PcComponentes, ficha Mijia Smart Evaporative Humidifier Pro 5L (23/11/2026)",
+      "Batna24, ficha Mijia Smart Evaporative Humidifier Pro EU (23/11/2026)",
+      "tuxiaomi.es, ficha Mijia Smart Evaporative Humidifier Pro (23/11/2026)",
+      "Análisis HumiSalud del lanzamiento en España (21/07/2026)",
+    ],
+    datosPendientes: [
+      "Precio exacto en Amazon.es: los 99,99 € son el PVP oficial de Xiaomi y los 91,36 € el precio de PcComponentes; la ficha de Amazon.es responde 503 y no se pudo leer",
+      "Decibelios a máxima potencia",
+      "Asistentes de voz compatibles en la versión europea",
+      "Apagado automático por falta de agua",
+      "Rellenado superior e indicador de nivel de agua (no constan en las fichas consultadas)",
+      "Coste anual del filtro: el recambio está a 26,15 € y la vida declarada va de 6 a 12 meses",
+    ],
+  },
+  {
     slug: "xiaomi-smart-humidifier-2",
     nombre: "Xiaomi Smart Humidifier 2",
     marca: "Xiaomi",
